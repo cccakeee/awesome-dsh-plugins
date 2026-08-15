@@ -290,6 +290,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [XCNXNXNX/dsh-portable-tavern](https://github.com/XCNXNXNX/dsh-portable-tavern) | 便携酒馆：RPG 式 SillyTavern V2/V3 角色卡生成、酒馆角色扮演聊天、世界书生成/补全、角色卡 JSON/PNG 导入导出、面板主题与本地音乐。Node 半经 webServer 注册 /api/dsh-portable-tavern 路由并调用官方 llm 服务，浏览器半经 slots 挂载面板。 | `git clone <repo> && pnpm install && pnpm build（lib/ 已提交，profile 安装无需再构建）；dsh plugin --profile web add <repo路径>（库内 cordis.patch.yml 经 dsh.bundle.patch 注入 web profile roster）` | BSD-3-Clause；娱乐/角色扮演插件；角色卡内容会进入模型调用。 |
 | [XuezuoYS/dsh-IamDeepSeekV4ga](https://github.com/XuezuoYS/dsh-IamDeepSeekV4ga) | 娱乐插件：基于（玄学）prompt 改造让 deepseek 思维链模仿灰测神必模型的说话方式，作用于 dsh 会话输出。 | `npx @deepseek-ai/dsh plugin --profile web add github:XuezuoYS/dsh-IamDeepSeekV4ga` | MIT；纯娱乐性质；readme 自述基于玄学，效果随机。 |
 | [YohtHill/dsh-plugin-greeter](https://github.com/YohtHill/dsh-plugin-greeter) | 每个会话开始时以不同措辞问候用户，并记住用户名字（个性化问候） | `dsh plugin --profile web add dsh-plugin-greeter` | 未发现 |
+| [Gxk96/dsh-ai-battle](https://github.com/Gxk96/dsh-ai-battle) | 把等待 AI 跑任务的时间，变成与AI进行Battle（小游戏对决）：内置扫雷/数独/华容道等多种小游戏，任务复杂度自动映射游戏难度，系统随机选择游戏类型，AI 完成任务前通关即获胜。  | `dsh plugin --profile web add github:Gxk96/dsh-ai-battle` | MIT；纯娱乐：宿主经 loopback HTTP（/ms/api，2s 轮询）读写状态、持久化到 $DSH_HOME/storages/dsh-ai-battle.json；无网络外发、无凭据、无外部依赖 |
 
 ### 搜索、浏览与知识工作流
 
