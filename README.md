@@ -290,6 +290,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [XCNXNXNX/dsh-portable-tavern](https://github.com/XCNXNXNX/dsh-portable-tavern) | 便携酒馆：RPG 式 SillyTavern V2/V3 角色卡生成、酒馆角色扮演聊天、世界书生成/补全、角色卡 JSON/PNG 导入导出、面板主题与本地音乐。Node 半经 webServer 注册 /api/dsh-portable-tavern 路由并调用官方 llm 服务，浏览器半经 slots 挂载面板。 | `git clone <repo> && pnpm install && pnpm build（lib/ 已提交，profile 安装无需再构建）；dsh plugin --profile web add <repo路径>（库内 cordis.patch.yml 经 dsh.bundle.patch 注入 web profile roster）` | BSD-3-Clause；娱乐/角色扮演插件；角色卡内容会进入模型调用。 |
 | [XuezuoYS/dsh-IamDeepSeekV4ga](https://github.com/XuezuoYS/dsh-IamDeepSeekV4ga) | 娱乐插件：基于（玄学）prompt 改造让 deepseek 思维链模仿灰测神必模型的说话方式，作用于 dsh 会话输出。 | `npx @deepseek-ai/dsh plugin --profile web add github:XuezuoYS/dsh-IamDeepSeekV4ga` | MIT；纯娱乐性质；readme 自述基于玄学，效果随机。 |
 | [YohtHill/dsh-plugin-greeter](https://github.com/YohtHill/dsh-plugin-greeter) | 每个会话开始时以不同措辞问候用户，并记住用户名字（个性化问候） | `dsh plugin --profile web add dsh-plugin-greeter` | 未发现 |
+| [bowenliang123/dsh-context](https://github.com/bowenliang123/dsh-context) | Context insight panel: see what the model's context window is made of and how it evolves — composition vs. window size, per-request history, compression/injection events, and per-message token stats. | `dsh plugin --profile web add dsh-context` | Apache-2.0；Read-only observer of local session logs; no network, no credentials, no model calls. |
 
 ### 搜索、浏览与知识工作流
 
