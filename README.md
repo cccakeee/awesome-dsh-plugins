@@ -435,6 +435,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [shengsheng90/DSH-taskboard](https://github.com/shengsheng90/DSH-taskboard) | Native taskboard: SQLite projects/tasks/workflows/automation, dsh Taskboard sidebar UI, in-process taskboard_* agent tools, manage-taskboard skill, headless JSON CLI. | `dsh plugin --profile web add -w <path>/shengsheng-dsh-taskboard-<ver>.tgz (build+pack first; lib/ is gitignored)` | Apache-2.0 |
 | [omdsh-dev/dsh-office](https://github.com/omdsh-dev/dsh-office) | 办公文档工具集（14 个工具）：生成/读取/编辑 .xlsx（含公式重算与审计）、PDF（创建/读取/合并/拆分）、.pptx（生成/读取/替换）、.docx，从 Tianshu 移植到 dsh cordis 工具模型 | `dsh plugin --profile <name> add @huiliyi37/dsh-office；dsh --profile <name>（要求 dsh ≥ 0.1.0-rc.5）` | Apache-2.0；读写本地 office 文档文件；无外部 API |
 | [Vladimir-Human/ru-marketplace-mcp](https://github.com/Vladimir-Human/ru-marketplace-mcp) | 9 个俄罗斯电商 + 淘宝的只读 MCP 服务器（价格/库存/评分/评论/比价），DSH 包自带 13 个 Agent Skills，MCP 行默认关闭以省 token，价格对比约 0.9k tokens | `dsh plugin --profile web add github:Vladimir-Human/ru-marketplace-mcp#path:/dsh; 再 git clone + uv sync --frozen + 设 RU_MARKETPLACE_MCP_DIR` | MIT；MCP 行默认关闭，需手动设 RU_MARKETPLACE_MCP_DIR 指向本地克隆并重启 profile 才启用 |
+| [263311487-ux/dsh-verify](https://github.com/263311487-ux/dsh-verify) | 智能体交付物的独立浏览器验收测试：JSON 清单驱动真实 Chromium，断言计算样式与像素差异，输出 HTML 报告与 0/1 退出码（npm CLI / GitHub Action / MCP Server） | `dsh plugin --profile web add dsh-verify` | MIT；Playwright 需下载 Chromium，会真实访问目标页面 |
 
 ### 自动化、会话、学习与记忆
 
