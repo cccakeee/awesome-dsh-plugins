@@ -24,5 +24,6 @@
 | [agentic-control-plane/dsh-acp-plugin](https://github.com/agentic-control-plane/dsh-acp-plugin) | Agentic Control Plane for dsh: policy-checks every tool call before it runs and records every allow/block/ask decision; agentTier configurable (interactive/background, headless resolves ask→deny). | `dsh plugin --profile <your-profile> add dsh-plugin-acp (or dsh plugin add github:agentic-control-plane/dsh-acp-plugin; override the row in profile cordis.patch.yml)` | MIT |
 | [dongsheng123132/dsh-release-proof](https://github.com/dongsheng123132/dsh-release-proof) | 发布供应链证据 (release evidence): 可复现的多来源发布物 inspect/verify（软件供应链/工件校验）。 | `dsh plugins install github:dongsheng123132/dsh-release-proof` | MIT |
 | [securstack/securstack-dsh-plugin](https://github.com/securstack/securstack-dsh-plugin) | SecurStack 安全扫描适配：仓库安全扫描、策略门禁、doctor 诊断、JSON CLI 结果，供 AI agent 安全调用 | `dsh plugin --profile securstack add @securstack/dsh-plugin` | MIT；DeepSeek Harness developer preview，兼容性待验证 |
+| [niaccky/dsh-install-guard](https://github.com/niaccky/dsh-install-guard) | DSH 执行 npm install 前的四维安全门禁：漏洞（OSV.dev）、SPDX 许可证、Bundlephobia gzip 体积与包健康度/typosquat，返回 allow / ask / deny；另提供只读 dep_check 工具。 | `dsh plugin --profile web add dsh-install-guard` | MIT；审计时会把包名/版本发送到 npm registry、OSV.dev、Bundlephobia 与 npm downloads API（无 API key，不发源码）。 |
 
 ← [返回 README](../../README.md)
