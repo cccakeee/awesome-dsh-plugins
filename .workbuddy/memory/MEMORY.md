@@ -104,3 +104,13 @@
   attempt; the rerun passed the exact-set gate. Verification passed: `aggregate.py --render-only`,
   `generate_docs.py --strict` (`unmapped=[]`), 9 unittest cases, py_compile, `git diff --check`,
   and case-insensitive duplicate-key checks for all four tables.
+- **2026-09-03 (daily / Thursday, Asia/Shanghai; run at 02:40 +0800):** actionable scan coverage
+  passed with `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
+  `leaves=6`, `failures=[]`, `over_cap=[]`, and 920 unique repositories. Star floor was 10;
+  `above_floor=17`, `skipped=0`. Verdicts: 8 `verified_plugin`, 2 `verified_skill`, 1
+  `watchlist`, 5 `related`, 1 `rejected`. Atomic merge added 10 rows to `repositories.csv`,
+  17 to `dsh-plugin-topic-candidates.csv`, 17 to `audit-results.csv`, and 10 to
+  `verified-plugins.csv`. Backup: `/tmp/dsh-curator-backup-ftqj_4n8`. Verification passed:
+  exact review-set/schema validation, `aggregate.py --render-only`, `generate_docs.py --strict`
+  (`unmapped=[]`), 9 unittest cases, py_compile, `git diff --check`, and case-insensitive
+  duplicate-key checks for all four tables.
