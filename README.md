@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2591-2563eb)
-![Verified](https://img.shields.io/badge/verified-1794-16a34a)
+![Verified](https://img.shields.io/badge/verified-1795-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-09-03。** 本版主目录收录 **1794 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2591 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-09-03。** 本版主目录收录 **1795 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2591 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -178,6 +178,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [delef/dsh-plugin-auto-review](https://github.com/delef/dsh-plugin-auto-review) | Automatically reviews native DSH tool approval requests through a configured DSH LLM route, with Web controls, delegated-session inheritance, and fail-closed handling. | `dsh plugin --profile web add dsh-plugin-auto-review` | Apache-2.0；The selected provider receives bounded approval context and its model may allow a tool call; keep DSH sandbox and permission boundaries enabled and review the provider's data handling. |
 | [KongFangXun/sofagent](https://github.com/KongFangXun/sofagent) | Adds audit, rollback, governance, constraint injection, ontology, and workflow controls to DSH. | `skillhub install cordis-plugin-sofagent-audit (repeat with cordis-plugin-sofagent-rollback, cordis-plugin-sofagent-inject, cordis-plugin-sofagent-evolve, cordis-plugin-sofagent-ontology, cordis-plugin-sofagent-commons, cordis-plugin-sofagent-gate, cordis-plugin-sofagent-daemon, or cordis-plugin-sofagent-fde)` | MIT；The root repository is a monorepo and the DSH units are the individual engine/dsh-plugins packages; install only the specific family members needed. |
 | [Hyna-hla/dsh-remote](https://github.com/Hyna-hla/dsh-remote) | Pair a mobile client with DSH for remote sessions, approvals, MCP/file browsing, and token-gated host access. | `git clone --depth 1 https://github.com/Hyna-hla/dsh-remote.git && cd dsh-remote/dsh-remote-access && npm pack && dsh plugin --profile web add ./dsh-remote-access-2.5.1.tgz; restart DSH web.` | MIT；The repository root mixes the Android app and plugin, and its nested README still names v2.4.1 while package.json is v2.5.1; install from dsh-remote-access and review exposure/tunnel settings carefully. |
 | [HakureiMonika/dsh-sandbox-escalation-fix](https://github.com/HakureiMonika/dsh-sandbox-escalation-fix) | Project per-session sandbox escalation schemas and suppress redundant escalation retries in DSH. | `dsh plugin --profile web add github:HakureiMonika/dsh-sandbox-escalation-fix#c209f3358853e8c486cf0bfe6cfbb79c88a0bc0a` | MIT；This is an independent community plugin, and its package repository/homepage metadata still references JUSTMONIKA2022; use the canonical HakureiMonika URL and the pinned commit above. Compatibility is limited to the DSH versions listed in README.md. |
@@ -187,9 +188,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [PensiveFei/dsh-secure-audit](https://github.com/PensiveFei/dsh-secure-audit) | DSH 只读安全与合规插件：提示注入/越狱检测（规则引擎+可选模型分类器）、中文 PII（手机号/身份证/银行卡等）脱敏、本地配置安全审计（密钥/文件权限/会话文件/环境变量），输出脱敏报告并注册 security-review 技能 | `dsh plugin add dsh-secure-audit（或从 GitHub release tarball 安装：dsh plugin add github:PensiveFei/dsh-secure-audit#<commit>）` | MIT；仅针对 dsh-tools 0.1.0-rc.7 测试，DSH 尚未 1.0，升级后需重新验证；检测为启发式规则，可能漏报误报；仓库创建于 2026-08-19，较新且星标少 |
 | [inmny/dsh-sandbox-escalation-fix](https://github.com/inmny/dsh-sandbox-escalation-fix) | Prevent repeated same-or-lower sandbox requests from failing while preserving genuine escalation approval checks. | `dsh plugin --profile web add dsh-plugin-sandbox-escalation-fix@0.1.2` | MIT；The implementation is tightly coupled to DSH 0.1.0-rc.6 ToolDefinition internals; retest after every DSH upgrade and remove it once upstream accepts redundant no-op escalation requests. |
 | [niaccky/dsh-install-guard](https://github.com/niaccky/dsh-install-guard) | 拦截 DSH bash 工具中的 npm install：解析命令后并行审计漏洞（OSV.dev）/许可证（SPDX）/体积（Bundlephobia）/健康度（typosquat），按策略返回 allow / ask / deny；另注册只读 dep_check 工具 | `dsh plugin --profile web add dsh-install-guard` | MIT；审计时向 npm registry、OSV.dev、Bundlephobia、npm downloads API 发送包名与版本；无 API key、不读源码；默认 fail-open，可配 failClosed: true |
-| [ang-XWBWZ/dsh-approval-ai](https://github.com/ang-XWBWZ/dsh-approval-ai) | AI 审批应答器:用统一 LLM 路由自动应答 DSH 审批提示,带 fail-closed 策略检查;注册原生 /approval-ai 斜杠命令,设置经 approval-ai settings 命名空间实时生效,无需手改 cordis.patch.yml。 | `pnpm dsh plugin --profile approval-ai add @llangtop/dsh-approval-ai@next (dev: pnpm dsh plugin --profile approval-ai-local add /mnt/data/demo/dsh插件/approval-ai or add the packed .tgz)` | MIT；Prerelease version; pin the exact tag and review the fail-closed policy rules before use on production profiles. |
 
-> 该分类共 **30** 个已核验条目，[查看完整清单 →](docs/categories/security.md)
+> 该分类共 **31** 个已核验条目，[查看完整清单 →](docs/categories/security.md)
 
 ### 聊天与 IM
 
