@@ -114,6 +114,18 @@
   exact review-set/schema validation, `aggregate.py --render-only`, `generate_docs.py --strict`
   (`unmapped=[]`), 9 unittest cases, py_compile, `git diff --check`, and case-insensitive
   duplicate-key checks for all four tables.
+- **2026-09-05 (daily / Saturday, Asia/Shanghai):** actionable refresh passed with
+  `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
+  `leaves=6`, `failures=[]`, `over_cap=[]`, and 955 unique repositories. Star floor was 10;
+  `above_floor=13`, `skipped=0`. Verdicts: 10 `verified_plugin`, 1 `verified_skill`, 0
+  `watchlist`, 2 `related`, 0 `rejected`. Atomic merge added 11 rows to `repositories.csv`, 13
+  to `dsh-plugin-topic-candidates.csv`, 13 to `audit-results.csv`, and 11 to
+  `verified-plugins.csv`. Backup: `/tmp/dsh-curator-backup-9uc1ckz8`. An unexpected stale
+  `/tmp/dsh_review_batch_4.json` was preserved at `/tmp/dsh-topic-curator-stale.m1CO6L`
+  before the successful exact-set merge. Pre-commit verification passed:
+  `aggregate.py --render-only`, `generate_docs.py --strict` (`unmapped=[]`), 9 unittest cases,
+  py_compile, `git diff --check`, and case-insensitive duplicate-key checks for all four tables;
+  post-commit synchronization recheck also passed.
 - **2026-09-04 (daily / Friday, Asia/Shanghai; run at 02:03 +0800):** actionable scan coverage
   passed with `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
   `leaves=6`, `failures=[]`, `over_cap=[]`, and 939 unique repositories. Star floor was 10;
