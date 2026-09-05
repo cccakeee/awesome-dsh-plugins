@@ -136,3 +136,17 @@
   exact review-set/schema validation, `aggregate.py --render-only`, `generate_docs.py --strict`
   (`unmapped=[]`), 9 unittest cases, py_compile, `git diff --check`, and case-insensitive
   duplicate-key checks for all four tables.
+- **2026-09-05 (daily / Saturday, Asia/Shanghai):** actionable scan coverage passed with
+  `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
+  `leaves=6`, `failures=[]`, `over_cap=[]`, and 968 unique repositories. Star floor was 10;
+  `above_floor=11`, `skipped=0`. Verdicts: 11 `verified_plugin`, 0 `verified_skill`, 0
+  `watchlist`, 0 `related`, 0 `rejected`. Atomic merge added 11 rows to `repositories.csv`,
+  11 to `dsh-plugin-topic-candidates.csv`, 11 to `audit-results.csv`, and 11 to
+  `verified-plugins.csv`. Backup: `/tmp/dsh-curator-backup-076xblkx`. Stale
+  `/tmp/dsh_review_batch_3.json` was preserved at `/tmp/dsh-topic-curator-stale.9xDzDW/`.
+  Verification passed: exact review-set/schema validation, `aggregate.py --render-only`,
+  `generate_docs.py --strict` (`unmapped=[]`), 9 unittest cases, py_compile,
+  `git diff --check`, and case-insensitive duplicate-key checks for all four tables. The
+  pre-existing `data/README.md` change (working-tree hash
+  `7ce1553dc72c8a03e2c284034b0a93f2c9388f12`) and existing stash were preserved; the
+  `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
