@@ -178,3 +178,19 @@
   `7ce1553dc72c8a03e2c284034b0a93f2c9388f12`) and existing stash
   `bbf884d2e65f1be852a841e5ca6f5e517d7f583c` were preserved; `.workbuddy/automations/` was
   not staged, committed, or pushed.
+- **2026-09-10 (daily / Thursday, Asia/Shanghai):** actionable scan coverage passed with
+  `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
+  `leaves=6`, `failures=[]`, `over_cap=[]`, and 1,030 unique repositories. Star floor was 10;
+  `above_floor=1`, `skipped=0` (`dushaobindoudou/dsh-freeroute`, 11 stars). The single review
+  batch passed exact repository-set, 20-field schema, enum, timestamp, and verdict/main-directory
+  checks; verdicts were 1 `verified_plugin`, 0 `verified_skill`, 0 `watchlist`, 0 `related`, and
+  0 `rejected`. Atomic merge added 1 row to each of `repositories.csv`,
+  `dsh-plugin-topic-candidates.csv`, `audit-results.csv`, and `verified-plugins.csv`. Backup:
+  `/tmp/dsh-curator-backup-t193y462`. Documentation verification passed:
+  `aggregate.py --render-only`, `generate_docs.py --strict` (`unmapped=[]`, 44 category pages,
+  1,884 verified entries, 2,678 catalog entries), 9 unittest cases, py_compile,
+  `git diff --check`, and case-insensitive duplicate-key checks for all four tables. The
+  pre-existing `data/README.md` was restored byte-for-byte with hash
+  `e32d1aae9ab46094030d4224175958671b81838caf790cb4b0fb19cbd9faac19`; stash
+  `dsh-topic-curator-2026-09-10-preexisting-data-readme` and the historical stash remain
+  preserved. The `.workbuddy/automations/` directory was not read, staged, committed, or pushed.

@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-2677-2563eb)
-![Verified](https://img.shields.io/badge/verified-1883-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-2678-2563eb)
+![Verified](https://img.shields.io/badge/verified-1884-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-09-11。** 本版主目录收录 **1883 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2677 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-09-11。** 本版主目录收录 **1884 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2678 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **2677 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **2678 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **2677 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **2678 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -278,6 +278,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | --- | --- | --- | --- |
 | [Cerbur/clutch-dsh](https://github.com/Cerbur/clutch-dsh) | Provides installable DSH extensions for worktree-oriented sessions, deterministic or LLM-assisted titles, brainstorming commands/skills, and a fireworks tool. | `dsh plugin --profile web add @cerbur/clutch-dsh-worktree; dsh plugin --profile web add @cerbur/clutch-dsh-fireworks; dsh plugin --profile web add @cerbur/clutch-dsh-title; dsh web` | MIT；The repository root is not itself an installable plugin. @cerbur/clutch-dsh-discuss is listed in the README but was not present in the npm registry when checked, so use the confirmed package installs above or review its source-install procedure separately. |
 | [ClickPM/dsh-acp-interactive](https://github.com/ClickPM/dsh-acp-interactive) | Runs DSH coding-agent sessions inside an ACP-compatible editor with tools, permissions, commands, MCP, and in-process subagents. | Run `npm install --global deepseekharness-acp-interactive`, then `dsh-acp-interactive --setup`, and register the installed `dsh-acp-interactive` command as an ACP agent in Zed settings. | MIT；This is an editor-facing self-contained Cordis/DSH deployment, not a package added to an existing profile with `dsh plugin add`; its Node engine requires ^22.19.0 or >=24.0.0. |
+| [dushaobindoudou/dsh-freeroute](https://github.com/dushaobindoudou/dsh-freeroute) | Routes DSH model requests across built-in and custom upstreams, rotating keys and failing over before the first token. | `dsh plugin --profile web add dsh-freeroute; configure a provider key in Settings -> Models -> Free, then select freeroute/auto or use http://127.0.0.1:3080/freeroute/v1.` | MIT；package.json repository/homepage URLs still point to 0xrushmoon/dsh-freeroute, and package-lock.json says 0.8.4 while package.json is 0.8.5; the installed package dry run is 0.8.5. |
 | [wingsky-1/dsh-plugin-hub](https://github.com/wingsky-1/dsh-plugin-hub) | Install notifications, provider usage, LAN access, MCP management, file preview, and isolated browser verification as one DSH bundle. | `dsh plugin --profile web add @wingsky-1/dsh-plugins-all; restart dsh web after installation. Install either this bundle or its individual packages, not both.` | MIT；The bundle targets the dsh 0.1.2-rc.1 contract and rejects alpha compatibility; do not install it together with a matching individual package, and review LAN, filesystem, MCP, and browser exposure before enabling it. |
 | [Canary-Builds/dhs-connect](https://github.com/Canary-Builds/dhs-connect) | Connects DSH to ChatGPT models using OAuth sign-in through the official Codex app-server, with streaming and a DSH tool-call bridge. | `dsh plugin --profile web add @canary-builds/dsh-connect` | MIT；Requires Node.js 22.19+, the official Codex CLI, and an eligible ChatGPT account; prompts and tool results are sent to OpenAI. Remove adapters that already claim the openai-codex route, and retest after DSH or Codex upgrades because the documented baseline is DSH 0.1.1-rc.2 and Codex 0.153.4. |
 | [ZhangFengshun/dsh-remote-ssh](https://github.com/ZhangFengshun/dsh-remote-ssh) | Connects DSH sessions to SSH hosts for remote file operations, terminals, sync, and command execution. | `dsh plugin --profile web add @zhangfengshun/dsh-remote-ssh@2.3.6` | MIT；Requires dsh-better-sidebar >=0.15 and must be installed after it; remote operations are consequential. |
@@ -285,9 +286,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Axiaohungry/dsh-llm-workbuddy](https://github.com/Axiaohungry/dsh-llm-workbuddy) | Adds WorkBuddy model discovery and inference to DSH with API-key or browser-login token authentication. | `npx --yes @axiaohungry/dsh-llm-workbuddy@latest install; restart DSH. Web-only: dsh plugin --profile web add @axiaohungry/dsh-llm-workbuddy@latest.` | MIT；Third-party WorkBuddy adapter; users must trust the WorkBuddy service and its persisted tokens, and DSH compatibility is constrained to the declared 0.1.2-alpha.2 to <0.2.0 range. |
 | [LivXue/dsh-plugin-shop](https://github.com/LivXue/dsh-plugin-shop) | Adds a DSH Settings shop for browsing, checking, installing, enabling, and updating plugins from the generated catalog. | `npm install -g @deepseek-ai/dsh pnpm && dsh plugin --profile web add dsh-plugin-shop@0.7.4; restart the DSH profile and open Settings -> Plugins -> Plugin shop.` | Apache-2.0；The project explicitly says installation is complete trust because mounted plugins receive full DSH privileges; pin versions and review each listed plugin rather than treating the shop's catalog as a sandbox or human audit. |
 | [opdsh/unity-plugin](https://github.com/opdsh/unity-plugin) | Drive Unity Editor and CLI operations from DSH, including scene commands, C# evaluation, builds, tests, and skills. | `dsh plugin --profile <name> add @opdsh/unity-plugin; dsh --profile <name> --dump-config; dsh --profile <name>` | MIT；Requires an authenticated, licensed Unity CLI; activation fetches Unity-Technologies/skills by default, and raw C#/CLI capabilities can make destructive project or account changes. |
-| [Kihara777/NixKits](https://github.com/Kihara777/NixKits) | Declaratively runs DSH on NixOS and mounts the included NixOS shell/diagnostic and API-balance extensions. | `In /etc/nixos/flake.nix set inputs.nixkits.url = "github:Kihara777/NixKits"; add nixkits.nixosModules.dsh to nixosConfigurations.<host>.modules; configure { nixkits.dsh.enable = true; nixkits.dsh.plugins.packages = [{ package = pkgs.dsh-nixos-shell; id = "nixos-shell"; name = "@kihara777/dsh-nixos-shell"; }]; } and apply the NixOS configuration.` | MIT；This is an aggregate Nix flake, so unrelated packages, overlays, and skills are not DSH catalog entries; only the documented DSH module/plugin paths were considered. Enable sudo and autoAuth only on a trusted host and network. |
 
-> 该分类共 **241** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **242** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 
