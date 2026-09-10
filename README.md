@@ -398,6 +398,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [yejiming/MuseAI](https://github.com/yejiming/MuseAI) | AI 角色与文字冒险桌面应用 | 支持 DeepSeek API 不等于支持 DSH 插件协议 |
 | [PM-Shawn/Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 本地优先桌面 Agent | 未核验到 DSH Profile/Bundles 挂载方式 |
 | [cofy-x/axern](https://github.com/cofy-x/axern) | Agent 沙箱与持久化服务 | 是可关联基础设施，不是 DSH 插件 |
+| [dsplugin.app](https://dsplugin.app/)（[vbarter/dsh-plugin-registry](https://github.com/vbarter/dsh-plugin-registry)） | 非官方社区 DeepSeek Harness 插件目录 / 注册表 | 社区发现与索引站点，不是可装载原生插件；含 Manifest / `dsh.bundle` 校验 |
 
 ## 安装与安全
 

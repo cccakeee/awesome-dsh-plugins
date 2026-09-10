@@ -397,6 +397,7 @@ These projects are intentionally outside the native directory because the inspec
 | [yejiming/MuseAI](https://github.com/yejiming/MuseAI) | AI companion / narrative desktop application | DeepSeek API support is not evidence of a DSH plugin protocol |
 | [PM-Shawn/Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | Local-first desktop agent | No verified DSH profile/bundle mounting evidence |
 | [cofy-x/axern](https://github.com/cofy-x/axern) | Agent sandbox service | Related infrastructure, not a DSH plugin |
+| [dsplugin.app](https://dsplugin.app/) ([vbarter/dsh-plugin-registry](https://github.com/vbarter/dsh-plugin-registry)) | Unofficial community DeepSeek Harness plugin directory / registry | Community discovery site, not a DSH-loadable plugin; Manifest / `dsh.bundle` checks |
 
 ## Installation and safety
 
