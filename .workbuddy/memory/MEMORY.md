@@ -194,3 +194,20 @@
   `e32d1aae9ab46094030d4224175958671b81838caf790cb4b0fb19cbd9faac19`; stash
   `dsh-topic-curator-2026-09-10-preexisting-data-readme` and the historical stash remain
   preserved. The `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-11 (daily / Friday, applicable task date; scan window reported 2026-09-12 02:02-02:03 +0800):**
+  Actionable scan coverage passed with `coverage_ok=true`, `planned/completed=6/6`,
+  `count_queries=6`, `fetch_queries=6`, `leaves=6`, `failures=[]`, `over_cap=[]`, and 1,042
+  unique repositories. Star floor was 10; `above_floor=14`, `skipped=0`. Three review batches
+  passed exact-set/schema validation for all 14 repositories: 12 `verified_plugin`, 0
+  `verified_skill`, 0 `watchlist`, 2 `related`, and 0 `rejected`. Atomic merge added 12 rows
+  to `repositories.csv`, 14 to `dsh-plugin-topic-candidates.csv`, 14 to `audit-results.csv`,
+  and 12 to `verified-plugins.csv`. Backup: `/tmp/dsh-curator-backup-lvuyph9o`; stale prior
+  review files were preserved at `/tmp/dsh-topic-curator-stale.Ky9Agw`. Documentation generation
+  passed: `aggregate.py --render-only`, `generate_docs.py --strict` (`unmapped=[]`, 44 category
+  pages, 1,896 verified entries, 2,690 catalog entries). Nine unittest cases, py_compile,
+  `git diff --check`, and case-insensitive duplicate-key checks for all four tables passed.
+  The pre-existing `data/README.md` remained byte-for-byte unchanged with hash
+  `e32d1aae9ab46094030d4224175958671b81838caf790cb4b0fb19cbd9faac19`; the new stash and
+  historical stashes remain preserved. The `.workbuddy/automations/` directory was not read,
+  staged, committed, or pushed.
