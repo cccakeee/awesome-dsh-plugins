@@ -211,3 +211,32 @@
   `e32d1aae9ab46094030d4224175958671b81838caf790cb4b0fb19cbd9faac19`; the new stash and
   historical stashes remain preserved. The `.workbuddy/automations/` directory was not read,
   staged, committed, or pushed.
+- **2026-09-12 (daily / Saturday; runtime `2026-09-12T18:28:18Z`, host local clock
+  `2026-09-13T02:28:18+0800`):** Main checkout preflight passed on `main` after
+  `git fetch origin main` and `git rebase origin/main`; the pre-existing
+  `data/README.md` was protected byte-for-byte (hash
+  `7ce1553dc72c8a03e2c284034b0a93f2c9388f12`) and the existing stashes remained preserved.
+  The requested `.workbuddy/skills/dsh-topic-curator` paths that do not exist in this
+  checkout were replaced only by their canonical equivalents: `.workbuddy` supplies the
+  scan/agent references, while `data/curation-criteria.yaml` and `scripts/{aggregate.py,
+  merge_audit_verdicts.py,generate_docs.py}` are authoritative.
+  Actionable scan coverage passed with `coverage_ok=true`, `planned/completed=6/6`,
+  `count_queries=6`, `fetch_queries=6`, `leaves=6`, `failures=[]`, `over_cap=[]`, and 1,047
+  unique repositories. Star floor was 10; `above_floor=6`, `skipped=0`:
+  `reactive-resume/reactive-resume`, `yinnho/aginxbrowser`, `a86582751/dsh-nexttavern`,
+  `zaizaizhao/dsh-branchmark`, `00080000/dsh-project-memory`, and
+  `Zoria-Lind/dsh-token-optimizer`.
+  Three exact two-repository review batches were dispatched. Batch 1 and Batch 3 passed;
+  Batch 2 produced no file and was completed by the main agent from GitHub metadata,
+  README, package manifests, patch files, and concrete load paths. An old temporary review
+  set was preserved at `/tmp/dsh-topic-curator-stale.JgdcHP`; all six current reviews passed
+  exact-set/20-field/schema checks and were `verified_plugin` (`reactive-resume`'s live API
+  star count was 42,528 versus the scan input's 42,527 and the difference was recorded in
+  evidence). Atomic merge added 6 rows to each of `repositories.csv`,
+  `dsh-plugin-topic-candidates.csv`, `audit-results.csv`, and `verified-plugins.csv`;
+  backup `/tmp/dsh-curator-backup-tozf1l11`.
+  `aggregate.py --render-only` passed with 2,696 catalog rows and 1,564 repository verified
+  flags; `generate_docs.py --strict` passed with 1,902 verified entries, 44 category pages,
+  snapshot `2026-09-12`, and `unmapped=[]`. Nine unittest cases, py_compile,
+  `git diff --check`, and case-insensitive primary-key checks passed. The project
+  `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
