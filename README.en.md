@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2690-2563eb)
-![Verified](https://img.shields.io/badge/verified-1896-16a34a)
+![Verified](https://img.shields.io/badge/verified-1897-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -54,6 +54,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [hutao562/dsh-remote-dsh](https://github.com/hutao562/dsh-remote-dsh) | Adds a row at the top of the sidebar that switches the whole Web GUI to another DSH host reached over a loopback port, with that host's session state on the row (running, unread activity, or waiting for your answer). | `dsh plugin --profile web add dsh-remote-dsh` | MIT; The row loads another DSH host's Web GUI into the current page over a loopback port, so that host's sessions are visible and drivable from this page; only pair hosts you control. The remote must be reachable on a loopback address (a public origin or a bare Tailscale IP returns 401 because the session cookie is HttpOnly; SameSite=Strict). No security audit was performed. |
 | [sz1698/dsh-bg-new](https://github.com/sz1698/dsh-bg-new) | Adds a DSH web wallpaper/background drawer for preset, color, gradient, image, and video backgrounds, plus a bg_apply tool. | `dsh plugin --profile web add github:sz1698/dsh-bg-new` | MIT; Community plugin; README says local images/videos are persisted and served locally, and the video path has no size limit. |
 | [TOBYCAI/dsh-sessions-manager](https://github.com/TOBYCAI/dsh-sessions-manager) | Adds DSH settings and sidebar controls for session archive/restore, cross-workspace moves, trash, lineage, search, statistics, and export. | `dsh plugin --profile desktop add "github:TOBYCAI/dsh-sessions-manager"` | MIT; Permanent purge and cross-workspace moves are guarded filesystem operations; the README documents runtime-version and active-writer limitations. |
 | [Angel2518975237/deepseek-harness-hello-kitty-suite](https://github.com/Angel2518975237/deepseek-harness-hello-kitty-suite) | Themes the DSH Web interface and notifies the user with a toast, sound, or system notification when an agent turn ends. | `dsh plugin --profile web add https://github.com/Angel2518975237/deepseek-harness-hello-kitty-suite.git; dsh web` | MIT; The client polls every 700 ms and requests browser notification permission. Hello Kitty names and character assets may carry third-party trademark or distribution constraints beyond the repository's MIT code license. |
@@ -65,7 +66,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Amakurai/dsh-liketavern](https://github.com/Amakurai/dsh-liketavern) | Adds character cards, prompt presets, lorebooks, personas, long-term memory, and floor branching to dsh web. | `dsh plugin --profile web add github:Amakurai/dsh-liketavern` | MIT; Requires Node >=24 and a matching pre-release DSH host; the README documents the dsh 0.1.2-rc.1 peer set and known platform limits. |
 | [baisama-cloud/dsh-galgame-generator](https://github.com/baisama-cloud/dsh-galgame-generator) | Scans workspace scripts and assets, then builds a branching Galgame with sprites, audio, save slots, and a Web player. | `pnpm pack; cd ~/.dsh/profiles/web; pnpm add /absolute/path/to/dsh-galgame-generator-0.4.0.tgz; restart dsh web` | MIT; Installation is manual tarball/profile wiring and depends on the committed built lib/ artifacts; compatibility follows DSH preview APIs. |
 
-> This category has **258** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
+> This category has **259** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
 
 ### Sessions & Messages
 

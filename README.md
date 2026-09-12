@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2690-2563eb)
-![Verified](https://img.shields.io/badge/verified-1896-16a34a)
+![Verified](https://img.shields.io/badge/verified-1897-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -55,6 +55,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [hutao562/dsh-remote-dsh](https://github.com/hutao562/dsh-remote-dsh) | 在侧边栏顶部加一行，点击后整页切换成另一台 DSH 主机的 Web GUI（通过回环端口访问），并在该行显示那台主机的会话状态（运行中、有新活动、正等你回答）。 | `dsh plugin --profile web add dsh-remote-dsh` | MIT；这一行会把另一台 DSH 主机的 Web GUI 加载进当前页面（走回环端口），那台主机的会话因此在当前页可见、可操作，请只配对你自己掌控的主机。远端必须能从回环地址访问（用公网域名或 Tailscale IP 直连会 401，因为会话 cookie 是 HttpOnly; SameSite=Strict）。未做安全审计。 |
 | [sz1698/dsh-bg-new](https://github.com/sz1698/dsh-bg-new) | Adds a DSH web wallpaper/background drawer for preset, color, gradient, image, and video backgrounds, plus a bg_apply tool. | `dsh plugin --profile web add github:sz1698/dsh-bg-new` | MIT；Community plugin; README says local images/videos are persisted and served locally, and the video path has no size limit. |
 | [TOBYCAI/dsh-sessions-manager](https://github.com/TOBYCAI/dsh-sessions-manager) | Adds DSH settings and sidebar controls for session archive/restore, cross-workspace moves, trash, lineage, search, statistics, and export. | `dsh plugin --profile desktop add "github:TOBYCAI/dsh-sessions-manager"` | MIT；Permanent purge and cross-workspace moves are guarded filesystem operations; the README documents runtime-version and active-writer limitations. |
 | [Angel2518975237/deepseek-harness-hello-kitty-suite](https://github.com/Angel2518975237/deepseek-harness-hello-kitty-suite) | Themes the DSH Web interface and notifies the user with a toast, sound, or system notification when an agent turn ends. | `dsh plugin --profile web add https://github.com/Angel2518975237/deepseek-harness-hello-kitty-suite.git; dsh web` | MIT；The client polls every 700 ms and requests browser notification permission. Hello Kitty names and character assets may carry third-party trademark or distribution constraints beyond the repository's MIT code license. |
@@ -66,7 +67,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Amakurai/dsh-liketavern](https://github.com/Amakurai/dsh-liketavern) | Adds character cards, prompt presets, lorebooks, personas, long-term memory, and floor branching to dsh web. | `dsh plugin --profile web add github:Amakurai/dsh-liketavern` | MIT；Requires Node >=24 and a matching pre-release DSH host; the README documents the dsh 0.1.2-rc.1 peer set and known platform limits. |
 | [baisama-cloud/dsh-galgame-generator](https://github.com/baisama-cloud/dsh-galgame-generator) | Scans workspace scripts and assets, then builds a branching Galgame with sprites, audio, save slots, and a Web player. | `pnpm pack; cd ~/.dsh/profiles/web; pnpm add /absolute/path/to/dsh-galgame-generator-0.4.0.tgz; restart dsh web` | MIT；Installation is manual tarball/profile wiring and depends on the committed built lib/ artifacts; compatibility follows DSH preview APIs. |
 
-> 该分类共 **258** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
+> 该分类共 **259** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
 
 ### 会话与消息
 
