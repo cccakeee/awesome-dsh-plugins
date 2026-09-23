@@ -358,3 +358,27 @@
   commit (`chore: record dsh topic curator 2026-09-22`); push was pending at
   memory-update time. The
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-23 (daily / Wednesday; host scan window `2026-09-24 02:05-02:06 +0800`):**
+  Actionable scan coverage passed with `coverage_ok=true`, `planned/completed=6/6`,
+  `count_queries=6`, `fetch_queries=6`, `leaves=6`, `failures=[]`, `over_cap=[]`, and
+  1,136 unique repositories. Star floor was 10; 10 candidates were reviewed. Two exact
+  review batches passed the 20-field/schema, enum, timestamp, and repository-set checks:
+  8 `verified_plugin`, 0 `verified_skill`, 0 `watchlist`, 2 `related`, and 0 `rejected`.
+  The promoted plugins were `slow-stack/mneme`, `PerryLink/jevcore`, `JRJRJPRO/dsh-chat-tree`,
+  `LAU-MARS/dsh-cad`, `Fantasality/dsh-origin-plugin`, `yanzwzz/dsh-whale-girl-pet`,
+  `Wenaixi/dsh-ponytail`, and `fengyungithub/dsh-short-video-studio`; `MnemosyneOS/mnemosyne`
+  and `klarkxy/dsh-editor` remained `related` because they are respectively an external MCP
+  service and a multi-package desktop workspace rather than root-installable DSH bundles.
+  Atomic merge added 8 rows to `repositories.csv`, 10 to `dsh-plugin-topic-candidates.csv`,
+  10 to `audit-results.csv`, and 8 to `verified-plugins.csv`; backup
+  `/tmp/dsh-curator-backup-16ozv1wb`. `LAU-MARS/dsh-cad` has a recorded license warning:
+  README/package metadata says MIT while the root `LICENSE` and GitHub metadata identify
+  Apache-2.0. Documentation checks passed: `aggregate.py --render-only` reported 2,792
+  aggregated repositories and `generate_docs.py --strict` reported 1,998 document entries,
+  44 category pages, and `unmapped=[]`. Nine unittest cases, py_compile, `git diff --check`,
+  and case-insensitive uniqueness checks for all four tables passed. The protected
+  `data/README.md` remained byte-for-byte unchanged with SHA-256
+  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. The catalog changes
+  are staged only in the working tree; commit and push remain pending. The
+  `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
