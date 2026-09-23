@@ -166,5 +166,6 @@
 | [YYTbit/dsh-plugin-rag](https://github.com/YYTbit/dsh-plugin-rag) | 本地知识库 RAG：索引项目文件（md/code/config），TF-IDF 关键词检索，注入系统提示，提供 `rag` CLI。 | `dsh plugin --profile your-profile add dsh-plugin-rag` | MIT；本地索引并读取项目文件（.env 亦在索引列表内），无网络/外部 API；注意敏感文件可能被索引注入。 |
 | [Zephyr-vibe/dsh-personalize](https://github.com/Zephyr-vibe/dsh-personalize) | Per-host personalization: global custom instructions, local long-term memory and reply-tone presets. | `` | MIT |
 | [zhujunpeng12/dsh-memory-system](https://github.com/zhujunpeng12/dsh-memory-system) | DSH 本地优先持久记忆基础设施（六层记忆闭环：热记忆/冷召回/授权写入/治理） | `` | MIT |
+| [Clearailhc/clearai-dsh](https://github.com/Clearailhc/clearai-dsh) | 为 DSH 带来认识论循环：每条结论由交付的证据算出，而非由模型宣告完成；研究过程沉淀为可检索的领域本体，携带证据链、支持等级与适用边界；互相矛盾的读数自动亮出交人裁决，而不是被静默合并。 | `dsh plugin --profile web add clearai-dsh` | Apache-2.0 |
 
 ← [返回 README](../../README.md)
