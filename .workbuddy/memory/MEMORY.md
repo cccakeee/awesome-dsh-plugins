@@ -379,6 +379,7 @@
   44 category pages, and `unmapped=[]`. Nine unittest cases, py_compile, `git diff --check`,
   and case-insensitive uniqueness checks for all four tables passed. The protected
   `data/README.md` remained byte-for-byte unchanged with SHA-256
-  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. The catalog changes
-  are staged only in the working tree; commit and push remain pending. The
+  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. Catalog commit
+  `cdca8c52` (`chore: record dsh topic curator 2026-09-23`) was pushed to `origin/main`;
+  the final memory state is recorded in the follow-up commit. The
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
