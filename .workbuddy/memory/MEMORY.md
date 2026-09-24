@@ -383,3 +383,24 @@
   `cdca8c52` (`chore: record dsh topic curator 2026-09-23`) was pushed to `origin/main`;
   the final memory state is recorded in the follow-up commit. The
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-25 (weekly / Friday; host scan window `2026-09-25 02:05-02:52 +0800`):**
+  Main checkout preflight passed on `main`; `origin/main` was fetched and already current,
+  the worktree was clean, historical stashes were preserved, and no current-run stash was
+  needed. Full topic coverage passed with `coverage_ok=true`, `planned/completed=44/44`,
+  `count_queries=198`, `fetch_queries=171`, `leaves=171`, `failures=[]`, `over_cap=[]`, and
+  16,050 unique repositories. Star floor was 10; `above_floor=14`, `skipped=13,587`.
+  Three exact review artifacts (`/tmp/dsh_review_20260925_batch_1.json` through batch 3)
+  passed the 20-field/schema, enum, timestamp, and repository-set checks: 13
+  `verified_plugin`, 0 `verified_skill`, 0 `watchlist`, 0 `related`, and 1 `rejected`
+  (`jiujiezongheti/zen-useragent`, unsafe request-identity/file-rewrite behavior).
+  Atomic merge added 13 rows to `repositories.csv`, 14 to `dsh-plugin-topic-candidates.csv`,
+  14 to `audit-results.csv`, and 13 to `verified-plugins.csv`; backup
+  `/tmp/dsh-curator-backup-wkvuchgf`. `aggregate.py --render-only` reported 2,805 unique
+  repositories and 1,673 CSV verified flags; `generate_docs.py --strict` reported 2,011
+  deduplicated verified entries, 44 category pages, snapshot `2026-09-25`, and
+  `unmapped=[]`. Nine unittest cases, py_compile, `git diff --check`, case-insensitive
+  uniqueness checks, and the expected-path boundary check passed. Protected `data/README.md`
+  remained byte-for-byte unchanged with SHA-256
+  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. The
+  `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
