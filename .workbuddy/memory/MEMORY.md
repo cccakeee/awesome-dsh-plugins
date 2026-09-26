@@ -404,3 +404,23 @@
   remained byte-for-byte unchanged with SHA-256
   `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. The
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-26 (daily / Saturday; host scan window `2026-09-27 02:07-03:18 +0800`):**
+  Main checkout started clean at `0432e9a`; all seven historical stashes were preserved.
+  Actionable scan coverage passed with `coverage_ok=true`, planned/completed `6/6`,
+  `1,175` unique repositories, no failures or over-cap partitions, and `22` candidates
+  above the `>10` star floor (`skipped=0`). Four exact review arrays were validated against
+  `above_floor`: `18 verified_plugin` and `4 related`, with no other verdicts. The merge
+  initially rejected `jaibhasin/dsh-browser-agent` because its review category was the
+  unsupported `web-browser`; it was normalized to the existing `automation` category and
+  the second atomic merge passed, adding 18 repository rows, 22 candidate rows, 22 audit
+  rows, and 18 verified rows; backup `/tmp/dsh-curator-backup-2sak_f8u`.
+  Documentation checks passed: `aggregate.py --render-only` reported `2,823` unique
+  repositories and `1,691` CSV verified flags; `generate_docs.py --strict` reported
+  `2,029` deduplicated verified entries, 44 category pages, snapshot `2026-09-26`, and
+  `unmapped=[]`. Nine unittest cases, py_compile, `git diff --check`, and case-insensitive
+  uniqueness checks for all four tables passed. Protected `data/README.md` remained
+  byte-for-byte unchanged with SHA-256
+  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`. Runtime summary
+  recorded at `2026-09-27T03:18:32+0800`; commit and push were pending. The
+  `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
