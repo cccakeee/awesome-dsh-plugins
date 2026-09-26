@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2805-2563eb)
-![Verified](https://img.shields.io/badge/verified-2011-16a34a)
+![Verified](https://img.shields.io/badge/verified-2012-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-09-25。** 本版主目录收录 **2011 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2805 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-09-26。** 本版主目录收录 **2012 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2805 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -276,6 +276,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [qikairo7/dsh-gemini-pool](https://github.com/qikairo7/dsh-gemini-pool) | 多账号 Google Gemini 提供商：按剩余额度挑选账号，遇 429 指数退避切换，后台探活已禁用账号。 | `dsh plugin --profile web add github:qikairo7/dsh-gemini-pool` | MIT；Reads Google account OAuth tokens from local profile storage and sends prompts to Google Antigravity / Cloud Code Assist endpoints. Reusing a Google AI Pro subscription through third-party clients violates Google's terms of service and has led to account bans; use accounts you can afford to lose. |
 | [1475505/miliastra-beyond-simulator](https://github.com/1475505/miliastra-beyond-simulator) | Edit, run, inspect, and test 2D+Lua games from a DSH session. | `dsh plugin --profile web add github:1475505/miliastra-beyond-simulator` | GPL-3.0-only；Simulator green status is not real-device validation; the README requires user-supplied 2D/Lua API knowledge for production game assets. |
 | [bychv/dsh-preset-enhance](https://github.com/bychv/dsh-preset-enhance) | Imports and edits SillyTavern presets, injects ordered prompt messages, and saves per-mode or per-session tool and MCP policies. | `dsh plugin --profile web add dsh-preset-enhance@0.3.2-rc.1` | MIT；The README install command is 0.3.2-rc.1 while package metadata is 0.3.2-rc.2; the README targets DSH >=0.1.5-rc.2 <0.1.6. |
 | [hyzyn/dsh-plugin-kit](https://github.com/hyzyn/dsh-plugin-kit) | Installs a coordinated suite of DSH management, developer-operation, and agent-tool panels. | `dsh plugin --profile web add @hyzyn/dsh-all; then restart dsh web. Source mount: pnpm install && pnpm build && dsh plugin --profile web add link:$(pwd).` | Apache-2.0；This is a multi-plugin family, not one narrow feature; avoid duplicate bundle rows and review SSH/SFTP, Docker mutation, and exec settings before enabling them. |
@@ -285,9 +286,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Noob-stupid/dsh-plugin-gating-hub](https://github.com/Noob-stupid/dsh-plugin-gating-hub) | Lists and toggles DSH plugin rows, searches GitHub/Gitee/custom sources, installs npm or Git repositories, manages skills, controls local server components, and runs framework upgrade/rollback flows. | `dsh plugin --profile web add @noob-stupid/dsh-plugin-console; # or: dsh plugin --profile web add github:Noob-stupid/dsh-plugin-hub` | MIT；The canonical repository is dsh-plugin-gating-hub, but README/package metadata still use the historical dsh-plugin-hub name and URL; the documented GitHub install string is preserved verbatim. The GitHub About URL redirects to the canonical repository, and exact language metadata was not available from the anonymous HTML panel. |
 | [Lenonss/DSH_VsCodeMode](https://github.com/Lenonss/DSH_VsCodeMode) | Edit workspace files in a Monaco-based DSH UI, review agent diffs, and use LSP navigation. | `dsh plugin --profile web add github:Lenonss/DSH_VsCodeMode#v0.1.23` | MIT；README installation examples pin v0.1.23, while package.json reports version 0.4.6; the documented pinned command is preserved here. |
 | [yangbobo2021/relay-dsh-plugin-codex](https://github.com/yangbobo2021/relay-dsh-plugin-codex) | Adds a native Codex mode with one Codex App Server thread per DSH session, model/reasoning selection, streaming, approvals and questions, images, session import/fork, and optional terminal transport. | `npx @deepseek-ai/dsh@0.1.6-alpha.1 plugin --profile web add relay-dsh-plugin-codex@next` | MIT；The copied install command uses the @next prerelease channel; README requires official Codex authentication, Node.js 22.13 or newer, and pnpm, and describes DSH as a developer preview with known lifecycle and platform limitations. |
-| [dingminhua/dsh-connect-trae](https://github.com/dingminhua/dsh-connect-trae) | Adds Trae-backed model routing and a read-only credits/usage overview to DSH, with desktop-profile configuration and optional raw-chat probing. | `dsh plugin --profile desktop add dsh-connect-trae; restart the corresponding DSH process.` | MIT；Treat local Trae token storage and external provider requests as sensitive; the plugin targets a prerelease DSH dependency graph and Raw Chat probing has platform-specific prerequisites and limitations. |
 
-> 该分类共 **263** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **264** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 

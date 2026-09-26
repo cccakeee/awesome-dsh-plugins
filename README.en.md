@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2805-2563eb)
-![Verified](https://img.shields.io/badge/verified-2011-16a34a)
+![Verified](https://img.shields.io/badge/verified-2012-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-09-25.** This edition's main directory includes **2011 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,805 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-09-26.** This edition's main directory includes **2012 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,805 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -275,6 +275,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [qikairo7/dsh-gemini-pool](https://github.com/qikairo7/dsh-gemini-pool) | 多账号 Google Gemini 提供商：按剩余额度挑选账号，遇 429 指数退避切换，后台探活已禁用账号。 | `dsh plugin --profile web add github:qikairo7/dsh-gemini-pool` | MIT; Reads Google account OAuth tokens from local profile storage and sends prompts to Google Antigravity / Cloud Code Assist endpoints. Reusing a Google AI Pro subscription through third-party clients violates Google's terms of service and has led to account bans; use accounts you can afford to lose. |
 | [1475505/miliastra-beyond-simulator](https://github.com/1475505/miliastra-beyond-simulator) | Edit, run, inspect, and test 2D+Lua games from a DSH session. | `dsh plugin --profile web add github:1475505/miliastra-beyond-simulator` | GPL-3.0-only; Simulator green status is not real-device validation; the README requires user-supplied 2D/Lua API knowledge for production game assets. |
 | [bychv/dsh-preset-enhance](https://github.com/bychv/dsh-preset-enhance) | Imports and edits SillyTavern presets, injects ordered prompt messages, and saves per-mode or per-session tool and MCP policies. | `dsh plugin --profile web add dsh-preset-enhance@0.3.2-rc.1` | MIT; The README install command is 0.3.2-rc.1 while package metadata is 0.3.2-rc.2; the README targets DSH >=0.1.5-rc.2 <0.1.6. |
 | [hyzyn/dsh-plugin-kit](https://github.com/hyzyn/dsh-plugin-kit) | Installs a coordinated suite of DSH management, developer-operation, and agent-tool panels. | `dsh plugin --profile web add @hyzyn/dsh-all; then restart dsh web. Source mount: pnpm install && pnpm build && dsh plugin --profile web add link:$(pwd).` | Apache-2.0; This is a multi-plugin family, not one narrow feature; avoid duplicate bundle rows and review SSH/SFTP, Docker mutation, and exec settings before enabling them. |
@@ -284,9 +285,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Noob-stupid/dsh-plugin-gating-hub](https://github.com/Noob-stupid/dsh-plugin-gating-hub) | Lists and toggles DSH plugin rows, searches GitHub/Gitee/custom sources, installs npm or Git repositories, manages skills, controls local server components, and runs framework upgrade/rollback flows. | `dsh plugin --profile web add @noob-stupid/dsh-plugin-console; # or: dsh plugin --profile web add github:Noob-stupid/dsh-plugin-hub` | MIT; The canonical repository is dsh-plugin-gating-hub, but README/package metadata still use the historical dsh-plugin-hub name and URL; the documented GitHub install string is preserved verbatim. The GitHub About URL redirects to the canonical repository, and exact language metadata was not available from the anonymous HTML panel. |
 | [Lenonss/DSH_VsCodeMode](https://github.com/Lenonss/DSH_VsCodeMode) | Edit workspace files in a Monaco-based DSH UI, review agent diffs, and use LSP navigation. | `dsh plugin --profile web add github:Lenonss/DSH_VsCodeMode#v0.1.23` | MIT; README installation examples pin v0.1.23, while package.json reports version 0.4.6; the documented pinned command is preserved here. |
 | [yangbobo2021/relay-dsh-plugin-codex](https://github.com/yangbobo2021/relay-dsh-plugin-codex) | Adds a native Codex mode with one Codex App Server thread per DSH session, model/reasoning selection, streaming, approvals and questions, images, session import/fork, and optional terminal transport. | `npx @deepseek-ai/dsh@0.1.6-alpha.1 plugin --profile web add relay-dsh-plugin-codex@next` | MIT; The copied install command uses the @next prerelease channel; README requires official Codex authentication, Node.js 22.13 or newer, and pnpm, and describes DSH as a developer preview with known lifecycle and platform limitations. |
-| [dingminhua/dsh-connect-trae](https://github.com/dingminhua/dsh-connect-trae) | Adds Trae-backed model routing and a read-only credits/usage overview to DSH, with desktop-profile configuration and optional raw-chat probing. | `dsh plugin --profile desktop add dsh-connect-trae; restart the corresponding DSH process.` | MIT; Treat local Trae token storage and external provider requests as sensitive; the plugin targets a prerelease DSH dependency graph and Raw Chat probing has platform-specific prerequisites and limitations. |
 
-> This category has **263** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
+> This category has **264** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
 
 ### Knowledge & Research
 
