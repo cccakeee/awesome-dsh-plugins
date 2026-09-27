@@ -151,30 +151,6 @@
   `7ce1553dc72c8a03e2c284034b0a93f2c9388f12`) and existing stash were preserved; the
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
 
-- **2026-09-27 (weekly / Sunday; task date pinned because the host clock was one day ahead; host scan window `2026-09-28 02:09-02:33 +0800`):**
-  Main checkout preflight passed on `main`; `HEAD` matched `origin/main`, the worktree was
-  clean, `data/README.md` SHA-256 was
-  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`, and all seven
-  historical stashes were preserved. Full topic coverage passed with `coverage_ok=true`,
-  planned/completed `44/44`, `count_queries=200`, `fetch_queries=174`, `leaves=174`,
-  `failures=[]`, `over_cap=[]`, and `16,374` unique repositories. Star floor was `10`;
-  `above_floor=7`, `skipped=13,895`: `voyager-crew/voyager`,
-  `chiphoton/DeepSeek-Harness-Video-Director`, `Finderchangchang/brewreel`,
-  `hikarioyama/Smart-DSH`, `mokuyoaxis/agent-guard`, `Yunado/dsh-qwen38-local-qol`,
-  and `ppy-web/dsh-plugin-xiaomi-mimo-tts`. The two requested multi-agent batches did
-  not produce artifacts after repeated waits, so they were closed and replaced with a
-  bounded primary-evidence review; the exact seven-repository review set passed all
-  schema/enum/timestamp checks: `6 verified_plugin`, `0 verified_skill`, `0 watchlist`,
-  `1 related`, `0 rejected`. Atomic merge added 6 rows to `repositories.csv`, 7 to
-  `dsh-plugin-topic-candidates.csv`, 7 to `audit-results.csv`, and 6 to
-  `verified-plugins.csv`; backup `/tmp/dsh-curator-backup-8im_k5cl`. Documentation checks
-  passed: `aggregate.py --render-only` reported 2,829 catalog rows and 1,697 CSV verified
-  flags; `generate_docs.py --strict` reported 2,035 deduplicated verified entries, 44
-  category pages, snapshot `2026-09-27`, and `unmapped=[]`. Nine unittest cases,
-  py_compile, `git diff --check`, case-insensitive uniqueness, exact-set presence, and
-  HEAD-to-working-tree preservation checks passed. The catalog changes were committed and
-  pushed to `origin/main`; `.workbuddy/automations/` was not read, staged, committed, or
-  pushed.
 - **2026-09-07 (daily / Monday, Asia/Shanghai; run at 02:06 +0800):** actionable scan coverage
   passed with `coverage_ok=true`, `planned/completed=6/6`, `count_queries=6`, `fetch_queries=6`,
   `leaves=6`, `failures=[]`, `over_cap=[]`, and 991 unique repositories. Star floor was 10;
@@ -451,3 +427,28 @@
   `origin/main`, and final verification confirmed `HEAD == origin/main` with a clean
   worktree. The
   `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-27 (weekly / Sunday; task date pinned because the host clock was one day ahead; host scan window `2026-09-28 02:09-02:33 +0800`):**
+  Main checkout preflight passed on `main`; `HEAD` matched `origin/main`, the worktree was
+  clean, `data/README.md` SHA-256 was
+  `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`, and all seven
+  historical stashes were preserved. Full topic coverage passed with `coverage_ok=true`,
+  planned/completed `44/44`, `count_queries=200`, `fetch_queries=174`, `leaves=174`,
+  `failures=[]`, `over_cap=[]`, and `16,374` unique repositories. Star floor was `10`;
+  `above_floor=7`, `skipped=13,895`: `voyager-crew/voyager`,
+  `chiphoton/DeepSeek-Harness-Video-Director`, `Finderchangchang/brewreel`,
+  `hikarioyama/Smart-DSH`, `mokuyoaxis/agent-guard`, `Yunado/dsh-qwen38-local-qol`,
+  and `ppy-web/dsh-plugin-xiaomi-mimo-tts`. The two requested multi-agent batches did
+  not produce artifacts after repeated waits, so they were closed and replaced with a
+  bounded primary-evidence review; the exact seven-repository review set passed all
+  schema/enum/timestamp checks: `6 verified_plugin`, `0 verified_skill`, `0 watchlist`,
+  `1 related`, `0 rejected`. Atomic merge added 6 rows to `repositories.csv`, 7 to
+  `dsh-plugin-topic-candidates.csv`, 7 to `audit-results.csv`, and 6 to
+  `verified-plugins.csv`; backup `/tmp/dsh-curator-backup-8im_k5cl`. Documentation checks
+  passed: `aggregate.py --render-only` reported 2,829 catalog rows and 1,697 CSV verified
+  flags; `generate_docs.py --strict` reported 2,035 deduplicated verified entries, 44
+  category pages, snapshot `2026-09-27`, and `unmapped=[]`. Nine unittest cases,
+  py_compile, `git diff --check`, case-insensitive uniqueness, exact-set presence, and
+  HEAD-to-working-tree preservation checks passed. The catalog changes were committed and
+  pushed to `origin/main`; `.workbuddy/automations/` was not read, staged, committed, or
+  pushed.
