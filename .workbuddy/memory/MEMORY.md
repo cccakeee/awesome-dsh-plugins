@@ -452,3 +452,31 @@
   HEAD-to-working-tree preservation checks passed. The catalog changes were committed and
   pushed to `origin/main`; `.workbuddy/automations/` was not read, staged, committed, or
   pushed.
+
+- **2026-09-28 (daily / Monday; task date pinned because the host clock was one day ahead;
+  host scan window `2026-09-29 02:05-02:06 +0800`; runtime summary recorded at
+  `2026-09-29T02:35:32+0800`):** Main checkout preflight passed on `main`; `HEAD` matched
+  `origin/main`, the worktree was clean, and all seven historical stashes were preserved.
+  The actionable scan passed with `coverage_ok=true`, planned/completed `6/6`,
+  `count_queries=6`, `fetch_queries=6`, `leaves=6`, `failures=[]`, `over_cap=[]`, and
+  `1,188` unique repositories. Star floor was `10`; `above_floor=12`, `skipped=0`:
+  `YottaMeta/deepseek-harness`, `beiyege-01/dsh-voice-ai-girlfriend-plugin`,
+  `PolinniZhong/dsh-knit`, `DSH-PackForge/dsh-pack-plugin`,
+  `luobosibing2/deepseek-harness-jev`, `PerryLink/dsh-mask`, `IcyCreamDAS/shidi-skill`,
+  `evoelsewhere/evoflux`, `pan17/dsh-wechat`, `Yurzi/dsh-web-fetch-enhanced`,
+  `aa2246740/dsh-skillhub`, and `PeterTXPan/dsh-unreal-mcp`. Two exact six-repository
+  review batches passed the 20-field/schema, enum, timestamp, and repository-set checks:
+  `9 verified_plugin`, `0 verified_skill`, `1 watchlist`, `1 related`, and `1 rejected`.
+  Atomic merge added 9 rows to `repositories.csv`, 12 to `dsh-plugin-topic-candidates.csv`,
+  12 to `audit-results.csv`, and 9 to `verified-plugins.csv`; backup
+  `/tmp/dsh-curator-backup-fm32xt9x`. The requested root `scripts/diff_topic.py` path was
+  absent in this checkout, so the existing canonical implementation at
+  `.workbuddy/skills/dsh-topic-curator/scripts/diff_topic.py` was used; the root
+  `data/curation-criteria.yaml` remained the authoritative criteria file. Documentation
+  checks passed: `aggregate.py --render-only` reported 2,838 unique repositories and
+  1,706 CSV verified flags; `generate_docs.py --strict` reported 2,044 deduplicated
+  verified entries, 44 category pages, snapshot `2026-09-28`, and `unmapped=[]`. Nine
+  unittest cases, py_compile, `git diff --check`, and case-insensitive primary-key checks
+  for all four tables passed. Protected `data/README.md` remained byte-for-byte unchanged
+  with SHA-256 `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`.
+  The `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
