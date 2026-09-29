@@ -480,3 +480,28 @@
   for all four tables passed. Protected `data/README.md` remained byte-for-byte unchanged
   with SHA-256 `d00cc65af2883502e77c8c9ac27aefa3f72a1a18c4aef8296c1a76df763b0bcc`.
   The `.workbuddy/automations/` directory was not read, staged, committed, or pushed.
+
+- **2026-09-29 (daily / Tuesday; task date pinned because the host clock was one day
+  ahead; host scan window `2026-09-30 02:06:27-02:07:38 +0800`, UTC date 2026-09-29):**
+  Main checkout preflight passed on `main`;
+  `origin/main` was fetched and already current, the worktree was clean, and all seven
+  historical stashes were preserved. The actionable online preflight returned six
+  partitions below the Search API cap (129, 77, 123, 141, 289, 446). Scan coverage passed
+  with `coverage_ok=true`, planned/completed `6/6`, `count_queries=6`, `fetch_queries=6`,
+  `leaves=6`, `failures=[]`, `over_cap=[]`, and 1,205 unique repositories. Star floor was
+  `>10`; `above_floor=17`, `skipped=0`. Three exact review batches (6/6/5) passed the
+  20-field/schema, enum, timestamp, and repository-set gates: 15 `verified_plugin`, 0
+  `verified_skill`, 0 `watchlist`, 2 `related`, and 0 `rejected`. Atomic merge added 15
+  rows to `repositories.csv`, 17 to `dsh-plugin-topic-candidates.csv`, 17 to
+  `audit-results.csv`, and 15 to `verified-plugins.csv`; backup
+  `/tmp/dsh-curator-backup-uk86k5xq`. `aggregate.py --render-only` reported 2,853 unique
+  repositories and 1,721 CSV verified flags; `generate_docs.py --strict` reported 2,059
+  verified entries, 44 category pages, snapshot `2026-09-29`, and `unmapped=[]`. Nine
+  unittest cases, py_compile, `git diff --check`, and case-insensitive primary-key checks
+  for all four tables passed; every verified candidate appeared in the generated docs and
+  the two related projects were not promoted. A pre-existing six-record
+  `/tmp/dsh_review_batch_2.json` was accidentally overwritten by a review agent; its JSON
+  content was reconstructed from the agent transcript and restored, but the original hash
+  was unavailable so byte-for-byte recovery cannot be asserted. The current batch review
+  remains at `/tmp/dsh_review_batch_2.current.json`. The `.workbuddy/automations/` directory
+  was not read, staged, committed, or pushed.
