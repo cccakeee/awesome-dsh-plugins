@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2866-2563eb)
-![Verified](https://img.shields.io/badge/verified-2072-16a34a)
+![Verified](https://img.shields.io/badge/verified-2073-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-09-30。** 本版主目录收录 **2072 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2866 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-01。** 本版主目录收录 **2073 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2866 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -327,6 +327,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [miqian-nomad/dsh-browser-playwright-codex](https://github.com/miqian-nomad/dsh-browser-playwright-codex) | Playwright 浏览器工具族：23 个 browser_* 工具（20 常驻 + 3 闸门），无障碍快照 + 稳定 ref 定位，独立可见窗口、持久登录态 | `dsh plugin --profile web add github:miqian-nomad/dsh-browser-playwright-codex` | MIT；驱动真实浏览器并使用你的登录态；执行任意网页 JS 与裸 CDP 访问默认关闭，URL 白名单、原生弹窗挂起与 CDP 方法白名单为机制级护栏 |
 | [ma-pony/deepspider](https://github.com/ma-pony/deepspider) | AI 原生网页抓取与 JavaScript 逆向：用 Patchright/CDP 观察真实请求与运行时事实，沿调用栈定位参数写入边界，通过独立 Node 语义运行时 (sdenv) 重新生成 Cookie 并以真实请求 (CycleTLS) 验证，导出可脱离浏览器重跑的 Solver | `dsh plugin --profile web add deepspider` | MIT；高权限：浏览器 Cookie/Session 恢复、脚本执行、向任意站点真实出站请求。仅应在自己拥有或已获授权的目标上使用，并遵守目标条款与法律；postinstall 会自动下载 Patchright Chromium |
 | [heartleo/hn-cli](https://github.com/heartleo/hn-cli) | Exposes Hacker News tools to DeepSeek Harness agents: ranked feeds (top/new/best/ask/show/job), item comment trees, Algolia search, and user profiles, all via public HN APIs. | `dsh plugin --profile <name> add -w dsh-hacker-news` | MIT；Network egress to third-party HN APIs; query text is sent to hn.algolia.com. The separate Go TUI `hn` binary has an optional translation feature requiring an OpenAI-compatible API key, but that is unrelated to the DSH plugin. |
 | [cocofhu/anime-find](https://github.com/cocofhu/anime-find) | 对话内多源搜番（Mikan/AniBT/AnimeGarden）：卡片展示 Bangumi 评分与详情、按字幕组浏览、复制磁力/种子；可选流媒体解析播放 Tab | `dsh plugin --profile web add github:cocofhu/anime-find（本地: dsh plugin --profile web add /abs/path）；更新: dsh plugin --profile web update anime-find` | MIT；向第三方来源站点发搜索/详情请求并经 Host 代理媒体流，含磁力/种子下载能力，需遵守来源条款与版权 |
@@ -336,9 +337,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [awesome-dsh-plugin/dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin) | In-agent plugin discovery: live GitHub repository search scoped to the official `dsh-plugin` topic, star-ranked; every result comes with a ready-to-run `dsh plugin add` command. | `dsh plugin --profile web add dsh-find-plugin  (or: dsh plugin --profile web add github:awesome-dsh-plugin/dsh-find-plugin)` | MIT；Requires network access to GitHub at runtime. |
 | [canghai666x/dsh-news-plugin](https://github.com/canghai666x/dsh-news-plugin) | 新闻采集工具插件：注册 news_fetch 工具抓取 RSS 新闻源并解析为结构化条目（Node 原生 fetch + 正则，零第三方依赖），五维评分/筛选/简报编排交给模型；附 dsh-news-briefing Skill。 | 将仓库放入 Harness 项目，在 cordis.yml 组合中声明 `- name: './index.ts'`（参考官方 cordis-tutorial/07 第 7 章），node --import tsx ../../vendor/cordis/bin.js 启动 | MIT；仓库根目录无 LICENSE 文件（仅 package.json 声明 MIT）；无 dsh.bundle，安装为非标准组合式（手写 cordis.yml）；基于 2026-08 官方教程，v0.1 API 可能变更。 |
 | [ch1bug/dsh-mimo-agent-tools](https://github.com/ch1bug/dsh-mimo-agent-tools) | 把小米 MiMo API 封装为 DSH Cordis 模型工具：mimo_search / vision / audio / video / asr / tts（Python 驱动，MIMO_DRIVER 指向默认安装路径），与 @deepseek-ai/dsh-tools 共存不重复加载。 | `dsh plugin --profile web add /path/to/dsh-mimo-agent-tools（或 github:ch1bug/dsh-mimo-agent-tools）；安装 python 驱动后重启 dsh web，工具自动挂载` | MIT；依赖 MiMo API 可用性与密钥配置。 |
-| [Clizo1209/dsh-playwright-browser](https://github.com/Clizo1209/dsh-playwright-browser) | Semantic, multi-tab browser automation for DeepSeek Harness powered by Playwright: abort-aware page operations, Cordis-owned lifecycle cleanup, configurable screenshotDir (default .dsh-browser/screenshots); ships sanitized real-world test suite on public demo sites. | dsh plugin --profile web add dsh-playwright-browser  (or tarball: dsh plugin --profile web add ./dsh-playwright-browser-0.1.3.tgz; headless: dsh plugin --profile headless add ./dsh-playwright-browser-0.1.3.tgz); needs `npx playwright install chromium` | MIT；Requires Playwright Chromium install; pnpm 10+ may need allowBuilds in profile pnpm-workspace.yaml for git installs. |
 
-> 该分类共 **53** 个已核验条目，[查看完整清单 →](docs/categories/web-browser.md)
+> 该分类共 **54** 个已核验条目，[查看完整清单 →](docs/categories/web-browser.md)
 
 ### 生态与资源
 
