@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2866-2563eb)
-![Verified](https://img.shields.io/badge/verified-2072-16a34a)
+![Verified](https://img.shields.io/badge/verified-2073-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-09-30.** This edition's main directory includes **2072 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,866 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-01.** This edition's main directory includes **2073 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,866 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -326,6 +326,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [miqian-nomad/dsh-browser-playwright-codex](https://github.com/miqian-nomad/dsh-browser-playwright-codex) | Playwright 浏览器工具族：23 个 browser_* 工具（20 常驻 + 3 闸门），无障碍快照 + 稳定 ref 定位，独立可见窗口、持久登录态 | `dsh plugin --profile web add github:miqian-nomad/dsh-browser-playwright-codex` | MIT; 驱动真实浏览器并使用你的登录态；执行任意网页 JS 与裸 CDP 访问默认关闭，URL 白名单、原生弹窗挂起与 CDP 方法白名单为机制级护栏 |
 | [ma-pony/deepspider](https://github.com/ma-pony/deepspider) | AI 原生网页抓取与 JavaScript 逆向：用 Patchright/CDP 观察真实请求与运行时事实，沿调用栈定位参数写入边界，通过独立 Node 语义运行时 (sdenv) 重新生成 Cookie 并以真实请求 (CycleTLS) 验证，导出可脱离浏览器重跑的 Solver | `dsh plugin --profile web add deepspider` | MIT; 高权限：浏览器 Cookie/Session 恢复、脚本执行、向任意站点真实出站请求。仅应在自己拥有或已获授权的目标上使用，并遵守目标条款与法律；postinstall 会自动下载 Patchright Chromium |
 | [heartleo/hn-cli](https://github.com/heartleo/hn-cli) | Exposes Hacker News tools to DeepSeek Harness agents: ranked feeds (top/new/best/ask/show/job), item comment trees, Algolia search, and user profiles, all via public HN APIs. | `dsh plugin --profile <name> add -w dsh-hacker-news` | MIT; Network egress to third-party HN APIs; query text is sent to hn.algolia.com. The separate Go TUI `hn` binary has an optional translation feature requiring an OpenAI-compatible API key, but that is unrelated to the DSH plugin. |
 | [cocofhu/anime-find](https://github.com/cocofhu/anime-find) | 对话内多源搜番（Mikan/AniBT/AnimeGarden）：卡片展示 Bangumi 评分与详情、按字幕组浏览、复制磁力/种子；可选流媒体解析播放 Tab | `dsh plugin --profile web add github:cocofhu/anime-find（本地: dsh plugin --profile web add /abs/path）；更新: dsh plugin --profile web update anime-find` | MIT; 向第三方来源站点发搜索/详情请求并经 Host 代理媒体流，含磁力/种子下载能力，需遵守来源条款与版权 |
@@ -335,9 +336,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [awesome-dsh-plugin/dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin) | In-agent plugin discovery: live GitHub repository search scoped to the official `dsh-plugin` topic, star-ranked; every result comes with a ready-to-run `dsh plugin add` command. | `dsh plugin --profile web add dsh-find-plugin  (or: dsh plugin --profile web add github:awesome-dsh-plugin/dsh-find-plugin)` | MIT; Requires network access to GitHub at runtime. |
 | [canghai666x/dsh-news-plugin](https://github.com/canghai666x/dsh-news-plugin) | 新闻采集工具插件：注册 news_fetch 工具抓取 RSS 新闻源并解析为结构化条目（Node 原生 fetch + 正则，零第三方依赖），五维评分/筛选/简报编排交给模型；附 dsh-news-briefing Skill。 | 将仓库放入 Harness 项目，在 cordis.yml 组合中声明 `- name: './index.ts'`（参考官方 cordis-tutorial/07 第 7 章），node --import tsx ../../vendor/cordis/bin.js 启动 | MIT; 仓库根目录无 LICENSE 文件（仅 package.json 声明 MIT）；无 dsh.bundle，安装为非标准组合式（手写 cordis.yml）；基于 2026-08 官方教程，v0.1 API 可能变更。 |
 | [ch1bug/dsh-mimo-agent-tools](https://github.com/ch1bug/dsh-mimo-agent-tools) | 把小米 MiMo API 封装为 DSH Cordis 模型工具：mimo_search / vision / audio / video / asr / tts（Python 驱动，MIMO_DRIVER 指向默认安装路径），与 @deepseek-ai/dsh-tools 共存不重复加载。 | `dsh plugin --profile web add /path/to/dsh-mimo-agent-tools（或 github:ch1bug/dsh-mimo-agent-tools）；安装 python 驱动后重启 dsh web，工具自动挂载` | MIT; 依赖 MiMo API 可用性与密钥配置。 |
-| [Clizo1209/dsh-playwright-browser](https://github.com/Clizo1209/dsh-playwright-browser) | Semantic, multi-tab browser automation for DeepSeek Harness powered by Playwright: abort-aware page operations, Cordis-owned lifecycle cleanup, configurable screenshotDir (default .dsh-browser/screenshots); ships sanitized real-world test suite on public demo sites. | dsh plugin --profile web add dsh-playwright-browser  (or tarball: dsh plugin --profile web add ./dsh-playwright-browser-0.1.3.tgz; headless: dsh plugin --profile headless add ./dsh-playwright-browser-0.1.3.tgz); needs `npx playwright install chromium` | MIT; Requires Playwright Chromium install; pnpm 10+ may need allowBuilds in profile pnpm-workspace.yaml for git installs. |
 
-> This category has **53** verified entries, [view the full list →](docs/categories/web-browser.en.md)
+> This category has **54** verified entries, [view the full list →](docs/categories/web-browser.en.md)
 
 ### Ecosystem & Resources
 
