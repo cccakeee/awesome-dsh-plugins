@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2883-2563eb)
-![Verified](https://img.shields.io/badge/verified-2089-16a34a)
+![Verified](https://img.shields.io/badge/verified-2090-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-02.** This edition's main directory includes **2089 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,883 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-06.** This edition's main directory includes **2090 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 2,883 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -249,6 +249,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [Sev7eEn7/sieve](https://github.com/Sev7eEn7/sieve) | Filters tool outputs, prunes stale context and discloses skills on demand for DSH 0.2.1-alpha.1. | `dsh plugin --profile headless add dsh-sieve@0.1.0` | MIT; Judge sends question context to the configured session model or TypeSafe/OpenRouter Jev; local spill archive and ledger; judge.type=off disables model calls; DSH 0.2.1-alpha.1 only. |
 | [aa2246740/dsh-model-fusion](https://github.com/aa2246740/dsh-model-fusion) | Adds a Fusion model that plans and reviews with one model while another performs code changes and tests. | `dsh plugin --profile web add dsh-model-fusion@0.2.5; reopen the DSH Web Host and reload the page.` | Apache-2.0; README supports DSH 0.2.0-rc.2 only; Windows 10/11 and Linux are not verified, and model/API cost estimates are not billing guarantees. |
 | [litestartup-com/dsh-api-gateway](https://github.com/litestartup-com/dsh-api-gateway) | Lets an authenticated remote client access selected DSH session, prompt, response, event, and sandbox-mode APIs. | Run `dsh plugin --profile web add github:litestartup-com/dsh-api-gateway`; copy the `id: dsh-api-gw`, `name: dsh-api-gateway` row from `examples/cordis.yml` into the existing host composition (not an agent preset), then restart DSH. | MIT; README lists defaults including corsOrigin='*', allowKeyProvision=true, and exposeErrors=true. The plugin exposes host session controls across machines; review bind/reachability and key provisioning configuration before enabling it. |
 | [luobosibing2/dsh-jev-plugin](https://github.com/luobosibing2/dsh-jev-plugin) | Adds configurable Jev-based skill selection, supervision, log admission, corrections, and single-operation approval assistance. | In DSH Web, open Plugins > Add plugin, paste `https://github.com/luobosibing2/dsh-jev-plugin`, install, then enable it; configure the Jev endpoint and credential, and enable individual features as needed. | MIT; README describes an early-stage project tested with DSH 0.1.7-rc.2. Approval assistance and other integrations are opt-in per profile; model judgments are not correctness guarantees. |
@@ -258,9 +259,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [1420079678-ctrl/agent-body](https://github.com/1420079678-ctrl/agent-body) | Mounts the body kernel, memory/context organs, and zero-residence controls while routing tool capabilities through a local organ model. | `dsh plugin --profile web add https://github.com/1420079678-ctrl/agent-body/releases/download/v0.1.1/dsh-external-dsh-organism-0.1.1.tgz` | MIT; The monorepo contains many additional organs with different capabilities and risks; the root bundle's mounted set should be reviewed after every release. |
 | [Innocent-children/TaskBelay](https://github.com/Innocent-children/TaskBelay) | Adds persistent TaskBelay task lifecycle, repository-scope checks, verification, and recovery workflows to DeepSeek Harness. | `npm install -g @deepseek-ai/dsh@latest; TARBALL="$(npm pack taskbelay-deepseek@latest --silent)"; dsh plugin --profile web add "$PWD/$TARBALL"` | Apache-2.0; This is a multi-host monorepo; only packages/deepseek is the DSH package. The workflow coordinates repository operations but does not itself grant permission to bypass host or user authorization. |
 | [jaibhasin/dsh-browser-agent](https://github.com/jaibhasin/dsh-browser-agent) | Lets a DSH agent read, navigate, click, type, scroll, screenshot, and manage tasks across a user's Chrome tabs. | `curl -fsSL https://raw.githubusercontent.com/jaibhasin/dsh-browser-agent/main/scripts/install.sh \| bash` | MIT; The installer executes the repository's main-branch script and the agent can affect signed-in tabs; keep human approval enabled and inspect the installed extension and bridge token. |
-| [thissensen/dsh-agent-studio](https://github.com/thissensen/dsh-agent-studio) | Builds per-agent prompt/tool/skill sets, subagent rosters, preset bindings, and fallback model chains through a web panel. | `dsh plugin --profile web add dsh-agent-studio` | MIT; Fallback routing and subagent settings can change model selection and execution behavior; review each agent's tool and skill allowlist after installation. |
 
-> This category has **284** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+> This category has **285** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 

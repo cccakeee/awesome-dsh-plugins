@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-2883-2563eb)
-![Verified](https://img.shields.io/badge/verified-2089-16a34a)
+![Verified](https://img.shields.io/badge/verified-2090-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-02。** 本版主目录收录 **2089 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2883 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-06。** 本版主目录收录 **2090 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（2883 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -250,6 +250,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [Sev7eEn7/sieve](https://github.com/Sev7eEn7/sieve) | Filters tool outputs, prunes stale context and discloses skills on demand for DSH 0.2.1-alpha.1. | `dsh plugin --profile headless add dsh-sieve@0.1.0` | MIT；Judge sends question context to the configured session model or TypeSafe/OpenRouter Jev; local spill archive and ledger; judge.type=off disables model calls; DSH 0.2.1-alpha.1 only. |
 | [aa2246740/dsh-model-fusion](https://github.com/aa2246740/dsh-model-fusion) | Adds a Fusion model that plans and reviews with one model while another performs code changes and tests. | `dsh plugin --profile web add dsh-model-fusion@0.2.5; reopen the DSH Web Host and reload the page.` | Apache-2.0；README supports DSH 0.2.0-rc.2 only; Windows 10/11 and Linux are not verified, and model/API cost estimates are not billing guarantees. |
 | [litestartup-com/dsh-api-gateway](https://github.com/litestartup-com/dsh-api-gateway) | Lets an authenticated remote client access selected DSH session, prompt, response, event, and sandbox-mode APIs. | Run `dsh plugin --profile web add github:litestartup-com/dsh-api-gateway`; copy the `id: dsh-api-gw`, `name: dsh-api-gateway` row from `examples/cordis.yml` into the existing host composition (not an agent preset), then restart DSH. | MIT；README lists defaults including corsOrigin='*', allowKeyProvision=true, and exposeErrors=true. The plugin exposes host session controls across machines; review bind/reachability and key provisioning configuration before enabling it. |
 | [luobosibing2/dsh-jev-plugin](https://github.com/luobosibing2/dsh-jev-plugin) | Adds configurable Jev-based skill selection, supervision, log admission, corrections, and single-operation approval assistance. | In DSH Web, open Plugins > Add plugin, paste `https://github.com/luobosibing2/dsh-jev-plugin`, install, then enable it; configure the Jev endpoint and credential, and enable individual features as needed. | MIT；README describes an early-stage project tested with DSH 0.1.7-rc.2. Approval assistance and other integrations are opt-in per profile; model judgments are not correctness guarantees. |
@@ -259,9 +260,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [1420079678-ctrl/agent-body](https://github.com/1420079678-ctrl/agent-body) | Mounts the body kernel, memory/context organs, and zero-residence controls while routing tool capabilities through a local organ model. | `dsh plugin --profile web add https://github.com/1420079678-ctrl/agent-body/releases/download/v0.1.1/dsh-external-dsh-organism-0.1.1.tgz` | MIT；The monorepo contains many additional organs with different capabilities and risks; the root bundle's mounted set should be reviewed after every release. |
 | [Innocent-children/TaskBelay](https://github.com/Innocent-children/TaskBelay) | Adds persistent TaskBelay task lifecycle, repository-scope checks, verification, and recovery workflows to DeepSeek Harness. | `npm install -g @deepseek-ai/dsh@latest; TARBALL="$(npm pack taskbelay-deepseek@latest --silent)"; dsh plugin --profile web add "$PWD/$TARBALL"` | Apache-2.0；This is a multi-host monorepo; only packages/deepseek is the DSH package. The workflow coordinates repository operations but does not itself grant permission to bypass host or user authorization. |
 | [jaibhasin/dsh-browser-agent](https://github.com/jaibhasin/dsh-browser-agent) | Lets a DSH agent read, navigate, click, type, scroll, screenshot, and manage tasks across a user's Chrome tabs. | `curl -fsSL https://raw.githubusercontent.com/jaibhasin/dsh-browser-agent/main/scripts/install.sh \| bash` | MIT；The installer executes the repository's main-branch script and the agent can affect signed-in tabs; keep human approval enabled and inspect the installed extension and bridge token. |
-| [thissensen/dsh-agent-studio](https://github.com/thissensen/dsh-agent-studio) | Builds per-agent prompt/tool/skill sets, subagent rosters, preset bindings, and fallback model chains through a web panel. | `dsh plugin --profile web add dsh-agent-studio` | MIT；Fallback routing and subagent settings can change model selection and execution behavior; review each agent's tool and skill allowlist after installation. |
 
-> 该分类共 **284** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+> 该分类共 **285** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 
