@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3010-2563eb)
-![Verified](https://img.shields.io/badge/verified-2216-16a34a)
+![Verified](https://img.shields.io/badge/verified-2217-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-15。** 本版主目录收录 **2216 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3010 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-15。** 本版主目录收录 **2217 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3010 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -251,6 +251,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Typed System One decision service and agent tool for yes/no checks, classification, and scoring. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0；Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. Runtime host compatibility was not tested for this listing. |
 | [Fei2411/DeepSeek-Bot](https://github.com/Fei2411/DeepSeek-Bot) | Adds persistent DSH bots, a chief that delegates work, and multi-bot group chats. | `npx @deepseek-ai/dsh@0.2.1-alpha.1 plugin --profile web add ds-bot` | Apache-2.0；README says the main bot has very high rights to manage other bots and group chats; group chats use more model calls. |
 | [BotHarness/DeepSeekBot](https://github.com/BotHarness/DeepSeekBot) | Create and coordinate PersonaBots with persistent Git memory, assignments, schedules, marketplace installs, browser/computer access, and authorized IM identities. | `npm i -g @deepseek-ai/dsh@0.2.0-rc.1 && dsh plugin --profile web add deepseekbot && dsh web; the desktop path is Plugins -> Add plugin -> deepseekbot, then Enable now and restart if prompted.` | MIT；The repository is a monorepo and the root package is private; install the published deepseekbot package rather than treating the root checkout as a standalone package. IM accounts and browser/computer access are gated but require careful authorization. |
 | [FeiZhuLulu/DeepSeek-Bot](https://github.com/FeiZhuLulu/DeepSeek-Bot) | Adds persistent bots, bot-to-bot delegation, group chats, memory, browser access, secrets, and usage controls to DSH. | `npx @deepseek-ai/dsh@0.2.1-alpha.1 plugin --profile web add ds-bot` | Apache-2.0；README warns that bots use the user's model quota and can read/write files and run commands; the GitHub connector and Desktop browser are optional but expand access. |
@@ -260,9 +261,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [jingyi0605/Codingns4DSH](https://github.com/jingyi0605/Codingns4DSH) | Use supported coding Agent CLIs and manage terminals, files, Git, project processes, and remote workspace access from DSH. | `dsh plugin --profile web add @jingyi0605/codingns4dsh@0.2.1-beta.6` | GPL-3.0-or-later；Remote access, terminal, file, and process modules are configurable; enable only on a trusted host and network. |
 | [zaimokuza-yoshiteru/dsh-acp-adapter](https://github.com/zaimokuza-yoshiteru/dsh-acp-adapter) | Run configured Devin, Codex, Claude, Kimi and other ACP agents in native DSH sessions with DSH approvals. | `npx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile web add @zaimokuza/dsh-acp-adapter@next` | MIT；External Agent binaries, login state and their own tools remain user-managed; compatibility is tied to the documented DSH release. |
 | [shuxidemosheng/dsh-tool-todo-plus](https://github.com/shuxidemosheng/dsh-tool-todo-plus) | Lets the model maintain prioritized tasks while showing progress and the current action in a floating panel. | `dsh plugin --profile <profile> add dsh-tool-todo-plus; fully restart the client.` | MIT；Requires Node.js >=24 per package.json; it is an enhanced fork of the official todo tool and registers as todo_write_plus by default. |
-| [2huy4n/ProjectKaren](https://github.com/2huy4n/ProjectKaren) | Give an existing DSH roleplay character time-aware sleep, greetings, idle activity, proactive conversation, weather, and optional photos. | `dsh plugin --profile <profile> add "git+https://github.com/2huy4n/ProjectKaren#v0.2.4"; restart DSH and configure Settings → ProjectKaren.` | AGPL-3.0-or-later；The plugin does not include a roleplay character card; photo generation requires a configured OpenAI-compatible image API. |
 
-> 该分类共 **308** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+> 该分类共 **309** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 

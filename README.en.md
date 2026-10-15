@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3010-2563eb)
-![Verified](https://img.shields.io/badge/verified-2216-16a34a)
+![Verified](https://img.shields.io/badge/verified-2217-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-15.** This edition's main directory includes **2216 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,010 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-15.** This edition's main directory includes **2217 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,010 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -250,6 +250,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Typed System One decision service and agent tool for yes/no checks, classification, and scoring. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0; Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. Runtime host compatibility was not tested for this listing. |
 | [Fei2411/DeepSeek-Bot](https://github.com/Fei2411/DeepSeek-Bot) | Adds persistent DSH bots, a chief that delegates work, and multi-bot group chats. | `npx @deepseek-ai/dsh@0.2.1-alpha.1 plugin --profile web add ds-bot` | Apache-2.0; README says the main bot has very high rights to manage other bots and group chats; group chats use more model calls. |
 | [BotHarness/DeepSeekBot](https://github.com/BotHarness/DeepSeekBot) | Create and coordinate PersonaBots with persistent Git memory, assignments, schedules, marketplace installs, browser/computer access, and authorized IM identities. | `npm i -g @deepseek-ai/dsh@0.2.0-rc.1 && dsh plugin --profile web add deepseekbot && dsh web; the desktop path is Plugins -> Add plugin -> deepseekbot, then Enable now and restart if prompted.` | MIT; The repository is a monorepo and the root package is private; install the published deepseekbot package rather than treating the root checkout as a standalone package. IM accounts and browser/computer access are gated but require careful authorization. |
 | [FeiZhuLulu/DeepSeek-Bot](https://github.com/FeiZhuLulu/DeepSeek-Bot) | Adds persistent bots, bot-to-bot delegation, group chats, memory, browser access, secrets, and usage controls to DSH. | `npx @deepseek-ai/dsh@0.2.1-alpha.1 plugin --profile web add ds-bot` | Apache-2.0; README warns that bots use the user's model quota and can read/write files and run commands; the GitHub connector and Desktop browser are optional but expand access. |
@@ -259,9 +260,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [jingyi0605/Codingns4DSH](https://github.com/jingyi0605/Codingns4DSH) | Use supported coding Agent CLIs and manage terminals, files, Git, project processes, and remote workspace access from DSH. | `dsh plugin --profile web add @jingyi0605/codingns4dsh@0.2.1-beta.6` | GPL-3.0-or-later; Remote access, terminal, file, and process modules are configurable; enable only on a trusted host and network. |
 | [zaimokuza-yoshiteru/dsh-acp-adapter](https://github.com/zaimokuza-yoshiteru/dsh-acp-adapter) | Run configured Devin, Codex, Claude, Kimi and other ACP agents in native DSH sessions with DSH approvals. | `npx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile web add @zaimokuza/dsh-acp-adapter@next` | MIT; External Agent binaries, login state and their own tools remain user-managed; compatibility is tied to the documented DSH release. |
 | [shuxidemosheng/dsh-tool-todo-plus](https://github.com/shuxidemosheng/dsh-tool-todo-plus) | Lets the model maintain prioritized tasks while showing progress and the current action in a floating panel. | `dsh plugin --profile <profile> add dsh-tool-todo-plus; fully restart the client.` | MIT; Requires Node.js >=24 per package.json; it is an enhanced fork of the official todo tool and registers as todo_write_plus by default. |
-| [2huy4n/ProjectKaren](https://github.com/2huy4n/ProjectKaren) | Give an existing DSH roleplay character time-aware sleep, greetings, idle activity, proactive conversation, weather, and optional photos. | `dsh plugin --profile <profile> add "git+https://github.com/2huy4n/ProjectKaren#v0.2.4"; restart DSH and configure Settings → ProjectKaren.` | AGPL-3.0-or-later; The plugin does not include a roleplay character card; photo generation requires a configured OpenAI-compatible image API. |
 
-> This category has **308** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+> This category has **309** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
