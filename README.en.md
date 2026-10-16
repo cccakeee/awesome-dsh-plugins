@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3044-2563eb)
-![Verified](https://img.shields.io/badge/verified-2250-16a34a)
+![Verified](https://img.shields.io/badge/verified-2251-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-17.** This edition's main directory includes **2250 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,044 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-17.** This edition's main directory includes **2251 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,044 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -288,7 +288,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [TikaFlow/dsh-model-fix](https://github.com/TikaFlow/dsh-model-fix) | Fills and validates model parameters and remembers or adjusts reasoning levels in DSH. | `dsh plugin --profile web add https://github.com/TikaFlow/dsh-model-fix/releases/download/v0.29.16/dsh-model-fix.tgz` | MIT; README states tested support through DSH 0.2.1-alpha.2; verify host compatibility before upgrading to a newer DSH release. |
 | [fan56/dsh-dcp](https://github.com/fan56/dsh-dcp) | Compact session history deterministically without auxiliary LLM summaries and configure trigger behavior. | `dsh plugin add @aiwayds/dsh-dcp` | MIT; README requires DSH >=0.2.0-rc.2 and says the alpha line is unsupported. |
 
-> This category has **310** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
+> This category has **311** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
 
 ### Knowledge & Research
 
