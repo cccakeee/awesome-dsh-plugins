@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3028-2563eb)
-![Verified](https://img.shields.io/badge/verified-2234-16a34a)
+![Verified](https://img.shields.io/badge/verified-2235-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-16.** This edition's main directory includes **2234 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,028 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-17.** This edition's main directory includes **2235 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,028 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -252,6 +252,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
 | [c1overzz/dsh-bili-scroll](https://github.com/c1overzz/dsh-bili-scroll) | Schedules Bilibili discovery, reads subtitles, writes daily reports, and optionally posts a comment tagging you. | `dsh plugin --profile web add github:c1overzz/dsh-bili-scroll` | MIT; README's first install example uses stale name dsh-bili-duty; package and bundle use dsh-bili-scroll. Commenting is opt-in. |
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Typed System One decision service and agent tool for yes/no checks, classification, and scoring. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0; Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. The host probe checked registration and fallback handling only; it did not send a real model request. |
 | [SuperWheel/dsh-cliworker-now](https://github.com/SuperWheel/dsh-cliworker-now) | Launch and continue named tasks through supported external coding-agent CLIs. | `dsh plugin --profile desktop add dsh-cliworker-now@latest` | MIT; The current GitHub package.json sets private=true although the published v0.7.9 npm package is available; the cited install command resolves the existing package, while source publication metadata may change. |
 | [Fei2411/DeepSeek-Bot](https://github.com/Fei2411/DeepSeek-Bot) | Adds persistent DSH bots, a chief that delegates work, and multi-bot group chats. | `npx @deepseek-ai/dsh@0.2.1-alpha.1 plugin --profile web add ds-bot` | Apache-2.0; README says the main bot has very high rights to manage other bots and group chats; group chats use more model calls. |
 | [BotHarness/DeepSeekBot](https://github.com/BotHarness/DeepSeekBot) | Create and coordinate PersonaBots with persistent Git memory, assignments, schedules, marketplace installs, browser/computer access, and authorized IM identities. | `npm i -g @deepseek-ai/dsh@0.2.0-rc.1 && dsh plugin --profile web add deepseekbot && dsh web; the desktop path is Plugins -> Add plugin -> deepseekbot, then Enable now and restart if prompted.` | MIT; The repository is a monorepo and the root package is private; install the published deepseekbot package rather than treating the root checkout as a standalone package. IM accounts and browser/computer access are gated but require careful authorization. |
@@ -260,9 +261,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Kanadego/dsh-heartbeat](https://github.com/Kanadego/dsh-heartbeat) | Schedules autonomous maintenance and reflection, web-search browsing, encrypted profile/material storage, and gated delivery into bound DSH sessions. | `dsh plugin --profile web add @kanadego/dsh-heartbeat` | MIT; package.json has a null license field even though the repository LICENSE is MIT; autonomous delivery, web browsing, and encrypted local data should be configured deliberately. |
 | [Contexera/dsh-agent-team](https://github.com/Contexera/dsh-agent-team) | Create long-lived agent members that coordinate through shared workspaces, channels, and durable task threads. | `dsh plugin --profile web add @contexera/dsh-agent-team@0.2.2` | MIT; Use only in a trusted workspace because managed agents have full-access tools. |
 | [jingyi0605/Codingns4DSH](https://github.com/jingyi0605/Codingns4DSH) | Use supported coding Agent CLIs and manage terminals, files, Git, project processes, and remote workspace access from DSH. | `dsh plugin --profile web add @jingyi0605/codingns4dsh@0.2.1-beta.6` | GPL-3.0-or-later; Remote access, terminal, file, and process modules are configurable; enable only on a trusted host and network. |
-| [zaimokuza-yoshiteru/dsh-acp-adapter](https://github.com/zaimokuza-yoshiteru/dsh-acp-adapter) | Run configured Devin, Codex, Claude, Kimi and other ACP agents in native DSH sessions with DSH approvals. | `npx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile web add @zaimokuza/dsh-acp-adapter@next` | MIT; External Agent binaries, login state and their own tools remain user-managed; compatibility is tied to the documented DSH release. |
 
-> This category has **311** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+> This category has **312** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
