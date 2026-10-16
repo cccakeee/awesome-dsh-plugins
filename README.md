@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3044-2563eb)
-![Verified](https://img.shields.io/badge/verified-2250-16a34a)
+![Verified](https://img.shields.io/badge/verified-2251-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-17。** 本版主目录收录 **2250 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3044 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-17。** 本版主目录收录 **2251 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3044 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -289,7 +289,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [TikaFlow/dsh-model-fix](https://github.com/TikaFlow/dsh-model-fix) | Fills and validates model parameters and remembers or adjusts reasoning levels in DSH. | `dsh plugin --profile web add https://github.com/TikaFlow/dsh-model-fix/releases/download/v0.29.16/dsh-model-fix.tgz` | MIT；README states tested support through DSH 0.2.1-alpha.2; verify host compatibility before upgrading to a newer DSH release. |
 | [fan56/dsh-dcp](https://github.com/fan56/dsh-dcp) | Compact session history deterministically without auxiliary LLM summaries and configure trigger behavior. | `dsh plugin add @aiwayds/dsh-dcp` | MIT；README requires DSH >=0.2.0-rc.2 and says the alpha line is unsupported. |
 
-> 该分类共 **310** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **311** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 
