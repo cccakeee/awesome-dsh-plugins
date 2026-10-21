@@ -62,6 +62,7 @@ SLUG_MAP = {
     "vision": "media-vision",
     "web_ui": "web-ui",
     "tui": "ui-experience",
+    "voice": "voice",
     "fun": "fun",
     "session_chat": "sessions-messages",
     "memory_persona": "sessions-messages",
