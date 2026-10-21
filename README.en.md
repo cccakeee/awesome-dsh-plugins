@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3108-2563eb)
-![Verified](https://img.shields.io/badge/verified-2314-16a34a)
+![Verified](https://img.shields.io/badge/verified-2316-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-21.** This edition's main directory includes **2314 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,108 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-21.** This edition's main directory includes **2316 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,108 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -156,6 +156,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [mhlywxl/dsh-split-workspace](https://github.com/mhlywxl/dsh-split-workspace) | Split the DSH conversation area into unlimited native panes — columns, stacked, 2x2 and an automatic grid; every pane is a real session with its own composer, streaming and approvals. | `dsh plugin --profile desktop add dsh-split-workspace` | MIT; Re-hosts the native conversation primitives in the top client; no remote assets; the pane layout persists across reloads and tool access follows the focused session. |
 | [Canary-Builds/dsh-mobile-ui](https://github.com/Canary-Builds/dsh-mobile-ui) | Adds touch-friendly navigation, layout refinements, and standalone PWA styling inside the existing DSH web interface. | `dsh plugin --profile web add @canary-builds/dsh-mobile-ui` | MIT; Requires Node.js 22.19+ and targets DSH 0.1.1-rc.x; build-specific UI selectors may stop applying after DSH upgrades. It overrides the host web manifest and must not be loaded alongside the older dsh-plugin-splash or @canary-builds/dsh-wpa packages. |
 | [1692775560/dsh-Mimir-Academic-research](https://github.com/1692775560/dsh-Mimir-Academic-research) | Installs into DSH as a native Cordis bundle providing an 8-view research web workbench, slash commands, agent tools, 9 research skills. | `npm install -g @deepseek-ai/dsh && dsh plugin --profile web add dsh-mimir@latest && dsh web` | MIT; Very new repo (created 2026-08-20); remote GPU/SSH features require user-supplied server credentials. |
 | [ai-daming/clickvibe](https://github.com/ai-daming/clickvibe) | GitHub issue-to-merge delivery control plane: per-issue status board, one-click agent dev in worktrees, auto review, rework, dry-run. | `dsh plugin --profile web add link:/path/to/clickvibe` | MIT; v0.1.0 experimental; no LICENSE file detected on GitHub (MIT only in package.json); agents run arbitrary shell and may auto-merge. |
@@ -165,9 +166,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Aisland-SJL/dsh-worktable](https://github.com/Aisland-SJL/dsh-worktable) | Sidebar project drawer, dockable split workspace (file explorer, terminal, browser), control-room dashboard. | `dsh plugin --profile web add "https://github.com/Aisland-SJL/dsh-worktable/releases/latest/download/dsh-worktable.tgz"` | MIT; Windows fully tested; macOS experimental; state stays in localStorage. |
 | [lavapapa/dsh-composer-layout](https://github.com/lavapapa/dsh-composer-layout) | DSH Web Composer 布局插件：可选右侧停靠、可调整面板宽度、按会话记录布局偏好，并在空间不足时临时回到底部布局 | `dsh plugin --profile web add dsh-composer-layout@0.1.5` | MIT; 仅调整界面和布局；不访问本地文件、网络、API Key、凭据或 shell；布局偏好通过 DSH 设置与会话状态保存 |
 | [GDWhisper/dsh-web-startup-auth](https://github.com/GDWhisper/dsh-web-startup-auth) | Remote DSH Web startup (replaces hard-reject 0.0.0.0), login/register pages, signed session cookies, all-route API auth, password reset. | `dsh plugin --profile web add dsh-web-startup-auth@latest` | MIT; No built-in transport encryption — trusted intranet or HTTPS reverse proxy only; complete first registration before exposing. |
-| [liangmianya/dsh-synapse](https://github.com/liangmianya/dsh-synapse) | DeepSeek Harness Web 可视化会话工作区：把会话/追问/分支渲染为可拖拽缩放的画布式会话地图，双向同步原生对话，按 callId 折叠工具过程，持久化画布布局 | `corepack pnpm dsh plugin --profile web add github:liangmianya/dsh-synapse && corepack pnpm dsh web（卸载：corepack pnpm dsh plugin --profile web remove dsh-synapse）` | MIT; 仅支持 web profile 且要求 DSH 2026-08+ 与 Node>=22.19；两个 dsh web 实例共享同一 profile 写同一 workspaces.json 存在覆盖风险（作者建议单实例运行） |
 
-> This category has **212** verified entries, [view the full list →](docs/categories/web-ui.en.md)
+> This category has **213** verified entries, [view the full list →](docs/categories/web-ui.en.md)
 
 ### Themes & Skins
 
@@ -217,7 +217,11 @@ An entry in this section has at least one verified native signal: a reproducible
 
 ### Voice & Speech
 
-> No verified entries yet.
+| Plugin | Capability | Install or mount | License / Risk |
+| --- | --- | --- | --- |
+| [mhlywxl/dsh-coding-sound](https://github.com/mhlywxl/dsh-coding-sound) | Generative background music while the model streams, plus completion and waiting chimes; per-phase thinking/answer/tool sounds with density, pitch and typewriter jitter. | `dsh plugin --profile desktop add dsh-coding-sound` | MIT; All audio is synthesized in the browser with Web Audio; no network calls and no bundled audio assets; settings persist in the browser's localStorage. |
+
+> This category has **1** verified entries, [view the full list →](docs/categories/voice.en.md)
 
 ### Lists & Resources
 
