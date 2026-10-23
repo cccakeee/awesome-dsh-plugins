@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3134-2563eb)
-![Verified](https://img.shields.io/badge/verified-2340-16a34a)
+![Verified](https://img.shields.io/badge/verified-2341-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-22。** 本版主目录收录 **2340 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3134 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-23。** 本版主目录收录 **2341 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3134 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -123,6 +123,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [hxlog/dsh-mcp-tools](https://github.com/hxlog/dsh-mcp-tools) | MCP 服务器与工具管理器：在 DSH 设置内添加 streamable-http / stdio 服务器、Postman 式逐行请求头、连通性测试与逐工具开关（停用的工具不会注册进模型）。 | `dsh plugin --profile web add dsh-mcp-tools` | MIT；MCP 服务器 URL、请求头（API Key）与 stdio 环境变量保存在本机 ~/.dsh/dsh-mcp-tools/state.json；仅访问用户自行配置的服务器。 |
 | [2026heshao/dsh-armory](https://github.com/2026heshao/dsh-armory) | Manages MCP connections, skills, experts, plugin installs, OAuth, and tool-usage views from a DSH panel. | `dsh plugin --profile web add dsh-armory` | MIT；The board writes profile/project MCP configuration and can authorize or install third-party services; verify transport and credential requirements before use. |
 | [wings1848/dsh-mcp-lazy](https://github.com/wings1848/dsh-mcp-lazy) | Routes configured stdio or streamable HTTP MCP servers through one lazy proxy tool with disk metadata caching, search, describe, and optional direct-tool promotion. | `dsh plugin --profile <your-profile> add dsh-mcp-lazy; add server entries under the inserted mcp-lazy row in the profile cordis.patch.yml, then restart the profile` | MIT；Only tools are supported; no OAuth or approval layer is added. Review every command, URL, header, envFrom source, and migrated native MCP row before enabling it. |
 | [appthin/dsh-mcp-manager-plus](https://github.com/appthin/dsh-mcp-manager-plus) | Lists, configures, enables, disables, restarts, removes, and adds MCP servers from DSH settings. | `dsh plugin --profile web add https://github.com/appthin/dsh-mcp-manager-plus.git; restart DSH or wait for profile hot reload.` | MIT；README limits supported DSH versions to >=0.1.6-alpha.1 and <0.3.0; only manage MCP servers and configurations you trust. |
@@ -132,9 +133,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [moguiyu/dsh-tavily](https://github.com/moguiyu/dsh-tavily) | Add optional Tavily search, extract, map, crawl, and research tools with key rotation. | `dsh plugin --profile web add @moguiyu/dsh-tavily` | MIT；The settings card and Plugins-page install route require DSH 0.1.6-alpha.2 or newer; README's verified compatibility matrix is narrower than its declared peer range. |
 | [getpapi/papi](https://github.com/getpapi/papi) | Adds PAPI planning and project-management MCP tools to DeepSeek Harness through the hosted Streamable HTTP endpoint. | `export PAPI_CONNECTION_TOKEN='<your-token>' && dsh plugin --profile web add @papi-ai/deepseek-harness` | MIT；PAPI's engine is hosted/closed source; installation requires a PAPI account, network access, and a user-supplied connection token, which must not be committed. |
 | [functy23/dsh-mcp-studio](https://github.com/functy23/dsh-mcp-studio) | Edits MCP server entries, scans and imports agent configurations, and manages installed Skills from a DSH panel. | `dsh plugin --profile web add dsh-mcp-studio@latest; restart DSH and hard-refresh the browser. For desktop use --profile desktop.` | MIT；README limits it to DSH Web/Desktop profiles using dsh-web-app and excludes the Tauri-native app. README also notes non-commercial secondary-development terms for vendored upstream code. |
-| [JerryLiu369/agent-web-search](https://github.com/JerryLiu369/agent-web-search) | Provides DSH web search through DDGS, Exa, Parallel, and optional model-grounding providers. | `dsh plugin --profile desktop add github:JerryLiu369/agent-web-search && python -m pip install agent-web-search-mcp` | MIT；The Python package must be installed in the DSH host environment; provider credentials and external API use depend on enabled providers. |
 
-> 该分类共 **49** 个已核验条目，[查看完整清单 →](docs/categories/mcp.md)
+> 该分类共 **50** 个已核验条目，[查看完整清单 →](docs/categories/mcp.md)
 
 ### 插件工具
 
