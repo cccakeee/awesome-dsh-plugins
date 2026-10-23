@@ -57,3 +57,4 @@
 | [ZSeven-W/dsh-crew](https://github.com/ZSeven-W/dsh-crew) | DSH Crew：把任务分发给 DSH agent 的插件（保留 Claude Code / Codex 原生子代理 UI） | `` | MIT |
 
 ← [Back to README](../../README.md)
+| [hxlog/dsh-mcp-tools](https://github.com/hxlog/dsh-mcp-tools) | MCP server & tool manager: add streamable-HTTP / stdio servers inside DSH Settings, Postman-style per-line request headers, connectivity test, and per-tool toggles so disabled tools never reach the model. | `dsh plugin --profile web add dsh-mcp-tools` | MIT; MCP server URLs, request headers (API keys) and stdio env vars stay in the local state file ~/.dsh/dsh-mcp-tools/state.json; only user-configured servers are contacted. |
