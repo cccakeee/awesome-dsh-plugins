@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3134-2563eb)
-![Verified](https://img.shields.io/badge/verified-2340-16a34a)
+![Verified](https://img.shields.io/badge/verified-2341-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-22.** This edition's main directory includes **2340 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,134 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-23.** This edition's main directory includes **2341 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,134 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -122,6 +122,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [hxlog/dsh-mcp-tools](https://github.com/hxlog/dsh-mcp-tools) | MCP 服务器与工具管理器：在 DSH 设置内添加 streamable-http / stdio 服务器、Postman 式逐行请求头、连通性测试与逐工具开关（停用的工具不会注册进模型）。 | `dsh plugin --profile web add dsh-mcp-tools` | MIT; MCP 服务器 URL、请求头（API Key）与 stdio 环境变量保存在本机 ~/.dsh/dsh-mcp-tools/state.json；仅访问用户自行配置的服务器。 |
 | [2026heshao/dsh-armory](https://github.com/2026heshao/dsh-armory) | Manages MCP connections, skills, experts, plugin installs, OAuth, and tool-usage views from a DSH panel. | `dsh plugin --profile web add dsh-armory` | MIT; The board writes profile/project MCP configuration and can authorize or install third-party services; verify transport and credential requirements before use. |
 | [wings1848/dsh-mcp-lazy](https://github.com/wings1848/dsh-mcp-lazy) | Routes configured stdio or streamable HTTP MCP servers through one lazy proxy tool with disk metadata caching, search, describe, and optional direct-tool promotion. | `dsh plugin --profile <your-profile> add dsh-mcp-lazy; add server entries under the inserted mcp-lazy row in the profile cordis.patch.yml, then restart the profile` | MIT; Only tools are supported; no OAuth or approval layer is added. Review every command, URL, header, envFrom source, and migrated native MCP row before enabling it. |
 | [appthin/dsh-mcp-manager-plus](https://github.com/appthin/dsh-mcp-manager-plus) | Lists, configures, enables, disables, restarts, removes, and adds MCP servers from DSH settings. | `dsh plugin --profile web add https://github.com/appthin/dsh-mcp-manager-plus.git; restart DSH or wait for profile hot reload.` | MIT; README limits supported DSH versions to >=0.1.6-alpha.1 and <0.3.0; only manage MCP servers and configurations you trust. |
@@ -131,9 +132,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [moguiyu/dsh-tavily](https://github.com/moguiyu/dsh-tavily) | Add optional Tavily search, extract, map, crawl, and research tools with key rotation. | `dsh plugin --profile web add @moguiyu/dsh-tavily` | MIT; The settings card and Plugins-page install route require DSH 0.1.6-alpha.2 or newer; README's verified compatibility matrix is narrower than its declared peer range. |
 | [getpapi/papi](https://github.com/getpapi/papi) | Adds PAPI planning and project-management MCP tools to DeepSeek Harness through the hosted Streamable HTTP endpoint. | `export PAPI_CONNECTION_TOKEN='<your-token>' && dsh plugin --profile web add @papi-ai/deepseek-harness` | MIT; PAPI's engine is hosted/closed source; installation requires a PAPI account, network access, and a user-supplied connection token, which must not be committed. |
 | [functy23/dsh-mcp-studio](https://github.com/functy23/dsh-mcp-studio) | Edits MCP server entries, scans and imports agent configurations, and manages installed Skills from a DSH panel. | `dsh plugin --profile web add dsh-mcp-studio@latest; restart DSH and hard-refresh the browser. For desktop use --profile desktop.` | MIT; README limits it to DSH Web/Desktop profiles using dsh-web-app and excludes the Tauri-native app. README also notes non-commercial secondary-development terms for vendored upstream code. |
-| [JerryLiu369/agent-web-search](https://github.com/JerryLiu369/agent-web-search) | Provides DSH web search through DDGS, Exa, Parallel, and optional model-grounding providers. | `dsh plugin --profile desktop add github:JerryLiu369/agent-web-search && python -m pip install agent-web-search-mcp` | MIT; The Python package must be installed in the DSH host environment; provider credentials and external API use depend on enabled providers. |
 
-> This category has **49** verified entries, [view the full list →](docs/categories/mcp.en.md)
+> This category has **50** verified entries, [view the full list →](docs/categories/mcp.en.md)
 
 ### Plugin Tooling
 
