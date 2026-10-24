@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3163-2563eb)
-![Verified](https://img.shields.io/badge/verified-2369-16a34a)
+![Verified](https://img.shields.io/badge/verified-2370-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-24。** 本版主目录收录 **2369 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3163 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-24。** 本版主目录收录 **2370 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3163 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -265,7 +265,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [cyancity/yolo-bot](https://github.com/cyancity/yolo-bot) | Adds channels, employees, dispatch, memory, skills, and a web workbench for multi-step DSH tasks. | `npx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile web add <yolo-bot.tgz 绝对路径>; npx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile web add <yolo-bot-ui.tgz 绝对路径>; npx @deepseek-ai/dsh@0.2.1-rc.2 web` | MIT；Requires matching DSH 0.2.1-rc.2 and both release tgz packages; task tools and backups may handle sensitive user data. |
 | [WestFox-AwA/dsh-wish-specializer](https://github.com/WestFox-AwA/dsh-wish-specializer) | Previews and injects missing design, interaction, and acceptance criteria while preserving the user's original prompt. | `PowerShell after downloading the README's release asset: $v = '0.9.0-beta-1'; $d = "$env:USERPROFILE\Downloads"; Invoke-WebRequest "https://github.com/WestFox-AwA/dsh-wish-specializer/releases/download/v$v/dsh-external-dsh-wish-specializer-$v.tgz" -OutFile "$d\dsh-external-dsh-wish-specializer-$v.tgz"; dsh plugin --profile po061 add "$d\dsh-external-dsh-wish-specializer-$v.tgz"` | BSD-3-Clause；README marks v0.9.0-beta-1 as a development beta and identifies runtime testing on DSH 0.1.7 with static contract validation for 0.2.0. |
 
-> 该分类共 **334** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Connect multiple decision providers and models through one interface: Jev via TypeSafe, Clef via Cloudflare, Drex via Nace, self-hosted Laya, and compatible custom providers. Agents and plugins can classify content, filter candidates, score against criteria, or locate objects in images, then use structured results in their workflows. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0；Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. The host probe checked registration and fallback handling only; it did not send a real model request. |
+> 该分类共 **335** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 
