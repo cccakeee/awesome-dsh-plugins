@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3322-2563eb)
-![Verified](https://img.shields.io/badge/verified-2528-16a34a)
+![Verified](https://img.shields.io/badge/verified-2529-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-02.** This edition's main directory includes **2528 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,322 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-02.** This edition's main directory includes **2529 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,322 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -264,7 +264,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [1264459640/dsh-trellis](https://github.com/1264459640/dsh-trellis) | Guides agents through feat/issue/refactor phases with task state, verification gates, and optional readonly planning. | `dsh plugin --profile web add @banana-peeljj12/dsh-trellis@latest` | MIT; Targets DSH 0.2.0-rc.2 peer ranges; configure project allowlist paths before enabling workflow interception. |
 | [Fei2411/DS-Bot](https://github.com/Fei2411/DS-Bot) | Create named bots with separate roles and coordinate them in DSH group chats and workspaces. | `Run dsh plugin --profile web add ds-bot, then start or restart the DSH Web profile. For a new task, open the DS Bot team.` | Apache-2.0; README notes that a profile-level searchProvider override takes precedence over the bundle's auto default. |
 
-> This category has **355** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Connect multiple decision providers and models through one interface: Jev via TypeSafe, Clef via Cloudflare, Drex via Nace, Decider via meraGPT, self-hosted Laya, and compatible custom providers. Agents and plugins can classify content, filter candidates, score against criteria, or locate objects in images, then use structured results in their workflows. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0; The existing host probe predates v0.5.0 and checked registration and fallback handling only; it did not send a real model request. Caller-supplied context may be sent to the configured provider. |
+> This category has **356** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
