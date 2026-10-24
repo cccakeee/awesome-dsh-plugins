@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3163-2563eb)
-![Verified](https://img.shields.io/badge/verified-2369-16a34a)
+![Verified](https://img.shields.io/badge/verified-2370-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-24.** This edition's main directory includes **2369 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-24.** This edition's main directory includes **2370 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -264,7 +264,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [cyancity/yolo-bot](https://github.com/cyancity/yolo-bot) | Adds channels, employees, dispatch, memory, skills, and a web workbench for multi-step DSH tasks. | `npx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile web add <yolo-bot.tgz 绝对路径>; npx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile web add <yolo-bot-ui.tgz 绝对路径>; npx @deepseek-ai/dsh@0.2.1-rc.2 web` | MIT; Requires matching DSH 0.2.1-rc.2 and both release tgz packages; task tools and backups may handle sensitive user data. |
 | [WestFox-AwA/dsh-wish-specializer](https://github.com/WestFox-AwA/dsh-wish-specializer) | Previews and injects missing design, interaction, and acceptance criteria while preserving the user's original prompt. | `PowerShell after downloading the README's release asset: $v = '0.9.0-beta-1'; $d = "$env:USERPROFILE\Downloads"; Invoke-WebRequest "https://github.com/WestFox-AwA/dsh-wish-specializer/releases/download/v$v/dsh-external-dsh-wish-specializer-$v.tgz" -OutFile "$d\dsh-external-dsh-wish-specializer-$v.tgz"; dsh plugin --profile po061 add "$d\dsh-external-dsh-wish-specializer-$v.tgz"` | BSD-3-Clause; README marks v0.9.0-beta-1 as a development beta and identifies runtime testing on DSH 0.1.7 with static contract validation for 0.2.0. |
 
-> This category has **334** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Connect multiple decision providers and models through one interface: Jev via TypeSafe, Clef via Cloudflare, Drex via Nace, self-hosted Laya, and compatible custom providers. Agents and plugins can classify content, filter candidates, score against criteria, or locate objects in images, then use structured results in their workflows. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0; Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. The host probe checked registration and fallback handling only; it did not send a real model request. |
+> This category has **335** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
