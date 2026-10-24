@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3163-2563eb)
-![Verified](https://img.shields.io/badge/verified-2369-16a34a)
+![Verified](https://img.shields.io/badge/verified-2370-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-24.** This edition's main directory includes **2369 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-24.** This edition's main directory includes **2370 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -177,6 +177,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [huanlin-labs/dsh-isolation-gate](https://github.com/huanlin-labs/dsh-isolation-gate) | Per-directory deny/read/full access gate for DSH: roster names and paths, group levels, per-session overrides, audit log, plus 7 model-facing gate_* tools whose permission widening requires owner approval. | `dsh plugin --profile desktop add dsh-isolation-gate, then restart DSH Desktop and open the left-nav 门禁 panel` | MIT; Enforces policy from inside DSH with filesystem access and writes its own state and audit files; the AI tools can tighten or request but never approve widening. No network access and no API keys. |
 | [MrMu666/dsh-lan-tool](https://github.com/MrMu666/dsh-lan-tool) | Expose the DSH web interface to trusted LAN devices through a password-gated proxy. | `dsh plugin --profile desktop add dsh-lan-tool; fully exit and restart DSH Desktop, set an access password in Settings > General > LAN Access, then enable the switch.` | Not found; The password gate is the full security boundary; only enable on trusted networks and use a strong password. The GitHub metadata contains no license. |
 | [0QwQ0/dsh-ui-auth](https://github.com/0QwQ0/dsh-ui-auth) | Gate DSH HTTP and WebSocket access behind login and isolate user sessions and model configuration. | Run `dsh plugin --profile web add dsh-ui-auth`, then restart the DSH web panel. | MIT; Targets only the DSH 0.2.0 web profile line and requires correct HTTPS/origin configuration for non-local deployment and passkey use. |
 | [czcdr/dsh-plugin-rea](https://github.com/czcdr/dsh-plugin-rea) | Registers upstream REA reverse-engineering tools as mcp__rea__* tools in DSH. | `dsh plugin --profile <profile> add dsh-plugin-rea; then run node scripts/setup.mjs --reuse once (or the README bootstrap for a bare Windows machine) and restart dsh.` | MIT; REA analysis is provided by the upstream project; README documents platform-specific capability limits, including Windows apktool limitations. |
@@ -186,9 +187,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [sgzeng/pbfuzz](https://github.com/sgzeng/pbfuzz) | Run approved PBFuzz campaigns inside DSH with directed-fuzzing tools, PIER guards, and optional LLVM reachability analysis. | `npx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile web add @pbfuzz/dsh-pbfuzz; optional: npx @deepseek-ai/dsh@0.2.0-rc.2 plugin --profile web add @pbfuzz/dsh-kanalyzer` | PolyForm-Noncommercial-1.0.0; The published plugin packages use PolyForm Noncommercial licensing; review target-code execution, LLVM/toolchain changes, and the required permissions before enabling it on a sensitive profile. |
 | [HorusJiang/dsh-jev-tools](https://github.com/HorusJiang/dsh-jev-tools) | Reduce oversized tool context, flag possible prompt injection, suggest skills, and gate claims through Jev judgments. | `dsh plugin --profile web add dsh-jev-tools; configure TYPESAFE_API_KEY in Settings -> Plugins -> dsh-jev-tools or the environment; use /jev-status.` | MIT; No API key leaves the plugin inert, but once configured the README explicitly says tool output and fetched pages leave the machine for the configured endpoint. Injection screening is advisory; jev_gate escalates ambiguous judgments. The GitHub tree has source and client files but no committed lib/index.js, so prefer the documented package install path that runs the build lifecycle. |
 | [islibaodong/dsh-login](https://github.com/islibaodong/dsh-login) | Add a login wall, user accounts, session ownership, and admin-managed access to DSH Web. | `dsh plugin --profile web add github:islibaodong/dsh-login; restart dsh web; create the administrator on first visit.` | MIT; The README says the per-user isolation composition and two-browser isolation sign-off still require boot verification; public exposure should use TLS and an explicit host-trust review. |
-| [mokuyoaxis/agent-guard](https://github.com/mokuyoaxis/agent-guard) | Guards destructive DSH shell actions, provides recovery tools, and checks outbound text for credentials and host paths. | `dsh plugin --profile <your-profile> add @mokuyoaxis/agent-guard` | MIT; The project explicitly is not a security sandbox; automatic interception depends on host hook support, and Python 3.9+ plus Git are required. |
 
-> This category has **53** verified entries, [view the full list →](docs/categories/security.en.md)
+> This category has **54** verified entries, [view the full list →](docs/categories/security.en.md)
 
 ### Chat & IM
 
