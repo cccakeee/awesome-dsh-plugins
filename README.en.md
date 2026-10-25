@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3163-2563eb)
-![Verified](https://img.shields.io/badge/verified-2369-16a34a)
+![Verified](https://img.shields.io/badge/verified-2370-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-24.** This edition's main directory includes **2369 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-25.** This edition's main directory includes **2370 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,163 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -54,6 +54,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [nickzhangcomes/dsh-doc-review](https://github.com/nickzhangcomes/dsh-doc-review) | 模型回复多处批注、文档阅读、评论线程与正文修订；阅读摘要带回主会话 / Inline response annotations, document review, comment threads, text revisions and reading summaries. | `dsh plugin --profile web add dsh-doc-review@0.1.1` | MIT; 早期 0.1.1；已测 macOS DSH 0.2.1-rc.3。localStorage 保存审阅记录；Agent 通过 DSH 配置的模型发送文档与评论，消耗 token，并继承会话上下文/工具权限。插件无独立遥测/API Key/文件读取；Windows/Linux 未独立验证。 |
 | [Lphehe/dsh-composer-assist](https://github.com/Lphehe/dsh-composer-assist) | Suggest a next message, complete a draft or polish a prompt from the current session context. | Run `dsh plugin --profile web add https://github.com/Lphehe/dsh-composer-assist/releases/download/v0.1.1/dsh-composer-assist.tgz`. | Not found; The LICENSE is custom source-visible, non-SPDX text that prohibits modification and redistribution of modified versions; automatic predictions incur model charges. |
 | [GooDAnDReaDY/dsh-voice](https://github.com/GooDAnDReaDY/dsh-voice) | Record speech in the DSH client, transcribe it using local or configured remote providers, and enter or send the result. | `dsh plugin --profile web add @goodandready/dsh-voice` | MIT; The README lists multiple remote STT providers and local whisper.cpp options; data handling depends on the selected provider and configuration. |
 | [ash-qw/dsh-theme-prts](https://github.com/ash-qw/dsh-theme-prts) | Applies an Arknights P.R.T.S.-inspired visual theme, settings panel, cursor assets, avatars, emblems, and backgrounds to DSH Web. | `npx @deepseek-ai/dsh plugin --profile web add @ash-qw/dsh-theme-prts` | MIT; The README says the MIT license covers original code only; identifiable Arknights names, images, emblems, and derived third-party assets are excluded and may lack redistribution rights. |
@@ -63,9 +64,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [gulagala001/dsh-intelligent-ui](https://github.com/gulagala001/dsh-intelligent-ui) | Render bounded OpenUI interactions in DSH conversations, persist artifact state, and continue sessions from explicit user actions. | `dsh plugin --profile web add https://github.com/gulagala001/dsh-intelligent-ui/releases/download/v0.2.1-rc.2.iui.1.0.10/dsh-intelligent-ui-0.2.1-rc.2.iui.1.0.10.tgz` | MIT; Use the tarball matching the full DSH 0.2.1-rc.1 or 0.2.1-rc.2 host; package compatibility is release-specific. The npm latest tag is an older 0.1.1 package, so the documented GitHub release URL is the reproducible path. |
 | [huashenglian/dsh-livechat](https://github.com/huashenglian/dsh-livechat) | Adds a Bilibili-style danmaku overlay with presets, optional LLM quips, session pools, controls, and gift effects. | `dsh plugin --profile web add dsh-livechat; restart dsh web and open http://127.0.0.1:3080.` | MIT; LLM mode and remote asset imports are optional but should be reviewed before enabling in a sensitive workspace. |
 | [suzike/dsh-freestyle-theme](https://github.com/suzike/dsh-freestyle-theme) | Design, inspect, save, and apply DSH themes with a visual studio and contrast checks. | `git clone https://github.com/suzike/dsh-freestyle-theme.git && cd dsh-freestyle-theme && pnpm install && pnpm build; copy the built checkout to ~/.dsh/plugins/dsh-freestyle-theme, add dependency dsh-freestyle-theme: link:../../plugins/dsh-freestyle-theme and dsh.profile.bundles=[dsh-freestyle-theme] to ~/.dsh/profiles/web/package.json, then restart dsh web.` | BSD-3-Clause; Requires DSH >=0.2.1-rc.2 and manual web-profile wiring; browser interaction coverage is described as still requiring manual verification. |
-| [lohana20061023-29/dsh-font-probe](https://github.com/lohana20061023-29/dsh-font-probe) | Previews font and typography changes, then saves confirmed preferences to the DSH profile. | `dsh plugin --profile desktop add dsh-font-probe; restart DSH once after installation.` | MIT; The package does not include fonts; the selected fonts must already be installed locally. The README requires a restart after first install. |
 
-> This category has **346** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
+> This category has **347** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
 
 ### Sessions & Messages
 

@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3163-2563eb)
-![Verified](https://img.shields.io/badge/verified-2369-16a34a)
+![Verified](https://img.shields.io/badge/verified-2370-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-24。** 本版主目录收录 **2369 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3163 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-25。** 本版主目录收录 **2370 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3163 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -55,6 +55,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [nickzhangcomes/dsh-doc-review](https://github.com/nickzhangcomes/dsh-doc-review) | 模型回复多处批注、文档阅读、评论线程与正文修订；阅读摘要带回主会话 / Inline response annotations, document review, comment threads, text revisions and reading summaries. | `dsh plugin --profile web add dsh-doc-review@0.1.1` | MIT；早期 0.1.1；已测 macOS DSH 0.2.1-rc.3。localStorage 保存审阅记录；Agent 通过 DSH 配置的模型发送文档与评论，消耗 token，并继承会话上下文/工具权限。插件无独立遥测/API Key/文件读取；Windows/Linux 未独立验证。 |
 | [Lphehe/dsh-composer-assist](https://github.com/Lphehe/dsh-composer-assist) | Suggest a next message, complete a draft or polish a prompt from the current session context. | Run `dsh plugin --profile web add https://github.com/Lphehe/dsh-composer-assist/releases/download/v0.1.1/dsh-composer-assist.tgz`. | 未发现；The LICENSE is custom source-visible, non-SPDX text that prohibits modification and redistribution of modified versions; automatic predictions incur model charges. |
 | [GooDAnDReaDY/dsh-voice](https://github.com/GooDAnDReaDY/dsh-voice) | Record speech in the DSH client, transcribe it using local or configured remote providers, and enter or send the result. | `dsh plugin --profile web add @goodandready/dsh-voice` | MIT；The README lists multiple remote STT providers and local whisper.cpp options; data handling depends on the selected provider and configuration. |
 | [ash-qw/dsh-theme-prts](https://github.com/ash-qw/dsh-theme-prts) | Applies an Arknights P.R.T.S.-inspired visual theme, settings panel, cursor assets, avatars, emblems, and backgrounds to DSH Web. | `npx @deepseek-ai/dsh plugin --profile web add @ash-qw/dsh-theme-prts` | MIT；The README says the MIT license covers original code only; identifiable Arknights names, images, emblems, and derived third-party assets are excluded and may lack redistribution rights. |
@@ -64,9 +65,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [gulagala001/dsh-intelligent-ui](https://github.com/gulagala001/dsh-intelligent-ui) | Render bounded OpenUI interactions in DSH conversations, persist artifact state, and continue sessions from explicit user actions. | `dsh plugin --profile web add https://github.com/gulagala001/dsh-intelligent-ui/releases/download/v0.2.1-rc.2.iui.1.0.10/dsh-intelligent-ui-0.2.1-rc.2.iui.1.0.10.tgz` | MIT；Use the tarball matching the full DSH 0.2.1-rc.1 or 0.2.1-rc.2 host; package compatibility is release-specific. The npm latest tag is an older 0.1.1 package, so the documented GitHub release URL is the reproducible path. |
 | [huashenglian/dsh-livechat](https://github.com/huashenglian/dsh-livechat) | Adds a Bilibili-style danmaku overlay with presets, optional LLM quips, session pools, controls, and gift effects. | `dsh plugin --profile web add dsh-livechat; restart dsh web and open http://127.0.0.1:3080.` | MIT；LLM mode and remote asset imports are optional but should be reviewed before enabling in a sensitive workspace. |
 | [suzike/dsh-freestyle-theme](https://github.com/suzike/dsh-freestyle-theme) | Design, inspect, save, and apply DSH themes with a visual studio and contrast checks. | `git clone https://github.com/suzike/dsh-freestyle-theme.git && cd dsh-freestyle-theme && pnpm install && pnpm build; copy the built checkout to ~/.dsh/plugins/dsh-freestyle-theme, add dependency dsh-freestyle-theme: link:../../plugins/dsh-freestyle-theme and dsh.profile.bundles=[dsh-freestyle-theme] to ~/.dsh/profiles/web/package.json, then restart dsh web.` | BSD-3-Clause；Requires DSH >=0.2.1-rc.2 and manual web-profile wiring; browser interaction coverage is described as still requiring manual verification. |
-| [lohana20061023-29/dsh-font-probe](https://github.com/lohana20061023-29/dsh-font-probe) | Previews font and typography changes, then saves confirmed preferences to the DSH profile. | `dsh plugin --profile desktop add dsh-font-probe; restart DSH once after installation.` | MIT；The package does not include fonts; the selected fonts must already be installed locally. The README requires a restart after first install. |
 
-> 该分类共 **346** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
+> 该分类共 **347** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
 
 ### 会话与消息
 
