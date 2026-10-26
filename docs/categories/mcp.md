@@ -57,3 +57,4 @@
 | [ZSeven-W/dsh-crew](https://github.com/ZSeven-W/dsh-crew) | DSH Crew：把任务分发给 DSH agent 的插件（保留 Claude Code / Codex 原生子代理 UI） | `` | MIT |
 
 ← [返回 README](../../README.md)
+| [hxlog/dsh-mcp-tools](https://github.com/hxlog/dsh-mcp-tools) | MCP 服务器与工具管理器：在 DSH 设置内添加 streamable-http / stdio 服务器、Postman 式逐行请求头、连通性测试与逐工具开关（停用的工具不会注册进模型）。 | `dsh plugin --profile web add dsh-mcp-tools` | MIT；MCP 服务器 URL、请求头（API Key）与 stdio 环境变量保存在本机 ~/.dsh/dsh-mcp-tools/state.json；仅访问用户自行配置的服务器。 |
