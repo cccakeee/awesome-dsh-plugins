@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3214-2563eb)
-![Verified](https://img.shields.io/badge/verified-2420-16a34a)
+![Verified](https://img.shields.io/badge/verified-2421-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-27.** This edition's main directory includes **2420 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,214 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-27.** This edition's main directory includes **2421 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,214 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -54,6 +54,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [nickzhangcomes/dsh-markup](https://github.com/nickzhangcomes/dsh-markup) | 模型回复多处批注、文档阅读、评论线程与正文修订；阅读摘要带回主会话 / Inline response annotations, document review, comment threads, text revisions and reading summaries. | `dsh plugin --profile web add github:nickzhangcomes/dsh-markup#46de29035c083943e8cea0051724ddceb04ae2c2` | MIT; 0.2.0 更名版，保留旧记录；原 0.1.1 已测 macOS DSH 0.2.1-rc.3。localStorage 保存审阅记录；Agent 通过 DSH 配置的模型发送文档与评论，消耗 token，并继承会话上下文/工具权限。插件无独立遥测/API Key/文件读取；Windows/Linux 未独立验证。 |
 | [JayCRL/MobileVC](https://github.com/JayCRL/MobileVC) | Use a phone to inspect DSH sessions, send or interrupt prompts, handle approvals, and manage files and plugins. | `dsh plugin --profile web add "github:JayCRL/MobileVC" && systemctl restart dsh-web` | MIT; The current DSH implementation is a host plugin and PWA; legacy Flutter/Go relay code is retained for historical reference. README requires authenticated HTTPS reverse proxy for remote access. |
 | [john-walks-slow/dsh-qol](https://github.com/john-walks-slow/dsh-qol) | Add configurable mobile-friendly navigation and interaction behavior to the DSH Web GUI. | `dsh plugin --profile web add dsh-qol; refresh the Web GUI and open Settings → QoL.` | MIT; The README's workspace-pin feature uses a host-side reorder RPC while describing the rest as local-only; direct GitHub installation can also require pnpm allowBuilds for its prepare script. |
 | [Bai-2008/dsh-better-panel](https://github.com/Bai-2008/dsh-better-panel) | Choose a provider and model and adjust reasoning effort from an integrated panel. | `For a non-desktop profile run dsh plugin --profile tui add github:Bai-2008/dsh-better-panel; for desktop use the repository install.cmd or DSH Plugin Manager because the CLI rejects the managed desktop profile, then restart DSH.` | MIT; The desktop profile is managed by DSH and cannot use the documented CLI path; use the listed desktop installer or Plugin Manager. |
@@ -63,9 +64,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Respawn-ID/dsh-rhine-splash](https://github.com/Respawn-ID/dsh-rhine-splash) | Applies a Rhine Lab visual theme and splash screen to the DSH desktop or web interface. | `Stop dsh web, run: dsh plugin --profile web add github:Respawn-ID/dsh-rhine-splash, then restart DSH.` | MIT; README lists DSH 0.2.1-rc.3 compatibility and requires pnpm for command-line installation into the web profile. |
 | [IndieXiaoLong/DSH-Enhance](https://github.com/IndieXiaoLong/DSH-Enhance) | Improves conversation navigation and common composer actions in DSH Web and Desktop. | `For Web: dsh plugin --profile web add github:IndieXiaoLong/DSH-Enhance; for Desktop: dsh plugin --profile desktop add github:IndieXiaoLong/DSH-Enhance. Reload Web or restart Desktop after installation.` | MIT; The README says the npm package has not been published; the documented GitHub-source install is available. Requires a compatible DSH Web composition. |
 | [Lphehe/dsh-composer-assist](https://github.com/Lphehe/dsh-composer-assist) | Suggest a next message, complete a draft or polish a prompt from the current session context. | Run `dsh plugin --profile web add https://github.com/Lphehe/dsh-composer-assist/releases/download/v0.1.1/dsh-composer-assist.tgz`. | Not found; The LICENSE is custom source-visible, non-SPDX text that prohibits modification and redistribution of modified versions; automatic predictions incur model charges. |
-| [TonyWu2333/dsh-mercury-diffusion](https://github.com/TonyWu2333/dsh-mercury-diffusion) | Adds an opt-in per-model diffusion animation in chat while persisting only the converged answer text. | `Install with dsh plugin --profile web add dsh-mercury-diffusion, then run dsh web; add an Inception custom model API route with an API key and select a Mercury model to enable the toggle. README source-install alternative: git clone https://github.com/TonyWu2333/dsh-mercury-diffusion.git && cd dsh-mercury-diffusion && npm install && npm pack && dsh plugin --profile web add ./dsh-mercury-diffusion-0.2.1.tgz && dsh web.` | MIT; Requires an Inception API route/key and DSH >=0.2.1-rc.2 <0.3.0; diffusion capability is probed and can be unavailable on gateways/models that reject the field. |
 
-> This category has **358** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
+> This category has **359** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
 
 ### Sessions & Messages
 
