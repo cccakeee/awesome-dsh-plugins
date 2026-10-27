@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3214-2563eb)
-![Verified](https://img.shields.io/badge/verified-2420-16a34a)
+![Verified](https://img.shields.io/badge/verified-2421-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-27.** This edition's main directory includes **2420 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,214 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-27.** This edition's main directory includes **2421 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,214 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -236,6 +236,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [LumiDesk/dsh-wallet-pill](https://github.com/LumiDesk/dsh-wallet-pill) | Composer-dock wallet pill: shows the account balance behind DEEPSEEK_API_KEY, the current peak/off-peak billing window with a live switch countdown, and per-model CNY prices per million tokens. | `dsh plugin --profile web add dsh-wallet-pill` | MIT; Requires DEEPSEEK_API_KEY; the Host makes a read-only request to api.deepseek.com/user/balance. No files are written. package.json has no install-time lifecycle scripts. |
 | [bpc-oss/dsh-web-billing](https://github.com/bpc-oss/dsh-web-billing) | RMB/USD token-billing for dsh web: official-policy auto pricing with peak/off-peak hours, per-message ledger, account balance polling, locale-driven currency display; host /billing route + hand-written client fee badge/panel (read-only over session/event). | `dsh plugin --profile web add github:bpc-oss/dsh-web-billing  (or dsh plugin --profile web add dsh-web-billing after publish); restart dsh web` | MIT |
 | [brittanistrehlowll-oss/dsh-quota-panel](https://github.com/brittanistrehlowll-oss/dsh-quota-panel) | Provider quota/balance corner panel for the dsh web surface: server-side credential proxies plus a config-driven page badge; shipped defaults overridable in the profile's cordis.patch.yml. | `dsh plugin --profile web add "github:brittanistrehlowll-oss/dsh-quota-panel" ; restart dsh web (bundle layers apply at boot)` | MIT; Review which provider keys the credential proxies touch. |
 | [dshiq04/dsh-deepseek-balance](https://github.com/dshiq04/dsh-deepseek-balance) | 余额查看 (API balance widget): web UI 侧边栏底部（Settings 上方）展示 DeepSeek API 余额，悬停显示币种/总额/赠送/充值，可配置颜色与手动刷新；API key 存 $DSH_HOME/settings.yaml 或 DEEPSEEK_API_KEY env。 | dsh plugin --profile web add dsh-deepseek-balance --link <path-to-this-package>, plus `- id: dsh-deepseek-balance` loader entry in $DSH_HOME/profiles/web/cordis.patch.yml (package must be resolvable from the profile node_modules) | MIT; Cross-device setup needs 4 manual steps; on this machine it relies on a local junction into the dsh installation's @deepseek-ai dir. |
@@ -245,9 +246,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [hnmrxz/dsh-plugin-deepseek-balance](https://github.com/hnmrxz/dsh-plugin-deepseek-balance) | 底部状态栏实时显示 DeepSeek 账户余额（同源路由 /dsh-deepseek-balance，credentials seam 实时解析 API Key，10 秒缓存） | `npm install dsh-plugin-deepseek-balance 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-deepseek-balance` | MIT; Not yet published to npm - use local install until published. |
 | [hnmrxz/dsh-plugin-usage-dashboard](https://github.com/hnmrxz/dsh-plugin-usage-dashboard) | 底部状态栏 DeepSeek 用量与估算花费：按会话聚合 token/成本，余额预算告警（复用与余额插件同一条凭据链路） | `npm install dsh-plugin-usage-dashboard 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-usage-dashboard` | MIT |
 | [hurry060215-tech/dsh-api-usage-bar](https://github.com/hurry060215-tech/dsh-api-usage-bar) | Web UI 轻量 API token 用量条：按缓存输入/未缓存输入/输出三分段显示用量构成与数值，纯前端不新增模型工具或 token 开销 | `dsh plugin --profile web add github:hurry060215-tech/dsh-api-usage-bar#v0.1.0，重启 dsh web 并刷新页面` | MIT; 适用于 DSH >=0.1.0-rc.6 <0.2.0；条形表达的是用量构成而非账户余额进度 |
-| [imeepos/dsh-billing-plugin](https://github.com/imeepos/dsh-billing-plugin) | 实时计费：Service+Consumer+Policy 三角色，价格/峰谷窗口/预算全部配置化，超预算时下一步被拒绝并记录预算耗尽通知 | `在 profile 的 cordis.patch.yml(或自有 cordis.yml) 添加挂载行 name: "dsh-billing"，用 dsh --profile <p> --dump-config 确认已入插件树` | MIT; 教材随书代码(第 11–15 章)，配置价格/预算需自行核对；仓库无独立 LICENSE 文件(仅 package.json 声明) |
 
-> This category has **38** verified entries, [view the full list →](docs/categories/billing.en.md)
+> This category has **39** verified entries, [view the full list →](docs/categories/billing.en.md)
 
 ### Agents, Automation & Workflows
 
