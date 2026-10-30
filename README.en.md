@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3268-2563eb)
-![Verified](https://img.shields.io/badge/verified-2474-16a34a)
+![Verified](https://img.shields.io/badge/verified-2475-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-30.** This edition's main directory includes **2474 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,268 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-30.** This edition's main directory includes **2475 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,268 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -264,7 +264,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [InariNGT-Ofiicial/dsh-plugin-updates](https://github.com/InariNGT-Ofiicial/dsh-plugin-updates) | Review plugin update status, schedule checks, and apply supported plugin updates with backups and rollback. | `Requires Node.js 24+ and DSH 0.2.1-rc.2 or rc.3; run dsh plugin --profile desktop add https://github.com/InariNGT-Ofiicial/dsh-plugin-updates/releases/download/v0.2.3/dsh-plugin-updates-0.2.3.tgz, then reload or restart DSH.` | MIT; Automatic installation is enabled by default; verify the documented Node and DSH version range and update policy before enabling it. |
 | [LockyBee/dsh-douyin-agent](https://github.com/LockyBee/dsh-douyin-agent) | Runs limited Douyin browsing and optional interactions through a dedicated Microsoft Edge profile and DSH settings. | `For Web, run dsh plugin --profile web add dsh-douyin-browser-local@1.4.5; for Desktop, install dsh-douyin-browser-local@1.4.5 in Applications -> Desktop plugins. Restart DSH, then use Settings -> 刷抖音. The README requires Windows and Microsoft Edge.` | MIT; Windows and Microsoft Edge are required. Friend interactions and autonomous public comments/sharing can send external messages or content; review allowlists and settings before enabling them. The skill file's version text trails the current README/package version. |
 
-> This category has **352** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+| [exoticknight/dsh-system1](https://github.com/exoticknight/dsh-system1) | Connect multiple decision providers and models through one interface: Jev via TypeSafe, Clef via Cloudflare, Drex via Nace, self-hosted Laya, and compatible custom providers. Agents and plugins can classify content, filter candidates, score against criteria, or locate objects in images, then use structured results in their workflows. | `dsh plugin --profile web add github:exoticknight/dsh-system1` | Apache-2.0; Calls the configured DSH model provider for decision requests; caller-supplied context may be sent to that provider. The host probe checked registration and fallback handling only; it did not send a real model request. |
+> This category has **353** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
