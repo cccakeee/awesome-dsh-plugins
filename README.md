@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3285-2563eb)
-![Verified](https://img.shields.io/badge/verified-2491-16a34a)
+![Verified](https://img.shields.io/badge/verified-2492-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-31。** 本版主目录收录 **2491 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-31。** 本版主目录收录 **2492 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -280,6 +280,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [curo22/dsh-wb400-guard](https://github.com/curo22/dsh-wb400-guard) | Rewrites the blocked at-sign and four channel fingerprints inside system messages at the fetch layer so WorkBuddy CN gateway requests stop returning HTTP 400 code 11128; dryRun mode only observes. | `dsh plugin add github:curo22/dsh-wb400-guard; restart the DSH profile` | MIT；Intercepts global fetch for the hosts in gatewayHosts (default copilot.tencent.com) and rewrites request bodies before they leave the machine; it writes a local JSONL log of origin, path and byte counts (query strings stripped). Only useful together with a domestic WorkBuddy reverse proxy, and relies on a preview channel check that the upstream may change; review the target host list after any DSH or connector upgrade. |
 | [LuYanFCP/dsh-kicad](https://github.com/LuYanFCP/dsh-kicad) | Provides DSH KiCad schematic/PCB read-edit, ERC/DRC, simulation, autorouting, fabrication, skills, and 2D/3D sidebar viewing. | `dsh plugin --profile web add https://github.com/LuYanFCP/dsh-kicad` | MIT；Developer preview tied to DSH >=0.2.1-rc.2 <0.3.0-0 and KiCad 8+; optional Java/Freerouting/ngspice/QEMU and KiCad libraries require separate installation, while source builds require pnpm. |
 | [john-walks-slow/dsh-inject](https://github.com/john-walks-slow/dsh-inject) | Applies scoped system prompts, synthetic turns, and keyword or regex rewrites through /inject presets and a settings UI. | `dsh plugin --profile web add dsh-inject` | MIT；The checked repository package is 0.3.2 while the npm registry currently reports 0.2.3; review preset contents, especially unrestricted/nsfw/dsh-purge imports, and pin the intended revision. |
 | [functy23/dsh-workbuddy-panel](https://github.com/functy23/dsh-workbuddy-panel) | Adds WorkBuddy2API CN/Global model providers and manages accounts, quotas, and a local gateway from DSH settings. | `dsh plugin --profile web add dsh-workbuddy-panel; restart DSH` | MIT；The README says the gateway aligns with official WorkBuddy Desktop headers and that the upstream forbids unauthorized reverse proxy or resale; verify WorkBuddy terms and use only accounts you control. |
@@ -289,9 +290,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Awoodwhale/dsh-agent-persona](https://github.com/Awoodwhale/dsh-agent-persona) | Create, scope, and edit personas from DSH settings, then apply the matching persona to each session prompt. | `dsh plugin --profile web add dsh-agent-persona` | Apache-2.0；The README limits tested DSH releases to listed builds; persona content is injected at system-prompt priority by design. |
 | [datit309/supergraph](https://github.com/datit309/supergraph) | Adds structured engineering workflows, repository intelligence, MCP tools, subagents, and browser-based QA. | `dsh plugin --profile web add github:datit309/supergraph` | MIT；The browser MCP explicitly uses real browser profiles; install and authorize its local MCP services accordingly. |
 | [HRuiCcc/RuiC-dsh-purge](https://github.com/HRuiCcc/RuiC-dsh-purge) | Preflights and applies supported local DSH host changes, records snapshots, and verifies rollback. | `From the source checkout, run npm test, npm pack --ignore-scripts, then dsh plugin --profile desktop add .; README also documents installing the downloaded release tarball with dsh plugin --profile desktop add ./ruic-dsh-purge-1.0.2.tgz. Reopen the matching DSH instance and use RuiC Purge settings or /ruic-purge status\|plan\|apply\|snapshots\|revert <id>.` | MIT；README warns that old DSH layouts include patches changing sandbox and approval defaults; inspect status and compatibility before applying host patches. |
-| [taikaikaikai-pixel/dsh-tap](https://github.com/taikaikaikai-pixel/dsh-tap) | Use configured subscription or API-key providers in DSH, including their models, search/fetch, and image-generation integrations. | `dsh plugin --profile web add dsh-tap` | MIT；This is an unofficial integration using third-party subscription/OAuth and gateway interfaces; review provider terms and credential handling before enabling accounts. |
 
-> 该分类共 **349** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **350** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 
