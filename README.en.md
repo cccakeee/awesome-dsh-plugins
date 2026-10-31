@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3285-2563eb)
-![Verified](https://img.shields.io/badge/verified-2491-16a34a)
+![Verified](https://img.shields.io/badge/verified-2492-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-10-31.** This edition's main directory includes **2491 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,285 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-10-31.** This edition's main directory includes **2492 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,285 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -279,6 +279,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [curo22/dsh-wb400-guard](https://github.com/curo22/dsh-wb400-guard) | Rewrites the blocked at-sign and four channel fingerprints inside system messages at the fetch layer so WorkBuddy CN gateway requests stop returning HTTP 400 code 11128; dryRun mode only observes. | `dsh plugin add github:curo22/dsh-wb400-guard; restart the DSH profile` | MIT; Intercepts global fetch for the hosts in gatewayHosts (default copilot.tencent.com) and rewrites request bodies before they leave the machine; it writes a local JSONL log of origin, path and byte counts (query strings stripped). Only useful together with a domestic WorkBuddy reverse proxy, and relies on a preview channel check that the upstream may change; review the target host list after any DSH or connector upgrade. |
 | [LuYanFCP/dsh-kicad](https://github.com/LuYanFCP/dsh-kicad) | Provides DSH KiCad schematic/PCB read-edit, ERC/DRC, simulation, autorouting, fabrication, skills, and 2D/3D sidebar viewing. | `dsh plugin --profile web add https://github.com/LuYanFCP/dsh-kicad` | MIT; Developer preview tied to DSH >=0.2.1-rc.2 <0.3.0-0 and KiCad 8+; optional Java/Freerouting/ngspice/QEMU and KiCad libraries require separate installation, while source builds require pnpm. |
 | [john-walks-slow/dsh-inject](https://github.com/john-walks-slow/dsh-inject) | Applies scoped system prompts, synthetic turns, and keyword or regex rewrites through /inject presets and a settings UI. | `dsh plugin --profile web add dsh-inject` | MIT; The checked repository package is 0.3.2 while the npm registry currently reports 0.2.3; review preset contents, especially unrestricted/nsfw/dsh-purge imports, and pin the intended revision. |
 | [functy23/dsh-workbuddy-panel](https://github.com/functy23/dsh-workbuddy-panel) | Adds WorkBuddy2API CN/Global model providers and manages accounts, quotas, and a local gateway from DSH settings. | `dsh plugin --profile web add dsh-workbuddy-panel; restart DSH` | MIT; The README says the gateway aligns with official WorkBuddy Desktop headers and that the upstream forbids unauthorized reverse proxy or resale; verify WorkBuddy terms and use only accounts you control. |
@@ -288,9 +289,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Awoodwhale/dsh-agent-persona](https://github.com/Awoodwhale/dsh-agent-persona) | Create, scope, and edit personas from DSH settings, then apply the matching persona to each session prompt. | `dsh plugin --profile web add dsh-agent-persona` | Apache-2.0; The README limits tested DSH releases to listed builds; persona content is injected at system-prompt priority by design. |
 | [datit309/supergraph](https://github.com/datit309/supergraph) | Adds structured engineering workflows, repository intelligence, MCP tools, subagents, and browser-based QA. | `dsh plugin --profile web add github:datit309/supergraph` | MIT; The browser MCP explicitly uses real browser profiles; install and authorize its local MCP services accordingly. |
 | [HRuiCcc/RuiC-dsh-purge](https://github.com/HRuiCcc/RuiC-dsh-purge) | Preflights and applies supported local DSH host changes, records snapshots, and verifies rollback. | `From the source checkout, run npm test, npm pack --ignore-scripts, then dsh plugin --profile desktop add .; README also documents installing the downloaded release tarball with dsh plugin --profile desktop add ./ruic-dsh-purge-1.0.2.tgz. Reopen the matching DSH instance and use RuiC Purge settings or /ruic-purge status\|plan\|apply\|snapshots\|revert <id>.` | MIT; README warns that old DSH layouts include patches changing sandbox and approval defaults; inspect status and compatibility before applying host patches. |
-| [taikaikaikai-pixel/dsh-tap](https://github.com/taikaikaikai-pixel/dsh-tap) | Use configured subscription or API-key providers in DSH, including their models, search/fetch, and image-generation integrations. | `dsh plugin --profile web add dsh-tap` | MIT; This is an unofficial integration using third-party subscription/OAuth and gateway interfaces; review provider terms and credential handling before enabling accounts. |
 
-> This category has **349** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
+> This category has **350** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
 
 ### Knowledge & Research
 
