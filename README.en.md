@@ -402,6 +402,9 @@ These projects are intentionally outside the native directory because the inspec
 | [PM-Shawn/Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | Local-first desktop agent | No verified DSH profile/bundle mounting evidence |
 | [cofy-x/axern](https://github.com/cofy-x/axern) | Agent sandbox service | Related infrastructure, not a DSH plugin |
 | [dsplugin.app](https://dsplugin.app/) ([vbarter/dsh-plugin-registry](https://github.com/vbarter/dsh-plugin-registry)) | Unofficial community DeepSeek Harness plugin directory / registry | Community discovery site, not a DSH-loadable plugin; Manifest / `dsh.bundle` checks |
+| [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) | Coding-agent-driven Android/Google TV debloat tool | Driven by coding agents (Claude Code, Codex, Gemini CLI) over ADB; README shows no DSH load path, pending verification |
+| [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | Open-source fully-local voice-cloning studio | Standalone desktop app plus generic agent skills (`npx skills add`); no inspected DSH bundle, patch, or install path |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | Behavior skills derived from Karpathy's coding principles | Single-file CLAUDE.md installed as a Claude Code plugin; Claude Code-oriented, no DSH load path found |
 
 ## Installation and safety
 

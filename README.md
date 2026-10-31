@@ -403,6 +403,9 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [PM-Shawn/Abu-Cowork](https://github.com/PM-Shawn/Abu-Cowork) | 本地优先桌面 Agent | 未核验到 DSH Profile/Bundles 挂载方式 |
 | [cofy-x/axern](https://github.com/cofy-x/axern) | Agent 沙箱与持久化服务 | 是可关联基础设施，不是 DSH 插件 |
 | [dsplugin.app](https://dsplugin.app/)（[vbarter/dsh-plugin-registry](https://github.com/vbarter/dsh-plugin-registry)） | 非官方社区 DeepSeek Harness 插件目录 / 注册表 | 社区发现与索引站点，不是可装载原生插件；含 Manifest / `dsh.bundle` 校验 |
+| [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) | AI 编码代理驱动的 Android/Google TV 瘦身工具 | 通过 Claude Code、Codex、Gemini CLI 等编码代理执行 ADB 去广告与臃肿应用；README 未提供 DSH 装载路径，待核验 |
+| [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 开源完全本地的语音克隆工作台 | 独立桌面应用 + 通用 agent skills（`npx skills add`）；未发现 DSH Bundle、Patch 或 DSH 安装步骤 |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 源自 Karpathy 编码准则的行为技能 | 单文件 CLAUDE.md，以 Claude Code 插件形式安装；面向 Claude Code，未发现 DSH 装载路径 |
 
 ## 安装与安全
 
