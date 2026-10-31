@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3285-2563eb)
-![Verified](https://img.shields.io/badge/verified-2491-16a34a)
+![Verified](https://img.shields.io/badge/verified-2492-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-31。** 本版主目录收录 **2491 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-01。** 本版主目录收录 **2492 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -55,6 +55,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [exoticknight/dsh-better-left-sidebar](https://github.com/exoticknight/dsh-better-left-sidebar) | Reorganizes DeepSeek Harness sidebar navigation and supports multiple plugin-defined compact-rail widgets. | `dsh plugin --profile web add dsh-better-left-sidebar@0.1.2` | Apache-2.0；Saves explicitly submitted layout, widget order/enablement, and clock preferences in the current DSH profile; profile storage and sync are managed by DSH. No direct network requests, conversation reads, workspace writes, credentials, or telemetry. |
 | [huaguoxingkong/dsh-prompt-rewriter](https://github.com/huaguoxingkong/dsh-prompt-rewriter) | Rewrite a composer draft with the current or pinned model while preserving undo and never sending it. | `dsh plugin --profile web add dsh-prompt-rewriter` | MIT；GitHub marks the repository as a public template; the package metadata and release instructions still describe a usable DSH plugin, but verify the published package version against the source commit. |
 | [Witherwithwinter/DSH-Codinput](https://github.com/Witherwithwinter/DSH-Codinput) | Replaces the DSH composer with a CodeMirror editor supporting split preview, floating/sidebar modes, attachments, slash commands, and stats. | `dsh plugin --profile web add dsh-codinput (or dsh plugin --profile web add github:Witherwithwinter/DSH-Codinput); then run dsh web or refresh the page.` | MIT；README documents dependence on internal composer slot contracts and says upgrades require the manual smoke checklist; the checked-in lib client is a build artifact. |
 | [AssassinVIX/fairy-zzz-plugin](https://github.com/AssassinVIX/fairy-zzz-plugin) | Adds a Fairy H.D.D boot screen, animated eye badge, theme controls, usage bubble, and optional local GPT-SoVITS voice. | `git clone https://github.com/AssassinVIX/fairy-zzz-plugin.git; in a DSH session run plugin_manager install_bundle target=<cloned-directory>` | MIT；Uses third-party Fairy/Zenless Zone Zero media and relies on DSH web DOM selectors; the voice engine is an optional external local dependency. |
@@ -64,9 +65,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [regrevia/dsh-unlag](https://github.com/regrevia/dsh-unlag) | Adds a desktop refresh button that reloads plugin code or rebuilds the DSH interface while preserving host sessions. | `dsh plugin install dsh-unlag` | MIT；Desktop-only; README says a plugin-owned running task can end when that plugin instance is reloaded, and native changes still require a full DSH restart. |
 | [joeseesun/qiaomu-home-dsh](https://github.com/joeseesun/qiaomu-home-dsh) | Adds a Home sidebar page for session search, daily priorities, tasks, notes, focus timers, web search, and weather widgets. | `shasum -a 256 -c SHA256SUMS && dsh plugin --profile desktop add /absolute/path/qiaomu-home-dsh-0.3.1.tgz (use --profile web for web); restart the profile` | GPL-3.0-only；The repository is a source checkout rather than an npm publication; README documents compatibility verification on DSH 0.2.1-rc.3 and says mobile behavior is unverified. |
 | [joeseesun/qiaomu-ui-learn-dsh](https://github.com/joeseesun/qiaomu-ui-learn-dsh) | Provides searchable UI references, a component dictionary, aesthetic quizzes, ratings, shortcuts, and persistent Markdown learning notes. | `dsh plugin --profile YOUR_PROFILE add /absolute/path/qiaomu-ui-learn-dsh-0.1.2.tgz; reload the profile. Requires DeepSeek Harness 0.2.1-rc.3.` | MIT；The package is private in package.json and is distributed as a prebuilt GitHub Release tgz; Home integration requires the qiaomuHome v1 service and the old Home release lacks it. |
-| [OrderG-X/dsh-design-studio](https://github.com/OrderG-X/dsh-design-studio) | Shows generated web, app, poster, slide, or email screens in a selectable sidebar canvas with design checks and exports. | `dsh plugin add https://github.com/OrderG-X/dsh-design-studio/releases/latest/download/dsh-design-studio.tgz; restart DSH.` | MIT；The optional phone view opens a LAN preview endpoint and the preview tooling can inspect or modify workspace HTML; only install it in a trusted DSH profile and workspace. |
 
-> 该分类共 **370** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
+> 该分类共 **371** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
 
 ### 会话与消息
 
