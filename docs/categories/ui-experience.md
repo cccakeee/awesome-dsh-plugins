@@ -374,5 +374,6 @@
 | [zhangzheng25/dsh-timeline](https://github.com/zhangzheng25/dsh-timeline) | DSH 时间线 UI 插件。 | `` | MIT |
 | [zhijun-dai/Catppuccin-dsh-theme](https://github.com/zhijun-dai/Catppuccin-dsh-theme) | DSH Catppuccin 四色系主题插件（Latte/Frappé/Macchiato/Mocha） | `` | MIT |
 | [Zzzzkd/dsh-prompt-rail](https://github.com/Zzzzkd/dsh-prompt-rail) | 提示词快速跳转条 | `` | MIT |
+| [ShawnRen57/dsh-whale-trail](https://github.com/ShawnRen57/dsh-whale-trail) | 小鲸鱼主题的本地成就插件：7 大系列 67 枚印章徽章、9 段航程 36 件海洋收藏、可配置 ASCII 水族馆，以及 PNG / 离线 HTML 航海名片；数据保存在本地 | 从 [v1.0.1 Release](https://github.com/ShawnRen57/dsh-whale-trail/releases/tag/v1.0.1) 下载 `dsh-whale-trail-1.0.1.tgz`，运行 `dsh plugin --profile desktop add 'file:/path/dsh-whale-trail-1.0.1.tgz' --ignore-scripts`，重启 Harness | 未发现（仓库无 LICENSE，package.json UNLICENSED 且 private:true）；安装走 Release 预构建包；读取本地会话历史，无网络请求、无新增模型调用 |
 
 ← [返回 README](../../README.md)
