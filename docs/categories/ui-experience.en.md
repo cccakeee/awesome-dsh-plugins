@@ -374,5 +374,6 @@
 | [zhangzheng25/dsh-timeline](https://github.com/zhangzheng25/dsh-timeline) | DSH 时间线 UI 插件。 | `` | MIT |
 | [zhijun-dai/Catppuccin-dsh-theme](https://github.com/zhijun-dai/Catppuccin-dsh-theme) | DSH Catppuccin 四色系主题插件（Latte/Frappé/Macchiato/Mocha） | `` | MIT |
 | [Zzzzkd/dsh-prompt-rail](https://github.com/Zzzzkd/dsh-prompt-rail) | 提示词快速跳转条 | `` | MIT |
+| [ShawnRen57/dsh-whale-trail](https://github.com/ShawnRen57/dsh-whale-trail) | Whale-themed local achievement plugin: 67 stamped badges across 7 series, 9 voyage chapters with 36 ocean collectibles, a configurable ASCII aquarium, and a PNG / offline-HTML voyage card; all records stay local | Download `dsh-whale-trail-1.0.1.tgz` from the [v1.0.1 release](https://github.com/ShawnRen57/dsh-whale-trail/releases/tag/v1.0.1) and run `dsh plugin --profile desktop add 'file:/path/dsh-whale-trail-1.0.1.tgz' --ignore-scripts`, then restart Harness | 未发现 (no LICENSE file; package.json UNLICENSED and private:true); installed from the prebuilt release tgz; reads local session history only, no network requests or model calls |
 
 ← [Back to README](../../README.md)
