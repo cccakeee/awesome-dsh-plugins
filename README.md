@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3285-2563eb)
-![Verified](https://img.shields.io/badge/verified-2491-16a34a)
+![Verified](https://img.shields.io/badge/verified-2492-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-31。** 本版主目录收录 **2491 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-10-31。** 本版主目录收录 **2492 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -195,6 +195,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [yinsang0910-star/dsh-feishu-plugin](https://github.com/yinsang0910-star/dsh-feishu-plugin) | 飞书连接设置页（Web UI bundle）：四步向导 + 扫码创建飞书应用（RFC 8628 设备授权）+ 九项实时自检；自检失败会直接给出该开通的 scope。配置后由同一上游仓库的 stdio MCP server 提供 25 个工具（把本地文件发进会话、进度卡原地刷新、阻塞式提问等）。 | `dsh plugin --profile web add github:yinsang0910-star/dsh-feishu-plugin#48ccedbfe10acb833ed4be5e0cc1d4de02ec5ecf` | MIT；设置页把 Feishu App ID/Secret 写入 ~/.config/dsh/feishu.env（0600），并需要访问 open.feishu.cn 与 accounts.feishu.cn；扫码建应用走飞书设备授权流程。插件本包不执行命令，但配套 MCP server 需另装，装后可向会话发送消息与本地文件。0.1.0 早期预览，无 release tag。 |
 | [tdcq9594/dsh-roost](https://github.com/tdcq9594/dsh-roost) | Bridges QQ conversations to persistent DSH sessions with personas, memory, context compaction, and configurable tools. | `dsh plugin --profile web add dsh-roost; requires the DSH desktop/Web combination, then configure Roost and ai-chat from the plugin panel.` | 未发现；LICENSE is a custom non-commercial license rather than an SPDX license; Roost and ai-chat must also be installed/configured, and group tool defaults require review. |
 | [cheesehaqi/dsh-qq-onebot-bridge](https://github.com/cheesehaqi/dsh-qq-onebot-bridge) | Bridges QQ/OneBot v11 inbound messages to DSH sessions and sends agent replies back with tools, controls, tracing, and media features. | `cd <this-directory> && npm install --omit=dev; dsh plugin --profile web add <this-directory>` | MIT；README requires a OneBot implementation and profile configuration, warns that only one instance should host the bridge, and documents dry-run/injection safeguards before enabling outbound actions. |
 | [Coprexist/Copree](https://github.com/Coprexist/Copree) | Embeds Copree chat/world views in DSH and mirrors worlds into DSH workspaces and tools. | `cd /path/to/Copree/dsh-copree && node scripts/build.mjs && dsh plugin --profile web add file:/path/to/Copree/dsh-copree` | MIT；Install from the nested dsh-copree directory and configure a reachable backend; enable the reverse bridge only with a reviewed shared secret and authorized Copree instance. |
@@ -204,9 +205,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [accomplish07zrh-eng/dsh-aurabot-qq](https://github.com/accomplish07zrh-eng/dsh-aurabot-qq) | Route QQ private and group conversations into DSH sessions and reply with configurable agent behavior. | `On Windows with DSH Desktop run & "$env:LOCALAPPDATA\Programs\DeepSeek Harness\resources\runtime\cli\bin\dsh.cmd" plugin --profile desktop add github:accomplish07zrh-eng/dsh-aurabot-qq; install/configure SnowLuma separately, then explicitly enable the bot in its panel.` | MIT；Windows and DSH Desktop are required; the README's default-off trial mode must be explicitly enabled. Star count sources were inconsistent at review time. |
 | [sorsama/deepseek-harness-relay](https://github.com/sorsama/deepseek-harness-relay) | Places an authenticated HTTPS relay and mobile pairing layer in front of a loopback DSH web server. | `dsh plugin --profile web add dsh-relay; restart with dsh web, then set a password at https://127.0.0.1:3443/relay/password and pair devices at /relay/pair.` | MIT；Remove any existing 0.0.0.0 harness LAN patch before installing; the compatibility address-grant/plain-port modes are weaker than real device-token authentication. |
 | [Yuuyuko-uu/dsh-qq-bridge](https://github.com/Yuuyuko-uu/dsh-qq-bridge) | Forwards DSH replies to QQ and routes selected incoming QQ text and images into a DSH session. | `dsh plugin --profile desktop add github:Yuuyuko-uu/dsh-qq-bridge` | MIT；Sending is disabled and dry-run enabled by default, but the test-send endpoint bypasses dry-run and sends a real message. |
-| [TH060419/gatherthread](https://github.com/TH060419/gatherthread) | Binds GatherThread projects to DSH sessions, synchronizes permitted messages and project code, and relays Agent work. | `npx @deepseek-ai/dsh@0.2.1-rc.2 plugin --profile web add "/absolute/path/to/LOCAL_DSH_PLUGIN.tgz"` | Apache-2.0；Beta integration is version-gated to DSH 0.2.1-rc.2 and matching GatherThread server behavior; pairing and optional GitHub sync require account and consent setup. |
 
-> 该分类共 **108** 个已核验条目，[查看完整清单 →](docs/categories/chat-im.md)
+> 该分类共 **109** 个已核验条目，[查看完整清单 →](docs/categories/chat-im.md)
 
 ### 命令行与终端
 
