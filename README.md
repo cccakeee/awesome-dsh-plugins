@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3285-2563eb)
-![Verified](https://img.shields.io/badge/verified-2491-16a34a)
+![Verified](https://img.shields.io/badge/verified-2492-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-10-31。** 本版主目录收录 **2491 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-01。** 本版主目录收录 **2492 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3285 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -157,6 +157,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [chriswang/dsh-conversation-tree](https://github.com/chriswang/dsh-conversation-tree) | Adds a collapsible Conversation Tree band beside the conversation: sessions organised by workspace, topic and conversation, the real sessions open in place, and the tree is exposed to the assistant through 9 model tools (map_*). | `dsh plugin --profile web add dsh-conversation-tree; restart DSH (remove: dsh plugin --profile web remove dsh-conversation-tree)` | MIT；Writes a local document at $DSH_HOME/conversation-map/map.json through a host RPC channel; published package makes no network requests and has no runtime dependencies; depends on public product DOM contracts and shows a temporarily-unavailable notice if they change; single writer (last write wins) when several processes share the same $DSH_HOME. |
 | [Canary-Builds/dsh-mobile-ui](https://github.com/Canary-Builds/dsh-mobile-ui) | Adds touch-friendly navigation, layout refinements, and standalone PWA styling inside the existing DSH web interface. | `dsh plugin --profile web add @canary-builds/dsh-mobile-ui` | MIT；Requires Node.js 22.19+ and targets DSH 0.1.1-rc.x; build-specific UI selectors may stop applying after DSH upgrades. It overrides the host web manifest and must not be loaded alongside the older dsh-plugin-splash or @canary-builds/dsh-wpa packages. |
 | [1692775560/dsh-Mimir-Academic-research](https://github.com/1692775560/dsh-Mimir-Academic-research) | Installs into DSH as a native Cordis bundle providing an 8-view research web workbench, slash commands, agent tools, 9 research skills. | `npm install -g @deepseek-ai/dsh && dsh plugin --profile web add dsh-mimir@latest && dsh web` | MIT；Very new repo (created 2026-08-20); remote GPU/SSH features require user-supplied server credentials. |
 | [ai-daming/clickvibe](https://github.com/ai-daming/clickvibe) | GitHub issue-to-merge delivery control plane: per-issue status board, one-click agent dev in worktrees, auto review, rework, dry-run. | `dsh plugin --profile web add link:/path/to/clickvibe` | MIT；v0.1.0 experimental; no LICENSE file detected on GitHub (MIT only in package.json); agents run arbitrary shell and may auto-merge. |
@@ -166,9 +167,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Aisland-SJL/dsh-worktable](https://github.com/Aisland-SJL/dsh-worktable) | Sidebar project drawer, dockable split workspace (file explorer, terminal, browser), control-room dashboard. | `dsh plugin --profile web add "https://github.com/Aisland-SJL/dsh-worktable/releases/latest/download/dsh-worktable.tgz"` | MIT；Windows fully tested; macOS experimental; state stays in localStorage. |
 | [lavapapa/dsh-composer-layout](https://github.com/lavapapa/dsh-composer-layout) | DSH Web Composer 布局插件：可选右侧停靠、可调整面板宽度、按会话记录布局偏好，并在空间不足时临时回到底部布局 | `dsh plugin --profile web add dsh-composer-layout@0.1.5` | MIT；仅调整界面和布局；不访问本地文件、网络、API Key、凭据或 shell；布局偏好通过 DSH 设置与会话状态保存 |
 | [GDWhisper/dsh-web-startup-auth](https://github.com/GDWhisper/dsh-web-startup-auth) | Remote DSH Web startup (replaces hard-reject 0.0.0.0), login/register pages, signed session cookies, all-route API auth, password reset. | `dsh plugin --profile web add dsh-web-startup-auth@latest` | MIT；No built-in transport encryption — trusted intranet or HTTPS reverse proxy only; complete first registration before exposing. |
-| [liangmianya/dsh-synapse](https://github.com/liangmianya/dsh-synapse) | DeepSeek Harness Web 可视化会话工作区：把会话/追问/分支渲染为可拖拽缩放的画布式会话地图，双向同步原生对话，按 callId 折叠工具过程，持久化画布布局 | `corepack pnpm dsh plugin --profile web add github:liangmianya/dsh-synapse && corepack pnpm dsh web（卸载：corepack pnpm dsh plugin --profile web remove dsh-synapse）` | MIT；仅支持 web profile 且要求 DSH 2026-08+ 与 Node>=22.19；两个 dsh web 实例共享同一 profile 写同一 workspaces.json 存在覆盖风险（作者建议单实例运行） |
 
-> 该分类共 **212** 个已核验条目，[查看完整清单 →](docs/categories/web-ui.md)
+> 该分类共 **213** 个已核验条目，[查看完整清单 →](docs/categories/web-ui.md)
 
 ### 主题与皮肤
 
