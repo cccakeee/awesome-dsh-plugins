@@ -247,5 +247,6 @@
 | [YYTbit/dsh-plugin-rag](https://github.com/YYTbit/dsh-plugin-rag) | 本地知识库 RAG：索引项目文件（md/code/config），TF-IDF 关键词检索，注入系统提示，提供 `rag` CLI。 | `dsh plugin --profile your-profile add dsh-plugin-rag` | MIT; 本地索引并读取项目文件（.env 亦在索引列表内），无网络/外部 API；注意敏感文件可能被索引注入。 |
 | [Zephyr-vibe/dsh-personalize](https://github.com/Zephyr-vibe/dsh-personalize) | Per-host personalization: global custom instructions, local long-term memory and reply-tone presets. | `` | MIT |
 | [zhujunpeng12/dsh-memory-system](https://github.com/zhujunpeng12/dsh-memory-system) | DSH 本地优先持久记忆基础设施（六层记忆闭环：热记忆/冷召回/授权写入/治理） | `` | MIT |
+| [1837458003-ctrl/dsh-memory-starmap](https://github.com/1837458003-ctrl/dsh-memory-starmap) | Renders DSH session memories as a rotatable 3D star map with local bge embeddings, UMAP layout, and a Three.js UI, plus a floating DSH panel. | `dsh plugin --profile web add link:/path/to/dsh-memory-starmap`; then run `python -m pip install -r requirements.txt`, `python download_model.py`, `python extract.py`, `python build.py`, `python server.py 8126` | MIT; reads local `~/.dsh/sessions`, downloads a ~95MB model from hf-mirror, requires Python 3.10+ and a local port; inference is local and conversation data is not uploaded. |
 
 ← [Back to README](../../README.md)

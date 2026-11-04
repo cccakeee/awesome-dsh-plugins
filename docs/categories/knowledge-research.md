@@ -247,5 +247,6 @@
 | [YYTbit/dsh-plugin-rag](https://github.com/YYTbit/dsh-plugin-rag) | 本地知识库 RAG：索引项目文件（md/code/config），TF-IDF 关键词检索，注入系统提示，提供 `rag` CLI。 | `dsh plugin --profile your-profile add dsh-plugin-rag` | MIT；本地索引并读取项目文件（.env 亦在索引列表内），无网络/外部 API；注意敏感文件可能被索引注入。 |
 | [Zephyr-vibe/dsh-personalize](https://github.com/Zephyr-vibe/dsh-personalize) | Per-host personalization: global custom instructions, local long-term memory and reply-tone presets. | `` | MIT |
 | [zhujunpeng12/dsh-memory-system](https://github.com/zhujunpeng12/dsh-memory-system) | DSH 本地优先持久记忆基础设施（六层记忆闭环：热记忆/冷召回/授权写入/治理） | `` | MIT |
+| [1837458003-ctrl/dsh-memory-starmap](https://github.com/1837458003-ctrl/dsh-memory-starmap) | 把 DSH 会话记忆渲染成可旋转的 3D 星图：本地 bge embedding + UMAP 布局 + Three.js 界面，附带 DSH 浮层面板。 | `dsh plugin --profile web add link:/path/to/dsh-memory-starmap`；依次运行 `python -m pip install -r requirements.txt`、`python download_model.py`、`python extract.py`、`python build.py`、`python server.py 8126` | MIT；读取本机 `~/.dsh/sessions`，从 hf-mirror 下载约 95MB 模型，需要 Python 3.10+ 和本地端口；推理在本机完成，不上传会话数据。 |
 
 ← [返回 README](../../README.md)
