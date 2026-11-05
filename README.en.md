@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3322-2563eb)
-![Verified](https://img.shields.io/badge/verified-2528-16a34a)
+![Verified](https://img.shields.io/badge/verified-2529-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-02.** This edition's main directory includes **2528 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,322 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-05.** This edition's main directory includes **2529 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,322 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -279,6 +279,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [huanlin-labs/dsh-superagent-win-startstop](https://github.com/huanlin-labs/dsh-superagent-win-startstop) | Windows status/start/stop/restart wrapper for dsh-superagent with the upstream four exit codes, WMI process discovery, health checks and a manually-stopped marker. | `git clone https://github.com/huanlin-labs/dsh-superagent-win-startstop.git ~/.dsh/skills/dsh-superagent-win-startstop; then run pwsh -NoProfile -File "$SKILL_DIR/dsh-superagent.ps1" status\|start\|stop\|restart -Profile <profile> -Url <url> -Root <checkout>` | MIT; Windows-only; stop uses Stop-Process -Force by default because Windows has no cross-process POSIX SIGINT; -NoForce keeps the no-force semantics. Not a Cordis native plugin. |
 | [KurutoDenzeru/tersio](https://github.com/KurutoDenzeru/tersio) | Installs configurable token-saving modes, usage tracking, a dashboard, and Tersio MCP tools into DSH. | `dsh plugin --profile web add npm:@krtclcdy/tersio` | MIT; The installer targets multiple agent hosts and can register extensions twice if both installer and host-native paths are used; follow one installation path per host. |
 | [XiangyuYue/boardwise](https://github.com/XiangyuYue/boardwise) | Adds DSH tools that call boardwise for board review, diagnostics, read-only bridge actions, and offline draw compile/lint workflows. | `From the checkout: cd dsh-plugin && npm install && npm run typecheck && npm test && npm run build && npm pack; then dsh plugin --profile web add file:./boardwise-dsh-0.6.0.tgz (README also documents github:xianyuyijinban/boardwise).` | MIT; The plugin requires a separately installed boardwise CLI and EasyEDA environment; the README identifies Windows as the supported environment and says macOS/Linux bridge behavior is untested. |
 | [LuYanFCP/dsh-kicad](https://github.com/LuYanFCP/dsh-kicad) | Provides DSH KiCad schematic/PCB read-edit, ERC/DRC, simulation, autorouting, fabrication, skills, and 2D/3D sidebar viewing. | `dsh plugin --profile web add https://github.com/LuYanFCP/dsh-kicad` | MIT; Developer preview tied to DSH >=0.2.1-rc.2 <0.3.0-0 and KiCad 8+; optional Java/Freerouting/ngspice/QEMU and KiCad libraries require separate installation, while source builds require pnpm. |
@@ -288,9 +289,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [MichengAI/dsh-simplify](https://github.com/MichengAI/dsh-simplify) | Adds /simplify to review Git changes and ask the Agent to simplify code while preserving behavior. | `git clone https://github.com/MichengAI/dsh-simplify.git && cd dsh-simplify && npm ci --ignore-scripts && npm run check && dsh plugin --profile web add . --ignore-scripts` | Apache-2.0; The /simplify command queues an Agent task that can edit selected Git changes; inspect the resulting diff and validation. |
 | [yh4922/dsh-workspace](https://github.com/yh4922/dsh-workspace) | Manage remote hosts, browse and edit remote files, open SSH terminals, and run agent tools on remote workspaces. | `dsh plugin --profile <profile> add @yh4922/dsh-workspace` | MIT; Remote shell commands run on the configured remote host; the plugin is not a local sandbox boundary. |
 | [iasiv5/dsh-m](https://github.com/iasiv5/dsh-m) | Adds a DSH sidebar marketplace, agent tools, and a CLI for listing, installing, updating, toggling, and removing plugins. | `Install in Web with dsh plugin --profile web add dsh-m; restart the Web service and refresh the page, then open Marketplace in the sidebar. npm install -g dsh-m installs only the standalone dshm CLI, not the DSH plugin.` | MIT; README states that community catalog inclusion is not a security review; users should inspect third-party entries before installing them. |
-| [dat-lequoc/dsh-kiro](https://github.com/dat-lequoc/dsh-kiro) | Add a Kiro provider to DSH with OAuth/API-key login, model discovery, streaming, tools, and reasoning controls. | `dsh plugin --profile web add github:dat-lequoc/dsh-kiro` | MIT; Protect stored credentials; provider availability depends on Kiro account, region, model catalog, and permitted egress/proxy settings. |
 
-> This category has **354** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
+> This category has **355** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
 
 ### Knowledge & Research
 

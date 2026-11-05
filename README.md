@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3322-2563eb)
-![Verified](https://img.shields.io/badge/verified-2528-16a34a)
+![Verified](https://img.shields.io/badge/verified-2529-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-02。** 本版主目录收录 **2528 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3322 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-05。** 本版主目录收录 **2529 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3322 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -280,6 +280,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [huanlin-labs/dsh-superagent-win-startstop](https://github.com/huanlin-labs/dsh-superagent-win-startstop) | Windows status/start/stop/restart wrapper for dsh-superagent with the upstream four exit codes, WMI process discovery, health checks and a manually-stopped marker. | `git clone https://github.com/huanlin-labs/dsh-superagent-win-startstop.git ~/.dsh/skills/dsh-superagent-win-startstop; then run pwsh -NoProfile -File "$SKILL_DIR/dsh-superagent.ps1" status\|start\|stop\|restart -Profile <profile> -Url <url> -Root <checkout>` | MIT；Windows-only; stop uses Stop-Process -Force by default because Windows has no cross-process POSIX SIGINT; -NoForce keeps the no-force semantics. Not a Cordis native plugin. |
 | [KurutoDenzeru/tersio](https://github.com/KurutoDenzeru/tersio) | Installs configurable token-saving modes, usage tracking, a dashboard, and Tersio MCP tools into DSH. | `dsh plugin --profile web add npm:@krtclcdy/tersio` | MIT；The installer targets multiple agent hosts and can register extensions twice if both installer and host-native paths are used; follow one installation path per host. |
 | [XiangyuYue/boardwise](https://github.com/XiangyuYue/boardwise) | Adds DSH tools that call boardwise for board review, diagnostics, read-only bridge actions, and offline draw compile/lint workflows. | `From the checkout: cd dsh-plugin && npm install && npm run typecheck && npm test && npm run build && npm pack; then dsh plugin --profile web add file:./boardwise-dsh-0.6.0.tgz (README also documents github:xianyuyijinban/boardwise).` | MIT；The plugin requires a separately installed boardwise CLI and EasyEDA environment; the README identifies Windows as the supported environment and says macOS/Linux bridge behavior is untested. |
 | [LuYanFCP/dsh-kicad](https://github.com/LuYanFCP/dsh-kicad) | Provides DSH KiCad schematic/PCB read-edit, ERC/DRC, simulation, autorouting, fabrication, skills, and 2D/3D sidebar viewing. | `dsh plugin --profile web add https://github.com/LuYanFCP/dsh-kicad` | MIT；Developer preview tied to DSH >=0.2.1-rc.2 <0.3.0-0 and KiCad 8+; optional Java/Freerouting/ngspice/QEMU and KiCad libraries require separate installation, while source builds require pnpm. |
@@ -289,9 +290,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [MichengAI/dsh-simplify](https://github.com/MichengAI/dsh-simplify) | Adds /simplify to review Git changes and ask the Agent to simplify code while preserving behavior. | `git clone https://github.com/MichengAI/dsh-simplify.git && cd dsh-simplify && npm ci --ignore-scripts && npm run check && dsh plugin --profile web add . --ignore-scripts` | Apache-2.0；The /simplify command queues an Agent task that can edit selected Git changes; inspect the resulting diff and validation. |
 | [yh4922/dsh-workspace](https://github.com/yh4922/dsh-workspace) | Manage remote hosts, browse and edit remote files, open SSH terminals, and run agent tools on remote workspaces. | `dsh plugin --profile <profile> add @yh4922/dsh-workspace` | MIT；Remote shell commands run on the configured remote host; the plugin is not a local sandbox boundary. |
 | [iasiv5/dsh-m](https://github.com/iasiv5/dsh-m) | Adds a DSH sidebar marketplace, agent tools, and a CLI for listing, installing, updating, toggling, and removing plugins. | `Install in Web with dsh plugin --profile web add dsh-m; restart the Web service and refresh the page, then open Marketplace in the sidebar. npm install -g dsh-m installs only the standalone dshm CLI, not the DSH plugin.` | MIT；README states that community catalog inclusion is not a security review; users should inspect third-party entries before installing them. |
-| [dat-lequoc/dsh-kiro](https://github.com/dat-lequoc/dsh-kiro) | Add a Kiro provider to DSH with OAuth/API-key login, model discovery, streaming, tools, and reasoning controls. | `dsh plugin --profile web add github:dat-lequoc/dsh-kiro` | MIT；Protect stored credentials; provider availability depends on Kiro account, region, model catalog, and permitted egress/proxy settings. |
 
-> 该分类共 **354** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **355** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 
