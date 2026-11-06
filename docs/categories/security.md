@@ -67,3 +67,4 @@
 | [JUSTMONIKA2022/dsh-sandbox-escalation-fix](https://github.com/JUSTMONIKA2022/dsh-sandbox-escalation-fix) | Session-aware sandbox 权限升级兼容插件：修复同模式 escalation、空白 justification、重试循环失败。 | Release 一键安装/卸载或 GitHub 安装（见 README） | MIT |
 
 ← [返回 README](../../README.md)
+| [kcgoofee-jpg/dsh-secret-form](https://github.com/kcgoofee-jpg/dsh-secret-form) | Collects secrets through a card and injects them into a terminal PTY, the DSH sidebar browser, or Ego Lite, so the value never becomes a tool argument or a tool result. Supports multi-field forms and live strength rules. | `npx -y @deepseek-ai/dsh plugin --profile <profile> add git+https://github.com/kcgoofee-jpg/dsh-secret-form.git; restart DSH.` | MIT；Writes `~/.dsh/.credentials.yaml` only when the user ticks the save box. The sidebar engine calls `webview.executeJavaScript` inside the panel, so a filled value lands in that page's own input; treat the panel's site as the trust boundary. |
