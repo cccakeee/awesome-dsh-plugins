@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3473-2563eb)
-![Verified](https://img.shields.io/badge/verified-2679-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3474-2563eb)
+![Verified](https://img.shields.io/badge/verified-2680-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-11.** This edition's main directory includes **2679 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,473 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-11.** This edition's main directory includes **2680 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,474 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,473** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,474** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | [Verified directory](#verified-directory) | Verified loadable extensions grouped into 22 capability categories (aligned with the [site](https://deepseekharnessplugins.com)) |
 | [UI & Experience](#ui--experience) · [Sessions & Messages](#sessions--messages) · [Other](#other) · [Desktop & Apps](#desktop--apps) · [MCP & Protocols](#mcp--protocols) · [Plugin Tooling](#plugin-tooling) · [Web UI & Frontend](#web-ui--frontend) · [Themes & Skins](#themes--skins) · [Security & Auth](#security--auth) · [Chat & IM](#chat--im) · [CLI & Terminal](#cli--terminal) · [Voice & Speech](#voice--speech) · [Lists & Resources](#lists--resources) · [Usage & Billing](#usage--billing) · [Agents, Automation & Workflows](#agents-automation--workflows) · [Integrations & Sharing](#integrations--sharing) · [Developer Tools](#developer-tools) · [Knowledge & Research](#knowledge--research) · [Design, Media & Vision](#design-media--vision) · [Web & Browser](#web--browser) · [Ecosystem & Resources](#ecosystem--resources) · [Just for Fun](#just-for-fun) | 22 category anchors |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
@@ -41,7 +41,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,473** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,474** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | Category pages (full listings) | [UI & Experience](docs/categories/ui-experience.en.md) · [Sessions & Messages](docs/categories/sessions-messages.en.md) · [Other](docs/categories/utilities.en.md) · [Desktop & Apps](docs/categories/desktop.en.md) · [MCP & Protocols](docs/categories/mcp.en.md) · [Plugin Tooling](docs/categories/plugin-tools.en.md) · [Web UI & Frontend](docs/categories/web-ui.en.md) · [Themes & Skins](docs/categories/theme.en.md) · [Security & Auth](docs/categories/security.en.md) · [Chat & IM](docs/categories/chat-im.en.md) · [CLI & Terminal](docs/categories/cli.en.md) · [Voice & Speech](docs/categories/voice.en.md) · [Lists & Resources](docs/categories/lists.en.md) · [Usage & Billing](docs/categories/billing.en.md) · [Agents, Automation & Workflows](docs/categories/agents-workflows.en.md) · [Integrations & Sharing](docs/categories/integrations-sharing.en.md) · [Developer Tools](docs/categories/developer-tools.en.md) · [Knowledge & Research](docs/categories/knowledge-research.en.md) · [Design, Media & Vision](docs/categories/media-vision.en.md) · [Web & Browser](docs/categories/web-browser.en.md) · [Ecosystem & Resources](docs/categories/ecosystem-resources.en.md) · [Just for Fun](docs/categories/fun.en.md) |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
 | [Watchlist and related projects](#watchlist-and-related-projects) | Related but unverified or non-loadable projects |
@@ -330,6 +330,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [miqian-nomad/dsh-browser-playwright-codex](https://github.com/miqian-nomad/dsh-browser-playwright-codex) | Playwright browser tool family for DSH: accessibility snapshots with stable refs, multi-tab, form filling and extraction in a visible persistent-login window; stops at logins, human-verification pages and dialogs. | `dsh plugin --profile <name> add dsh-browser-playwright-codex (or github:miqian-nomad/dsh-browser-playwright-codex)` | MIT; Drives a real browser with your logged-in sessions. browser_evaluate / browser_cdp are off by default; URL policy, CDP allow-list and dialog policy are documented guards; browser_extract needs an auxiliary LLM route. |
 | [ma-pony/deepspider](https://github.com/ma-pony/deepspider) | AI 原生网页抓取与 JavaScript 逆向：用 Patchright/CDP 观察真实请求与运行时事实，沿调用栈定位参数写入边界，通过独立 Node 语义运行时 (sdenv) 重新生成 Cookie 并以真实请求 (CycleTLS) 验证，导出可脱离浏览器重跑的 Solver | `dsh plugin --profile web add deepspider` | MIT; 高权限：浏览器 Cookie/Session 恢复、脚本执行、向任意站点真实出站请求。仅应在自己拥有或已获授权的目标上使用，并遵守目标条款与法律；postinstall 会自动下载 Patchright Chromium |
 | [heartleo/hn-cli](https://github.com/heartleo/hn-cli) | Exposes Hacker News tools to DeepSeek Harness agents: ranked feeds (top/new/best/ask/show/job), item comment trees, Algolia search, and user profiles, all via public HN APIs. | `dsh plugin --profile <name> add -w dsh-hacker-news` | MIT; Network egress to third-party HN APIs; query text is sent to hn.algolia.com. The separate Go TUI `hn` binary has an optional translation feature requiring an OpenAI-compatible API key, but that is unrelated to the DSH plugin. |
 | [cocofhu/anime-find](https://github.com/cocofhu/anime-find) | 对话内多源搜番（Mikan/AniBT/AnimeGarden）：卡片展示 Bangumi 评分与详情、按字幕组浏览、复制磁力/种子；可选流媒体解析播放 Tab | `dsh plugin --profile web add github:cocofhu/anime-find（本地: dsh plugin --profile web add /abs/path）；更新: dsh plugin --profile web update anime-find` | MIT; 向第三方来源站点发搜索/详情请求并经 Host 代理媒体流，含磁力/种子下载能力，需遵守来源条款与版权 |
@@ -339,9 +340,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [awesome-dsh-plugin/dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin) | In-agent plugin discovery: live GitHub repository search scoped to the official `dsh-plugin` topic, star-ranked; every result comes with a ready-to-run `dsh plugin add` command. | `dsh plugin --profile web add dsh-find-plugin  (or: dsh plugin --profile web add github:awesome-dsh-plugin/dsh-find-plugin)` | MIT; Requires network access to GitHub at runtime. |
 | [canghai666x/dsh-news-plugin](https://github.com/canghai666x/dsh-news-plugin) | 新闻采集工具插件：注册 news_fetch 工具抓取 RSS 新闻源并解析为结构化条目（Node 原生 fetch + 正则，零第三方依赖），五维评分/筛选/简报编排交给模型；附 dsh-news-briefing Skill。 | 将仓库放入 Harness 项目，在 cordis.yml 组合中声明 `- name: './index.ts'`（参考官方 cordis-tutorial/07 第 7 章），node --import tsx ../../vendor/cordis/bin.js 启动 | MIT; 仓库根目录无 LICENSE 文件（仅 package.json 声明 MIT）；无 dsh.bundle，安装为非标准组合式（手写 cordis.yml）；基于 2026-08 官方教程，v0.1 API 可能变更。 |
 | [ch1bug/dsh-mimo-agent-tools](https://github.com/ch1bug/dsh-mimo-agent-tools) | 把小米 MiMo API 封装为 DSH Cordis 模型工具：mimo_search / vision / audio / video / asr / tts（Python 驱动，MIMO_DRIVER 指向默认安装路径），与 @deepseek-ai/dsh-tools 共存不重复加载。 | `dsh plugin --profile web add /path/to/dsh-mimo-agent-tools（或 github:ch1bug/dsh-mimo-agent-tools）；安装 python 驱动后重启 dsh web，工具自动挂载` | MIT; 依赖 MiMo API 可用性与密钥配置。 |
-| [Clizo1209/dsh-playwright-browser](https://github.com/Clizo1209/dsh-playwright-browser) | Semantic, multi-tab browser automation for DeepSeek Harness powered by Playwright: abort-aware page operations, Cordis-owned lifecycle cleanup, configurable screenshotDir (default .dsh-browser/screenshots); ships sanitized real-world test suite on public demo sites. | dsh plugin --profile web add dsh-playwright-browser  (or tarball: dsh plugin --profile web add ./dsh-playwright-browser-0.1.3.tgz; headless: dsh plugin --profile headless add ./dsh-playwright-browser-0.1.3.tgz); needs `npx playwright install chromium` | MIT; Requires Playwright Chromium install; pnpm 10+ may need allowBuilds in profile pnpm-workspace.yaml for git installs. |
 
-> This category has **53** verified entries, [view the full list →](docs/categories/web-browser.en.md)
+> This category has **54** verified entries, [view the full list →](docs/categories/web-browser.en.md)
 
 ### Ecosystem & Resources
 
