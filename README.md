@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3474-2563eb)
-![Verified](https://img.shields.io/badge/verified-2680-16a34a)
+![Verified](https://img.shields.io/badge/verified-2681-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-10。** 本版主目录收录 **2680 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3474 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-10。** 本版主目录收录 **2681 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3474 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
@@ -195,6 +195,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [bamboosir1109/dsh-lanya](https://github.com/bamboosir1109/dsh-lanya) | Windows QQ character integration kit with NapCatQQ/SnowLuma, Bilibili interactions, local GPT-SoVITS voice, revisable memory/diaries and an activity dashboard. | `dsh plugin --profile <your-profile> add github:bamboosir1109/dsh-lanya` | MIT；Development preview; Windows companion services, QQ backend and optional Bilibili/voice/memory components require separate configuration. Chat, local files and authenticated platform actions use the owner-configured accounts and model providers. |
 | [Britneycode/dsh-fish-soul](https://github.com/Britneycode/dsh-fish-soul) | Adds a persona and per-person memory agent with QQ, Bilibili and Douyin channels, proactive behavior, voice, and model routing. | `dsh plugin --profile desktop add dsh-fish-soul`; local source is documented as `dsh plugin --profile desktop add ./dsh-fish-soul`. | MIT；No LICENSE file was surfaced in the repository tree; package.json and README declare MIT. External account credentials, cookies, proactive messaging, and group-management options require explicit user trust and configuration; the README says DSH 0.2.1-rc.5 was the verified host. |
 | [elegant01/dsh-codearts](https://github.com/elegant01/dsh-codearts) | Adds Huawei Cloud CodeArts model access, OAuth sign-in, model discovery, account rotation, usage reporting, and a DSH settings card. | `pnpm install && pnpm run build && node scripts/deploy.mjs [profileDir] (profileDir defaults to <home>/.dsh/profiles/desktop); restart DSH and select the codearts provider.` | MIT；The source deployment manually updates profile package metadata and writes credentials under $DSH_HOME. INSTALL.md states that the GUI-side translation layer still needs end-to-end confirmation in a real DSH GUI, and the README limits use to personal study/research. |
 | [jayantTang/DSH_Mobile](https://github.com/jayantTang/DSH_Mobile) | Reach a local DSH host from iPhone or iPad through a WSS relay, with session, pairing, and file controls. | `dsh plugin --profile web add dsh-plugin-mobile-link; from this checkout: dsh plugin --profile web add ./plugins/mobile-link` | MIT；This is a multi-component repository; only plugins/mobile-link is the DSH-loadable package, while the iOS app and relay require separate deployment or TestFlight setup. |
@@ -204,9 +205,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [thawline/dsh-wechat-bridge](https://github.com/thawline/dsh-wechat-bridge) | Route inbound WeChat messages into DSH sessions and send completed DSH replies, images, and controls back through a local Windows bridge. | `dsh plugin --profile desktop add github:thawline/dsh-wechat-bridge; then restart DSH and open Settings -> 通到微信.` | MIT；README warns that WeChat automation is unofficial, Windows-only, may break after WeChat updates, and can risk account bans; the default inbound whitelist is open until configured. |
 | [tonyzdev/dsh-session-messaging](https://github.com/tonyzdev/dsh-session-messaging) | List, message, or create independent top-level DSH sessions from model tools. | `Web profile: dsh plugin --profile web add github:tonyzdev/dsh-session-messaging. For macOS desktop use the bundled DSH CLI at /Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh with --profile desktop; restart or hot-reload as documented.` | MIT；Recipients run with their own model and approval settings; delivery confirms inbox acceptance, not completion, and cross-workspace access is enabled in the shipped patch configuration. |
 | [aureth-labs/dsh-aurabot-qq](https://github.com/aureth-labs/dsh-aurabot-qq) | Connects DSH sessions to QQ through OneBot v11 and exposes configurable chat, media, memory, and social tools. | `dsh plugin --profile <profile> add github:accomplish07zrh-eng/dsh-aurabot-qq` | MIT；README and package metadata use the historical accomplish07zrh-eng path (which resolves to the current repository); review QQ gateway tokens, cookies, browser access, and per-tool permissions before enabling. |
-| [Yuuyuko-uu/dsh-qq-link](https://github.com/Yuuyuko-uu/dsh-qq-link) | Bridges DSH conversation turns and QQ messages, media, notices, and optional Qzone actions through a local OneBot backend. | `dsh plugin --profile desktop add github:Yuuyuko-uu/dsh-qq-link` | 未发现；The repository has a custom non-SPDX attribution license, and its homepage points to the older dsh-qq-bridge name; review backend trust, tokens, inbound triggers, and outbound posting permissions. |
 
-> 该分类共 **120** 个已核验条目，[查看完整清单 →](docs/categories/chat-im.md)
+> 该分类共 **121** 个已核验条目，[查看完整清单 →](docs/categories/chat-im.md)
 
 ### 命令行与终端
 
