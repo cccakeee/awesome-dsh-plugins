@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3475-2563eb)
-![Verified](https://img.shields.io/badge/verified-2681-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3477-2563eb)
+![Verified](https://img.shields.io/badge/verified-2683-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-11.** This edition's main directory includes **2681 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,475 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-11.** This edition's main directory includes **2683 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,477 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,475** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,477** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | [Verified directory](#verified-directory) | Verified loadable extensions grouped into 22 capability categories (aligned with the [site](https://deepseekharnessplugins.com)) |
 | [UI & Experience](#ui--experience) · [Sessions & Messages](#sessions--messages) · [Other](#other) · [Desktop & Apps](#desktop--apps) · [MCP & Protocols](#mcp--protocols) · [Plugin Tooling](#plugin-tooling) · [Web UI & Frontend](#web-ui--frontend) · [Themes & Skins](#themes--skins) · [Security & Auth](#security--auth) · [Chat & IM](#chat--im) · [CLI & Terminal](#cli--terminal) · [Voice & Speech](#voice--speech) · [Lists & Resources](#lists--resources) · [Usage & Billing](#usage--billing) · [Agents, Automation & Workflows](#agents-automation--workflows) · [Integrations & Sharing](#integrations--sharing) · [Developer Tools](#developer-tools) · [Knowledge & Research](#knowledge--research) · [Design, Media & Vision](#design-media--vision) · [Web & Browser](#web--browser) · [Ecosystem & Resources](#ecosystem--resources) · [Just for Fun](#just-for-fun) | 22 category anchors |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
@@ -41,7 +41,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,475** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,477** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | Category pages (full listings) | [UI & Experience](docs/categories/ui-experience.en.md) · [Sessions & Messages](docs/categories/sessions-messages.en.md) · [Other](docs/categories/utilities.en.md) · [Desktop & Apps](docs/categories/desktop.en.md) · [MCP & Protocols](docs/categories/mcp.en.md) · [Plugin Tooling](docs/categories/plugin-tools.en.md) · [Web UI & Frontend](docs/categories/web-ui.en.md) · [Themes & Skins](docs/categories/theme.en.md) · [Security & Auth](docs/categories/security.en.md) · [Chat & IM](docs/categories/chat-im.en.md) · [CLI & Terminal](docs/categories/cli.en.md) · [Voice & Speech](docs/categories/voice.en.md) · [Lists & Resources](docs/categories/lists.en.md) · [Usage & Billing](docs/categories/billing.en.md) · [Agents, Automation & Workflows](docs/categories/agents-workflows.en.md) · [Integrations & Sharing](docs/categories/integrations-sharing.en.md) · [Developer Tools](docs/categories/developer-tools.en.md) · [Knowledge & Research](docs/categories/knowledge-research.en.md) · [Design, Media & Vision](docs/categories/media-vision.en.md) · [Web & Browser](docs/categories/web-browser.en.md) · [Ecosystem & Resources](docs/categories/ecosystem-resources.en.md) · [Just for Fun](docs/categories/fun.en.md) |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
 | [Watchlist and related projects](#watchlist-and-related-projects) | Related but unverified or non-loadable projects |
@@ -65,7 +65,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [frostming/dsh-hongguo](https://github.com/frostming/dsh-hongguo) | Play short dramas in a DSH sidebar or standalone browser player and pause playback when the agent finishes. | `dsh plugin add github:frostming/dsh-hongguo; install ffmpeg separately (brew install ffmpeg on macOS or winget install Gyan.FFmpeg on Windows) for the default encrypted source; restart DSH.` | MIT; The README identifies the API and content as unofficial and asks users to limit use to personal learning/research; copyright remains with the rights holders. |
 | [Roland0511/dsh-marktext](https://github.com/Roland0511/dsh-marktext) | Open and edit Markdown as rendered documents in the DSH sidebar, quote selections into chat, save with version guards, and export PDFs. | `dsh plugin --profile web add dsh-marktext` | MIT; The client claims Markdown file patterns that can conflict with dsh-markdown-typora; PDF output is rasterized, and the native-fs fallback deserves review in locked-down workspaces. |
 
-> This category has **405** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
+> This category has **406** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
 
 ### Sessions & Messages
 
@@ -156,6 +156,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [mhlywxl/dsh-split-workspace](https://github.com/mhlywxl/dsh-split-workspace) | Split the DSH conversation area into native panes (columns, stacked, 2x2, auto grid); each pane is a real session with its own composer, streaming and approvals. | `dsh plugin --profile web add dsh-split-workspace (Desktop: install via the in-app plugin market)` | MIT; Re-hosts native conversation UI in the client; tool access follows the focused session; layout persists across reloads. |
 | [Canary-Builds/dsh-mobile-ui](https://github.com/Canary-Builds/dsh-mobile-ui) | Adds touch-friendly navigation, layout refinements, and standalone PWA styling inside the existing DSH web interface. | `dsh plugin --profile web add @canary-builds/dsh-mobile-ui` | MIT; Requires Node.js 22.19+ and targets DSH 0.1.1-rc.x; build-specific UI selectors may stop applying after DSH upgrades. It overrides the host web manifest and must not be loaded alongside the older dsh-plugin-splash or @canary-builds/dsh-wpa packages. |
 | [1692775560/dsh-Mimir-Academic-research](https://github.com/1692775560/dsh-Mimir-Academic-research) | Installs into DSH as a native Cordis bundle providing an 8-view research web workbench, slash commands, agent tools, 9 research skills. | `npm install -g @deepseek-ai/dsh && dsh plugin --profile web add dsh-mimir@latest && dsh web` | MIT; Very new repo (created 2026-08-20); remote GPU/SSH features require user-supplied server credentials. |
 | [ai-daming/clickvibe](https://github.com/ai-daming/clickvibe) | GitHub issue-to-merge delivery control plane: per-issue status board, one-click agent dev in worktrees, auto review, rework, dry-run. | `dsh plugin --profile web add link:/path/to/clickvibe` | MIT; v0.1.0 experimental; no LICENSE file detected on GitHub (MIT only in package.json); agents run arbitrary shell and may auto-merge. |
@@ -165,9 +166,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Aisland-SJL/dsh-worktable](https://github.com/Aisland-SJL/dsh-worktable) | Sidebar project drawer, dockable split workspace (file explorer, terminal, browser), control-room dashboard. | `dsh plugin --profile web add "https://github.com/Aisland-SJL/dsh-worktable/releases/latest/download/dsh-worktable.tgz"` | MIT; Windows fully tested; macOS experimental; state stays in localStorage. |
 | [lavapapa/dsh-composer-layout](https://github.com/lavapapa/dsh-composer-layout) | DSH Web Composer 布局插件：可选右侧停靠、可调整面板宽度、按会话记录布局偏好，并在空间不足时临时回到底部布局 | `dsh plugin --profile web add dsh-composer-layout@0.1.5` | MIT; 仅调整界面和布局；不访问本地文件、网络、API Key、凭据或 shell；布局偏好通过 DSH 设置与会话状态保存 |
 | [GDWhisper/dsh-web-startup-auth](https://github.com/GDWhisper/dsh-web-startup-auth) | Remote DSH Web startup (replaces hard-reject 0.0.0.0), login/register pages, signed session cookies, all-route API auth, password reset. | `dsh plugin --profile web add dsh-web-startup-auth@latest` | MIT; No built-in transport encryption — trusted intranet or HTTPS reverse proxy only; complete first registration before exposing. |
-| [liangmianya/dsh-synapse](https://github.com/liangmianya/dsh-synapse) | DeepSeek Harness Web 可视化会话工作区：把会话/追问/分支渲染为可拖拽缩放的画布式会话地图，双向同步原生对话，按 callId 折叠工具过程，持久化画布布局 | `corepack pnpm dsh plugin --profile web add github:liangmianya/dsh-synapse && corepack pnpm dsh web（卸载：corepack pnpm dsh plugin --profile web remove dsh-synapse）` | MIT; 仅支持 web profile 且要求 DSH 2026-08+ 与 Node>=22.19；两个 dsh web 实例共享同一 profile 写同一 workspaces.json 存在覆盖风险（作者建议单实例运行） |
 
-> This category has **212** verified entries, [view the full list →](docs/categories/web-ui.en.md)
+> This category has **213** verified entries, [view the full list →](docs/categories/web-ui.en.md)
 
 ### Themes & Skins
 
