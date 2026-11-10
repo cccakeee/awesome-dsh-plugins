@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3474-2563eb)
-![Verified](https://img.shields.io/badge/verified-2680-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3473-2563eb)
+![Verified](https://img.shields.io/badge/verified-2679-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-11。** 本版主目录收录 **2680 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3474 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-11。** 本版主目录收录 **2679 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3473 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3474 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3473 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3474 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3473 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -76,14 +76,14 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [corrinehu/dsh-workbuddy-connect](https://github.com/corrinehu/dsh-workbuddy-connect) | Adds WorkBuddy models to the DSH model picker with zero configuration across Web/Desktop/TUI; settings card shows account info and remaining credits. | `dsh plugin --profile web add dsh-workbuddy-connect` | MIT；Depends on non-official WorkBuddy client interface; may break on app updates; README restricts to personal research use. |
 | [DingTalk-Real-AI/dsh-dingtalk](https://github.com/DingTalk-Real-AI/dsh-dingtalk) | Chat bot bridging dsh web to DingTalk private/group chats: streaming AI cards, session persistence, model selection, workspace switch, access policies. | `dsh plugin --profile web add @dingtalk-real-ai/dsh-dingtalk@latest && dsh web` | MIT；Only dsh web profile supported; local-only uptime; Windows experimental; requires Node ^22.19 or >=24. |
 | [MichengAI/dsh-archive-manager](https://github.com/MichengAI/dsh-archive-manager) | Archive sessions from sidebar, browse/manage in Settings->Archived, restore single/all, permanent delete with double-confirm. | `dsh plugin --profile web add @michengai/dsh-archive-manager@latest` | Apache-2.0；Not an official DeepSeek product; verify plugin source before granting delete permissions. |
-| [Ultronen/dsh-archived-chats](https://github.com/Ultronen/dsh-archived-chats) | Web-plugin archive management UI: workspace-grouped browsing, full-text search, native preview, History with restore-as-copy, ZIP export/import, Recycle Bin, retention policies. | `dsh plugin --profile web add dsh-archived-chats@latest` | MIT；Reads archived conversation content (may include sensitive chat text); data persists under $DSH_HOME after uninstall (by design). |
 | [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) | Web-profile DSH bundle adding AWiki identity (OTP login/recovery), IM (DMs, groups, attachments), AI summaries, 5 mail + 5 message agent tools. | `dsh plugin --profile web add @awiki/dsh-plugin@latest` | MIT；Third-party org (not DeepSeek); depends on hosted awiki.ai services; v1 lacks E2E encryption. |
 | [boomzikazita/dsh-cybernetics](https://github.com/boomzikazita/dsh-cybernetics) | Agent 工具循环的控制论运行时：前馈拦截不可逆操作、EMA 失败率滤波、fast/deep/conservative 档位自适应稳定阀、发散/振荡检测、能控性自检 | `dsh plugin --profile web add github:boomzikazita/dsh-cybernetics` | MIT；拦截并记录本地工具调用、写本地 NDJSON 状态日志；不访问网络、无需 API Key；会 block 命中规则的工具调用 |
 | [yjh051108/dsh-router-standard](https://github.com/yjh051108/dsh-router-standard) | Task-aware reasoning-mode router for DSH: classifies first real user message (build/fix/ambiguous), injects matching persona + band-gated tool surface, progressive tool disclosure, dev_router_status/mode/subagent commands | `Copy-Item -Recurse .\preset\router-standard $HOME\.dsh\.agent-presets\router-standard; npm package dsh-router-standard` | MIT；Research artifact; author formally retracted dual-attractor theory sections; presets are experimental and rewrite first-turn prompts |
 | [SiriLee/dsh-rewind](https://github.com/SiriLee/dsh-rewind) | Claude Code-style in-place /rewind for DSH web profile: cut conversation back to any earlier user message, optional workspace-file restore from disk-persisted before-backups, per-message button + candidate picker UI | `dsh plugin --profile web add dsh-rewind-plugin (git installs need allowBuilds in profile's pnpm-workspace.yaml)` | MIT；npm name is dsh-rewind-plugin (dsh-rewind taken); known <=v0.2.4 marker-turn bug can corrupt client replay; ships dsh-rewind-repair |
 | [tinqiao-oss/engramory](https://github.com/tinqiao-oss/engramory) | 便携记忆协议：常驻规则 + 记忆纪律（SKILL.md），纯 markdown 笔记单一库跨宿主共享；原生插件 dsh-engramory 用 ctx.tools.guard() 把常驻索引的体积上限做成单调拒绝（写前 deny 而非提醒），并经 ctx.inject(['skills']) 在运行时注册 skill，不依赖文件落到五个 skill 根之一 | `dsh plugin --profile <name> add dsh-engramory（npm 包 dsh-engramory；亦可 python tools/engramory_init.py dsh --install-skill 只装 skill + AGENTS.md 块）` | MIT；dsh 仍是开发者预览、插件 API 可能变化；0.2.0 装上永不激活（issue #8），须 0.2.1 及以上；记忆以明文 markdown 存本地 .engramory-memory/，位于项目仓内时应加入 git 忽略；插件本身无 exec/eval/网络请求/环境变量读取 |
+| [xiaozhe7772222/dsh-opencode-zen](https://github.com/xiaozhe7772222/dsh-opencode-zen) | Registers an 'opencode' LLM provider route in DSH model picker for 6 free models with streaming and tool calls. | `dsh plugin --profile web add github:xiaozhe7772222/dsh-opencode-zen` | MIT；Free tier subject to per-IP rate limits; requires DSH 0.8.0+ with ctx.llm.registerAdapter. |
 
-> 该分类共 **110** 个已核验条目，[查看完整清单 →](docs/categories/sessions-messages.md)
+> 该分类共 **109** 个已核验条目，[查看完整清单 →](docs/categories/sessions-messages.md)
 
 ### 其他
 
@@ -297,6 +297,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [Ultroncn/dsh-archived-chats](https://github.com/Ultroncn/dsh-archived-chats) | Workspace-based archive management with scoped content search, conversation previews, tags and notes, ZIP backups, lineage graphs, confirmed permanent deletion with retries, and official Host updates. | `dsh plugin --profile web add dsh-archived-chats@latest` | MIT；Reads local chat content. Permanent deletion includes associated subagents and is irreversible. Upgrades and uninstall preserve plugin data under $DSH_HOME/plugin-data/archived-chats. Declared DSH range >=0.1.0-rc.7 \|\| 0.2.2-rc.1. |
 | [Chang-Tong/dsh-unified-context](https://github.com/Chang-Tong/dsh-unified-context) | Imports resumable sessions and agents, links shared instructions and skills, converges memory, and migrates automations into DSH tasks. | `dsh plugin --profile web add dsh-unified-context@0.5.0`; restart `dsh web` and refresh the page. Use `/import-all` for the full migration, or `node import.mjs all --apply` for the CLI session/skill/context path. | MIT；Node >=22.19 is required. `/link-context` creates symlinks and `/import-all` writes local session, skill, memory, and context data; `/import-automations --activate` can schedule active work. |
 | [runzhliu/welink](https://github.com/runzhliu/welink) | Query allowlisted WeLink conversations, dates, and optionally bounded message content through read-only DSH tools. | `dsh plugin --profile web add 'github:runzhliu/welink#v0.4.1&path:/plugins/dsh-welink'; Configure WELINK_URL, WELINK_ALLOWED_CONVERSATIONS, an absolute WELINK_TOKEN_FILE, and optionally WELINK_ALLOW_MESSAGES=1 in the DSH environment, then restart the profile.` | AGPL-3.0-only；The plugin can expose third-party chat contents to the DSH model and sends queries to the configured backend. Use an isolated deployment, a least-privilege read-only token, an explicit conversation allowlist, and HTTPS outside loopback. |
 | [CixiSVesper/dsh-soundtry](https://github.com/CixiSVesper/dsh-soundtry) | Adds six local audio-analysis tools for transcription, rhythm, melody, chords, structure, and vocal separation. | `node --expose-internals "<DSH>\resources\app\lib\plugin-cli.js" desktop install C:\Users\<你>\.dsh\plugins\dsh-cixisound; node src/deps.js; runtime\venv\Scripts\python.exe python\soundtry.py doctor` | MIT；Requires Windows 10/11 x64 and Python 3.10-3.12; the default README footprint is about 2.4 GB, with larger optional modes/models. Tool names collide with older dsh-cixisound versions, so the old version must be removed first. |
@@ -306,7 +307,6 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [poco-ai/agentero-dsh-plugin](https://github.com/poco-ai/agentero-dsh-plugin) | Brings Agentero local papers, notes, PDF reading, translation, and Vault tools into DSH conversations. | `dsh plugin --profile web add agentero-dsh@0.1.7` | 未发现；No LICENSE file or GitHub license identifier was found; this is a load-path verification only. The plugin handles local research files and can import remote papers and a CLI into the user environment. |
 | [STARDUSTLC666/dsh-ffmpeg](https://github.com/STARDUSTLC666/dsh-ffmpeg) | Adds DSH tools for probing, storyboarding, trimming, joining, encoding, subtitling, extracting, GIF creation, frame batches, and media adjustment. | `dsh plugin --profile desktop add dsh-ffmpeg; install ffmpeg/ffprobe locally, restart the DSH profile, and run ffmpeg_health before using the media tools. For the web profile replace desktop with web.` | MIT；The user must install ffmpeg and ffprobe separately. README.md says the host requirement is >=0.2.1-rc.3 while package.json declares dsh >=0.2.1-rc.2, so compatibility should be checked against the installed DSH release. |
 | [KingsleyAsher/Personal-Knowledge-Base](https://github.com/KingsleyAsher/Personal-Knowledge-Base) | Import and index a local knowledge base, retrieve and cite notes, run OCR/ASR, organize content, back up data, and expose DSH tools and UI. | `Download https://github.com/KingsleyAsher/Personal-Knowledge-Base/releases/download/v2.5.10/local-dsh-knowledge-base-2.5.10.tgz and install the TGZ through DSH plugin management.` | MIT；The root also contains a standalone Windows client; install the TGZ for the DSH plugin, not the EXE. GitHub's description is stale about the plugin version, while the inspected README and package are 2.5.10. |
-| [Yuuyuko-uu/dsh-xingxi](https://github.com/Yuuyuko-uu/dsh-xingxi) | Visualizes session memory archives as an interactive star map and lets DSH read selected archive content. | `dsh plugin add dsh-xingxi` | 未发现；The custom Yuuyuko-uu Plugin License 1.1 explicitly says it is not an OSI license and requires attribution and license preservation; the SPDX-style catalog value is therefore Not found. |
 
 > 该分类共 **264** 个已核验条目，[查看完整清单 →](docs/categories/knowledge-research.md)
 
