@@ -265,7 +265,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [MYCF711/dsh-session-superagent](https://github.com/MYCF711/dsh-session-superagent) | Watch GitHub or Gitee issues and pull requests, wake an idle DSH session, and optionally guide confirmed repository work with acknowledgement and isolation controls. | `dsh plugin --profile desktop add dsh-session-superagent@0.10.11; reload the host, then use watch_start({ repo: "owner/name", goal: "处理这个仓库的 issue" }) and watch_status(). The README documents the same profile install with the package name.` | MIT；The README requires a host reload for server-side changes and says write methods require explicit confirm:true; compatibility is limited to the package engines.dsh range, and credentials should be configured in the operator environment. |
 | [onehumanbeing/esp32-iphone-agent](https://github.com/onehumanbeing/esp32-iphone-agent) | Uses a bundled DSH skill and MCP bridge to control an iPhone from an ESP32 agent. | `dsh plugin --profile web add "github:onehumanbeing/esp32-iphone-agent#main&path:/integrations/dsh"` | MIT；Requires compatible ESP32/iPhone hardware and device permissions; review every exposed action and use a test device before enabling it. |
 
-> 该分类共 **381** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+> 该分类共 **382** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 
@@ -291,7 +291,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [ZSeven-W/dsh-game-studio](https://github.com/ZSeven-W/dsh-game-studio) | Create, preview, playtest, art-direct, export, share, and optionally publish small games from the DSH sidebar. | `dsh plugin --profile web add @zseven-w/dsh-game-studio@latest` | MIT；Generation may incur image cost, while share and publish can expose game content publicly; keep approval prompts enabled and review destinations. |
 | [gehennawu/dsh-service](https://github.com/gehennawu/dsh-service) | Operate DSH Web services from a settings panel, including health checks, model and quota management, backups, skills, sessions, and controlled restart. | `dsh plugin --profile web add @gehennawu/dsh-service@2.1.5 && dsh web` | MIT；The README describes destructive or privileged maintenance actions as confirmation-gated, but this remains an operations plugin with broad local control. |
 
-> 该分类共 **375** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
+> 该分类共 **374** 个已核验条目，[查看完整清单 →](docs/categories/developer-tools.md)
 
 ### 知识与研究
 
