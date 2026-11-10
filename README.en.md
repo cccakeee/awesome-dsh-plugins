@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 ![Catalog](https://img.shields.io/badge/catalog-3480-2563eb)
-![Verified](https://img.shields.io/badge/verified-2686-16a34a)
+![Verified](https://img.shields.io/badge/verified-2687-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,7 +11,7 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-11.** This edition's main directory includes **2686 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,480 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-11.** This edition's main directory includes **2687 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,480 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
@@ -279,6 +279,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [xiaoyuyu6420/dsh-backup](https://github.com/xiaoyuyu6420/dsh-backup) | Backup, restore and migration for all DSH data (~/.dsh): typed and scheduled backups with retention, sha256-verified merge restore with rollback, session-log doctor/repair, pre-upgrade snapshots, out-of-process rescue console, and optional private GitHub sync. | `dsh plugin --profile web add @xiaoyuyu6420/dsh-backup; restart dsh web (GitHub form: dsh plugin --profile web add github:xiaoyuyu6420/dsh-backup)` | MIT; Reads/writes ~/.dsh and can overwrite DSH data on restore. Credentials are redacted by default, but --types credentials archives contain plaintext API keys (excluded from GitHub sync). Optional GitHub token for private-repo sync. |
 | [sysevol-ai/CodeNib](https://github.com/sysevol-ai/CodeNib) | Add a codenib MCP tool that returns ranked, source-linked context and recorded code references for the current Git checkout. | `dsh plugin add "git+https://github.com/sysevol-ai/CodeNib.git#main&path:/plugins/dsh"; Install the runtime with uv tool install "codenib[graph,mcp]" (or let the bundle use uvx), then start dsh inside a Git checkout.` | Apache-2.0; CodeNib is beta and its indexers may require language toolchains; pin the bundle commit for repeatability and remember that optional model-written Wiki routes are separate from this local DSH MCP bundle. |
 | [ltmroberthk915/markpilot](https://github.com/ltmroberthk915/markpilot) | Adds an IDE-style Markdown workspace beside DSH chat with live rendering, math and tables, file navigation, and selection-to-chat. | `dsh plugin --profile desktop add dsh-markdown-editor-typora@1.4.0; restart DSH and open Markdown. The package is the nested dsh-markdown-editor-typora directory in this repository.` | MIT; The DSH package is nested at dsh-markdown-editor-typora; older dsh-markdown-typora instructions are historical. The root repository also contains the broader desktop editor and other integrations. |
 | [meyaomiao/dsh-server-deck](https://github.com/meyaomiao/dsh-server-deck) | Server dashboard with SSH host import, live CPU/memory/disk trends, interactive xterm terminals, and DSH host tools. | `dsh plugin --profile web add dsh-server-deck; restart dsh web` | MIT; README and peer ranges target the DSH 0.2.1-rc.5 line; review SSH host and credential scope before enabling. |
@@ -288,9 +289,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Tranquillitatis-Lab/dsh-tool-activator](https://github.com/Tranquillitatis-Lab/dsh-tool-activator) | Defers non-basic tools into an available-tools catalog and lets the model activate them on demand without changing underlying permissions. | `dsh plugin --profile desktop add dsh-tool-activator` | MIT; The README says real GUI E2E, published-artifact, and real-profile verification remain untested; it has no dedicated install snippet, so the command uses the published npm package name and standard DSH plugin installer. |
 | [XINY11451/dsh-wsl](https://github.com/XINY11451/dsh-wsl) | Adds WSL command, path, environment, file, grep, bootstrap, and terminal tools to DSH agents on Windows. | `dsh plugin add --profile <profile> dsh-wsl-tool; restart DSH. For a checkout, use dsh plugin add --profile <profile> file:<path-to-this-repo> instead.` | MIT; Windows/WSL-specific. The published npm name is dsh-wsl-tool rather than the repository name; root/bootstrap/channel features and the allowRoot switch require explicit operator review. |
 | [ZSeven-W/dsh-game-studio](https://github.com/ZSeven-W/dsh-game-studio) | Create, preview, playtest, art-direct, export, share, and optionally publish small games from the DSH sidebar. | `dsh plugin --profile web add @zseven-w/dsh-game-studio@latest` | MIT; Generation may incur image cost, while share and publish can expose game content publicly; keep approval prompts enabled and review destinations. |
-| [gehennawu/dsh-service](https://github.com/gehennawu/dsh-service) | Operate DSH Web services from a settings panel, including health checks, model and quota management, backups, skills, sessions, and controlled restart. | `dsh plugin --profile web add @gehennawu/dsh-service@2.1.5 && dsh web` | MIT; The README describes destructive or privileged maintenance actions as confirmation-gated, but this remains an operations plugin with broad local control. |
 
-> This category has **374** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
+> This category has **375** verified entries, [view the full list →](docs/categories/developer-tools.en.md)
 
 ### Knowledge & Research
 
