@@ -3375,3 +3375,4 @@ miqian-nomad/dsh-browser-playwright-codex,dsh-plugin,verified_plugin
 exoticknight/dsh-system1,dsh-plugin,verified_plugin
 mhlywxl/dsh-coding-sound,dsh-plugin,verified_plugin
 mhlywxl/dsh-split-workspace,dsh-plugin,verified_plugin
+huanlin-labs/dsh-isolation-gate,dsh-plugin,verified_plugin

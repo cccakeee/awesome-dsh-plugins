@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3477-2563eb)
-![Verified](https://img.shields.io/badge/verified-2683-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3478-2563eb)
+![Verified](https://img.shields.io/badge/verified-2684-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-11。** 本版主目录收录 **2683 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3477 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-11。** 本版主目录收录 **2684 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3478 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3477 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3478 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3477 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3478 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -179,6 +179,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
 | [LYL-Z/dsh-armorbreak](https://github.com/LYL-Z/dsh-armorbreak) | Add an evidence-first security-research mode with scoped analysis tools, policy gates, bundled skills, and reproducible evidence reports. | `plugin_manager action=install_bundle target="<BUNDLE_PATH>"; for a CLI test profile, add the source with & $dsh plugin --profile abmtest add link:"<REPO_PATH>" after creating abmtest from the web profile.` | MIT；The README calls v2.3.1 an active stable release candidate rather than a verified Stable release and states that AI-assisted review is not human security certification; use only within an explicitly authorized scope and verify optional tool availability. |
+| [huanlin-labs/dsh-isolation-gate](https://github.com/huanlin-labs/dsh-isolation-gate) | Per-directory access gate for DSH tool calls (deny / read-only / full), groups, per-session overrides and audit log, plus model-facing gate_* tools where widening permissions requires owner approval. | `dsh plugin --profile desktop add dsh-isolation-gate; restart DSH Desktop and open the left-nav 门禁 panel` | MIT；Policy enforcement only covers DSH tool calls; raw filesystem access, other processes and shell indirection can bypass it (documented). Windows-first; other platforms unverified. Writes its own state and audit files. |
 | [openguardrails/openguardrails-spec](https://github.com/openguardrails/openguardrails-spec) | Guards DSH model requests and responses and can gate tool approvals through an OpenGuardrails runtime. | `dsh plugin --profile web add @openguardrails/dsh` | Apache-2.0；The nested package repository field points to openguardrails/openguardrails while the reviewed source is openguardrails-spec; verify release provenance and remember the documented default fail-open behavior. |
 | [jitianjiyan/dsh-auth-cookie-guard](https://github.com/jitianjiyan/dsh-auth-cookie-guard) | Prevents DSH desktop welcome failures by raising local listener header capacity and pruning stale launch cookies. | `dsh plugin add dsh-auth-cookie-guard` | MIT；Cookie pruning targets launch cookies on the local host; the raised header limit is intended for local or controlled listeners. |
 | [SteelUnion/dsh-confirm-gate](https://github.com/SteelUnion/dsh-confirm-gate) | Counts persistent operations per turn, injects stop reminders, and asks for user confirm at configurable hard limits. | `npx -p @deepseek-ai/dsh dsh plugin --profile web add github:SteelUnion/dsh-confirm-gate; restart DSH.` | MIT；This is an accounting/confirmation layer rather than a sandbox or prompt-injection boundary; any user message containing confirmWord releases the whole turn, and compatibility follows the declared DSH range. |
@@ -187,9 +188,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [uumit-ai/dsh-uumit-remote](https://github.com/uumit-ai/dsh-uumit-remote) | Connect to DSH from another device and selectively share the remote instance with invited users. | `dsh plugin --profile web add @uumit-ai/dsh-uumit-remote@beta; restart dsh web.` | MIT；README warns that Everyone mode allows anonymous visitors to use the owner's terminal and files; keep this mode off unless that exposure is intended. |
 | [MrMu666/dsh-lan-tool](https://github.com/MrMu666/dsh-lan-tool) | Expose the DSH web interface to trusted LAN devices through a password-gated proxy. | `dsh plugin --profile desktop add dsh-lan-tool; fully exit and restart DSH Desktop, set an access password in Settings > General > LAN Access, then enable the switch.` | 未发现；The password gate is the full security boundary; only enable on trusted networks and use a strong password. The GitHub metadata contains no license. |
 | [lovezi0/dsh-workspace-acl-allow](https://github.com/lovezi0/dsh-workspace-acl-allow) | Pre-authorizes explicitly declared Windows DSH workspaces with a full-control ACL ACE to avoid sandbox startup failures. | `dsh plugin --profile web add dsh-workspace-acl-allow (Windows only)` | MIT；Uninstall stops future authorization but does not revoke already written ACLs; deepGrant can recurse, so use only on explicitly intended Windows workspaces. |
-| [0QwQ0/dsh-ui-auth](https://github.com/0QwQ0/dsh-ui-auth) | Gate DSH HTTP and WebSocket access behind login and isolate user sessions and model configuration. | Run `dsh plugin --profile web add dsh-ui-auth`, then restart the DSH web panel. | MIT；Targets only the DSH 0.2.0 web profile line and requires correct HTTPS/origin configuration for non-local deployment and passkey use. |
 
-> 该分类共 **64** 个已核验条目，[查看完整清单 →](docs/categories/security.md)
+> 该分类共 **65** 个已核验条目，[查看完整清单 →](docs/categories/security.md)
 
 ### 聊天与 IM
 
