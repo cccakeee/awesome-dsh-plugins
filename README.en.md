@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3480-2563eb)
-![Verified](https://img.shields.io/badge/verified-2687-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3479-2563eb)
+![Verified](https://img.shields.io/badge/verified-2686-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-11.** This edition's main directory includes **2687 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,480 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-11.** This edition's main directory includes **2686 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,479 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,480** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,479** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | [Verified directory](#verified-directory) | Verified loadable extensions grouped into 22 capability categories (aligned with the [site](https://deepseekharnessplugins.com)) |
 | [UI & Experience](#ui--experience) · [Sessions & Messages](#sessions--messages) · [Other](#other) · [Desktop & Apps](#desktop--apps) · [MCP & Protocols](#mcp--protocols) · [Plugin Tooling](#plugin-tooling) · [Web UI & Frontend](#web-ui--frontend) · [Themes & Skins](#themes--skins) · [Security & Auth](#security--auth) · [Chat & IM](#chat--im) · [CLI & Terminal](#cli--terminal) · [Voice & Speech](#voice--speech) · [Lists & Resources](#lists--resources) · [Usage & Billing](#usage--billing) · [Agents, Automation & Workflows](#agents-automation--workflows) · [Integrations & Sharing](#integrations--sharing) · [Developer Tools](#developer-tools) · [Knowledge & Research](#knowledge--research) · [Design, Media & Vision](#design-media--vision) · [Web & Browser](#web--browser) · [Ecosystem & Resources](#ecosystem--resources) · [Just for Fun](#just-for-fun) | 22 category anchors |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
@@ -41,7 +41,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,480** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,479** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | Category pages (full listings) | [UI & Experience](docs/categories/ui-experience.en.md) · [Sessions & Messages](docs/categories/sessions-messages.en.md) · [Other](docs/categories/utilities.en.md) · [Desktop & Apps](docs/categories/desktop.en.md) · [MCP & Protocols](docs/categories/mcp.en.md) · [Plugin Tooling](docs/categories/plugin-tools.en.md) · [Web UI & Frontend](docs/categories/web-ui.en.md) · [Themes & Skins](docs/categories/theme.en.md) · [Security & Auth](docs/categories/security.en.md) · [Chat & IM](docs/categories/chat-im.en.md) · [CLI & Terminal](docs/categories/cli.en.md) · [Voice & Speech](docs/categories/voice.en.md) · [Lists & Resources](docs/categories/lists.en.md) · [Usage & Billing](docs/categories/billing.en.md) · [Agents, Automation & Workflows](docs/categories/agents-workflows.en.md) · [Integrations & Sharing](docs/categories/integrations-sharing.en.md) · [Developer Tools](docs/categories/developer-tools.en.md) · [Knowledge & Research](docs/categories/knowledge-research.en.md) · [Design, Media & Vision](docs/categories/media-vision.en.md) · [Web & Browser](docs/categories/web-browser.en.md) · [Ecosystem & Resources](docs/categories/ecosystem-resources.en.md) · [Just for Fun](docs/categories/fun.en.md) |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
 | [Watchlist and related projects](#watchlist-and-related-projects) | Related but unverified or non-loadable projects |
@@ -150,7 +150,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [1HelloMan1/dsh-stats-dashboard](https://github.com/1HelloMan1/dsh-stats-dashboard) | Provider/model usage stats dashboard: response speed, call log, token totals, cache rate, cost estimates (built-in DeepSeek pricing), CSV export; driven by dsh-session-stats and dsh-token-meter projections. | `dsh plugin --profile web add "github:1HelloMan1/dsh-stats-dashboard#main" (npm: dsh plugin --profile web add dsh-stats-dashboard)` | MIT; GitHub API reports no LICENSE file, but package.json declares MIT. |
 | [95384/DSH-user-plugin-list](https://github.com/95384/DSH-user-plugin-list) | Adds a '用户插件' tab in Settings→插件 listing non-system plugins from the loader tree (profile-local, external-path, enabled/disabled) with search/status/collapse interaction; classifies via Node resolve + realpath and excludes transitive deps. | `dsh plugin --profile web add github:95384/DSH-user-plugin-list (or local: git clone && dsh plugin --profile web add .; update: dsh plugin --profile web update user-plugin-list; remove: dsh plugin --profile web remove user-plugin-list)` | MIT |
 
-> This category has **64** verified entries, [view the full list →](docs/categories/plugin-tools.en.md)
+> This category has **63** verified entries, [view the full list →](docs/categories/plugin-tools.en.md)
 
 ### Web UI & Frontend
 
