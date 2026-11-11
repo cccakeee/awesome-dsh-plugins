@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3502-2563eb)
-![Verified](https://img.shields.io/badge/verified-2709-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3503-2563eb)
+![Verified](https://img.shields.io/badge/verified-2710-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-12。** 本版主目录收录 **2709 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3502 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-12。** 本版主目录收录 **2710 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3503 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3502 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3503 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3502 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3503 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -140,6 +140,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [zuwenyin/dsh-plugin-upgrader](https://github.com/zuwenyin/dsh-plugin-upgrader) | Adds a Versions tab to the Plugins page: one-click and batch upgrades through the plugin manager, live pnpm progress, full version history with rollback, and a selectable npm registry. | `dsh plugin --profile web add dsh-plugin-upgrader; restart DSH` | MIT；Journaled in-place edits of the profile package.json; network calls go to the chosen npm registry and GitHub tags/releases; routes are loopback-only. |
 | [yxxbc/dsh-balance-plugin](https://github.com/yxxbc/dsh-balance-plugin) | DeepSeek 余额监控与用量统计：CNY/USD 双余额池多账户查询、低余额告警、官方充值入口、Miyu 风格用量仪表盘、三方插件管理、query_api_quota 模型工具 | `dsh plugin --profile web add dsh-balance-plugin（github: 源）或 curl -fsSL https://raw.githubusercontent.com/yxxbc/dsh-balance-plugin/main/install.sh \| bash` | MIT；npm 上存在他人同名包 dsh-balance-plugin@0.1.0，裸包名会装错，务必用 github: 源或官方一键脚本 |
 | [bowenliang123/dsh-context](https://github.com/bowenliang123/dsh-context) | Context dashboard tab + /context command showing context-window composition, per-turn history, compaction/prune events, per-message token costs | `dsh plugin --profile web add dsh-context` | Apache-2.0 |
 | [crazywoola/dsh-balance](https://github.com/crazywoola/dsh-balance) | DSH Settings-page balance monitor: total/recharge/gift balance, chat-composer balance summary, available models for the API key, cached queries with manual refresh, DeepSeek peak-hour indicator, zh/en i18n | `dsh plugin --profile web add @pinkbanana/dsh-balance@latest ; dsh --profile web` | MIT；以本机保存的 DEEPSEEK_API_KEY 调用 DeepSeek API 查余额/模型，key 只在本机 Host 使用、不上浏览器 |
@@ -149,9 +150,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [toby-bridges/api-relay-audit](https://github.com/toby-bridges/api-relay-audit) | Local 14-step security audit of AI API relays/LLM proxies — detects prompt injection, model substitution, tool-call rewriting, SSE anomalies, error leakage and Web3 wallet risks; emits a Markdown report via the /relay-audit slash command. | `DSH_PLUGIN_REF=v2.4.0; dsh plugin --profile web add "github:toby-bridges/api-relay-audit#${DSH_PLUGIN_REF}"  (or --profile cc-tui)` | AGPL-3.0；AGPL-3.0 copyleft; audits require trusting the target relay with your API key; Web3 profile can trigger wallet-signing probes; depends on @deepseek-ai DSH rc packages. |
 | [1514100951/dsh-usage-footer](https://github.com/1514100951/dsh-usage-footer) | Floating coin button showing account balance, peak/off-peak pricing, today/session cost & token estimates; adds a '用量与费用栏' toggle in Settings; day-reset local stats in localStorage. | Link/copy packages dsh-usage-status and dsh-client-ui-usage-footer into $DSH_HOME/profiles/node_modules/ and append `name: dsh-usage-status` + `name: dsh-client-ui-usage-footer` to profiles/web/cordis.patch.yml; restart dsh web | MIT |
 | [1HelloMan1/dsh-stats-dashboard](https://github.com/1HelloMan1/dsh-stats-dashboard) | Provider/model usage stats dashboard: response speed, call log, token totals, cache rate, cost estimates (built-in DeepSeek pricing), CSV export; driven by dsh-session-stats and dsh-token-meter projections. | `dsh plugin --profile web add "github:1HelloMan1/dsh-stats-dashboard#main" (npm: dsh plugin --profile web add dsh-stats-dashboard)` | MIT；GitHub API reports no LICENSE file, but package.json declares MIT. |
-| [95384/DSH-user-plugin-list](https://github.com/95384/DSH-user-plugin-list) | Adds a '用户插件' tab in Settings→插件 listing non-system plugins from the loader tree (profile-local, external-path, enabled/disabled) with search/status/collapse interaction; classifies via Node resolve + realpath and excludes transitive deps. | `dsh plugin --profile web add github:95384/DSH-user-plugin-list (or local: git clone && dsh plugin --profile web add .; update: dsh plugin --profile web update user-plugin-list; remove: dsh plugin --profile web remove user-plugin-list)` | MIT |
 
-> 该分类共 **63** 个已核验条目，[查看完整清单 →](docs/categories/plugin-tools.md)
+> 该分类共 **64** 个已核验条目，[查看完整清单 →](docs/categories/plugin-tools.md)
 
 ### Web 界面与前端
 
