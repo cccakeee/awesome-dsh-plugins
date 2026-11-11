@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3503-2563eb)
-![Verified](https://img.shields.io/badge/verified-2710-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3507-2563eb)
+![Verified](https://img.shields.io/badge/verified-2714-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-12。** 本版主目录收录 **2710 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3503 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-12。** 本版主目录收录 **2714 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3507 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3503 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3507 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3503 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3507 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -66,7 +66,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [YuChenLiao/dsh-comfyui-workbench](https://github.com/YuChenLiao/dsh-comfyui-workbench) | Browse and manage local ComfyUI assets and run API-format workflows from DSH. | `Run dsh plugin --profile desktop add github:YuChenLiao/dsh-comfyui-workbench, then restart DSH; for local development the README gives dsh plugin --profile desktop add link:D:/dsh/dsh-comfyui-workbench.` | MIT；Requires a local ComfyUI or a configured start command. The default configuration can scan workspace directories, write uploads/outputs and show terminal logs; do not enable it alongside the predecessor dsh-comfyui-album because the README warns of duplicate interfaces and deletion controls. |
 | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | Build personalized courses and teach them through an interactive handwriting whiteboard, quizzes, speech, and study tools. | `DSH desktop: Plugins -> Add Plugin -> enter dsh-aha-tutor and install from the official source, then fully restart DSH. For a non-desktop profile: dsh plugin --profile <name> add dsh-aha-tutor@1.15.0.` | MIT；The desktop host needs a full restart after installation; optional cloud speech providers use credentials and may incur charges. |
 
-> 该分类共 **414** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
+> 该分类共 **415** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
 
 ### 会话与消息
 
@@ -117,7 +117,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Mrsirlila/dsh-pocket-plus](https://github.com/Mrsirlila/dsh-pocket-plus) | Lets a phone access and control a local DSH web session over LAN, Tailscale, or Cloudflare with QR login, WebSocket synchronization, and password protection. | `dsh plugin --profile web add "dsh-pocket@github:Mrsirlila/dsh-pocket-plus#path:/plugin"; restart DSH and open the DSH Pocket settings page.` | GPL-2.0；This is a modified dsh-pocket distribution and materially expands the DSH code-execution surface over a network. Keep public access disabled unless needed, use strong credentials, protect Cloudflare tokens, and review the upstream patch provenance. |
 | [pavel-logachev/dsh-mobile](https://github.com/pavel-logachev/dsh-mobile) | Pairs an Android app with a DSH host for project and session browsing, live agent interaction, files, notifications, and optional remote task execution. | `Download the signed APK, dsh-mobile-host-0.9.3.zip, and matching SHA-256 files from one release; in PowerShell run & $installer -ZipPath $zip -Hosts $hosts -WhatIf, then & $installer -ZipPath $zip -Hosts $hosts, then & $installer -ZipPath $zip -Hosts $hosts -Activate; verify with node $cli verify-config --config $config and pair with node $cli pair --config $config --read all --ttl 300 --qr (add --execute all only with explicit consent).` | MIT；Unofficial Windows + Android app; only the explicitly tested DSH versions are supported. The installer requires signed release artifacts and project filtering is a permission filter, not a filesystem sandbox. |
 
-> 该分类共 **100** 个已核验条目，[查看完整清单 →](docs/categories/desktop.md)
+> 该分类共 **101** 个已核验条目，[查看完整清单 →](docs/categories/desktop.md)
 
 ### MCP 与协议
 
@@ -237,6 +237,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [Aily-DSH/dsh-peak-guard](https://github.com/Aily-DSH/dsh-peak-guard) | Pauses and resumes chosen DSH sessions around DeepSeek peak-price hours: warns before peak, stops ticked sessions at the boundary and resumes them off-peak, with a Chinese holiday / make-up-workday calendar. | `dsh plugin --profile desktop add "git+https://github.com/Aily-DSH/dsh-peak-guard.git"; restart DSH` | MIT；Interrupts long turns at the boundary (grace period configurable); only acts on sessions you tick. |
 | [bpc-oss/dsh-web-billing](https://github.com/bpc-oss/dsh-web-billing) | RMB/USD token-billing for dsh web: official-policy auto pricing with peak/off-peak hours, per-message ledger, account balance polling, locale-driven currency display; host /billing route + hand-written client fee badge/panel (read-only over session/event). | `dsh plugin --profile web add github:bpc-oss/dsh-web-billing  (or dsh plugin --profile web add dsh-web-billing after publish); restart dsh web` | MIT |
 | [brittanistrehlowll-oss/dsh-quota-panel](https://github.com/brittanistrehlowll-oss/dsh-quota-panel) | Provider quota/balance corner panel for the dsh web surface: server-side credential proxies plus a config-driven page badge; shipped defaults overridable in the profile's cordis.patch.yml. | `dsh plugin --profile web add "github:brittanistrehlowll-oss/dsh-quota-panel" ; restart dsh web (bundle layers apply at boot)` | MIT；Review which provider keys the credential proxies touch. |
 | [dshiq04/dsh-deepseek-balance](https://github.com/dshiq04/dsh-deepseek-balance) | 余额查看 (API balance widget): web UI 侧边栏底部（Settings 上方）展示 DeepSeek API 余额，悬停显示币种/总额/赠送/充值，可配置颜色与手动刷新；API key 存 $DSH_HOME/settings.yaml 或 DEEPSEEK_API_KEY env。 | dsh plugin --profile web add dsh-deepseek-balance --link <path-to-this-package>, plus `- id: dsh-deepseek-balance` loader entry in $DSH_HOME/profiles/web/cordis.patch.yml (package must be resolvable from the profile node_modules) | MIT；Cross-device setup needs 4 manual steps; on this machine it relies on a local junction into the dsh installation's @deepseek-ai dir. |
@@ -246,9 +247,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [hnmrxz/dsh-plugin-deepseek-balance](https://github.com/hnmrxz/dsh-plugin-deepseek-balance) | 底部状态栏实时显示 DeepSeek 账户余额（同源路由 /dsh-deepseek-balance，credentials seam 实时解析 API Key，10 秒缓存） | `npm install dsh-plugin-deepseek-balance 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-deepseek-balance` | MIT；Not yet published to npm - use local install until published. |
 | [hnmrxz/dsh-plugin-usage-dashboard](https://github.com/hnmrxz/dsh-plugin-usage-dashboard) | 底部状态栏 DeepSeek 用量与估算花费：按会话聚合 token/成本，余额预算告警（复用与余额插件同一条凭据链路） | `npm install dsh-plugin-usage-dashboard 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-usage-dashboard` | MIT |
 | [hurry060215-tech/dsh-api-usage-bar](https://github.com/hurry060215-tech/dsh-api-usage-bar) | Web UI 轻量 API token 用量条：按缓存输入/未缓存输入/输出三分段显示用量构成与数值，纯前端不新增模型工具或 token 开销 | `dsh plugin --profile web add github:hurry060215-tech/dsh-api-usage-bar#v0.1.0，重启 dsh web 并刷新页面` | MIT；适用于 DSH >=0.1.0-rc.6 <0.2.0；条形表达的是用量构成而非账户余额进度 |
-| [imeepos/dsh-billing-plugin](https://github.com/imeepos/dsh-billing-plugin) | 实时计费：Service+Consumer+Policy 三角色，价格/峰谷窗口/预算全部配置化，超预算时下一步被拒绝并记录预算耗尽通知 | `在 profile 的 cordis.patch.yml(或自有 cordis.yml) 添加挂载行 name: "dsh-billing"，用 dsh --profile <p> --dump-config 确认已入插件树` | MIT；教材随书代码(第 11–15 章)，配置价格/预算需自行核对；仓库无独立 LICENSE 文件(仅 package.json 声明) |
 
-> 该分类共 **38** 个已核验条目，[查看完整清单 →](docs/categories/billing.md)
+> 该分类共 **39** 个已核验条目，[查看完整清单 →](docs/categories/billing.md)
 
 ### Agent、自动化与工作流
 
@@ -265,7 +265,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Luminousyyh/skill-wb-exec](https://github.com/Luminousyyh/skill-wb-exec) | Publish a DSH skill that delegates bounded coding tasks to a headless CLI executor and returns structured results and real diffs. | `dsh plugin --profile <profile> add github:Luminousyyh/skill-wb-exec; After installation, run python <SKILL_DIR>/scripts/wb_exec.py doctor before dispatching a task.` | MIT；The required backend CLI is not installed or configured by the plugin. Its executor can modify worktrees and run arbitrary project commands, so retain the documented path whitelist, isolation, and review gates. |
 | [luodaoyi/dsh-cabinet-mode](https://github.com/luodaoyi/dsh-cabinet-mode) | Adds a Cabinet agent preset plus a right-sidebar team panel and per-member settings/model routing. | `dsh plugin --profile desktop add https://github.com/luodaoyi/dsh-cabinet-mode/releases/download/v0.6.3/dsh-cabinet-mode-0.6.3.tgz; dsh plugin --profile desktop list; Fully quit and restart DSH, then create a new session and select Cabinet Mode (cabinet).` | MIT；The 0.6.3 compatibility note targets DSH 0.2.2-rc.1; Windows install paths were tested on selected rc.3/rc.5 setups, while other DSH versions/platforms and live teammate behavior remain unverified. Do not combine the bundle install with the fallback preset patch. |
 
-> 该分类共 **386** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+> 该分类共 **387** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 

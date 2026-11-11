@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3503-2563eb)
-![Verified](https://img.shields.io/badge/verified-2710-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3507-2563eb)
+![Verified](https://img.shields.io/badge/verified-2714-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 **English** | [简体中文](README.md) | [🌐 Website](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness is in **Developer Preview** and uses Cordis' “Everything is a plugin” architecture. A DSH profile composes bundles; external extensions commonly declare their loading mechanism through a `dsh` field in `package.json` and a patch file.[1] [2] Test every installation against your own DSH release before relying on it.
 
-**Snapshot: 2026-11-12.** This edition's main directory includes **2710 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,503 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
+**Snapshot: 2026-11-12.** This edition's main directory includes **2714 verified plugins and skills whose source or install manifests were inspected**, organized into 22 capability categories (aligned with the companion site [deepseekharnessplugins.com](https://deepseekharnessplugins.com)); the full listing is split into 22 category pages under [`docs/categories/`](docs/categories/). Plus a **full aggregated catalog — [`CATALOG.md`](CATALOG.md), 3,507 repositories** — merged and deduplicated from GitHub search and several community directories. **Aggregation is not an installation, compatibility, maintenance, or security certification**; only the verified subset enters the main directory, with evidence in [data/verified-plugins.csv](data/verified-plugins.csv) and [data/audit-results.csv](data/audit-results.csv).[3]
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,503** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,507** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | [Verified directory](#verified-directory) | Verified loadable extensions grouped into 22 capability categories (aligned with the [site](https://deepseekharnessplugins.com)) |
 | [UI & Experience](#ui--experience) · [Sessions & Messages](#sessions--messages) · [Other](#other) · [Desktop & Apps](#desktop--apps) · [MCP & Protocols](#mcp--protocols) · [Plugin Tooling](#plugin-tooling) · [Web UI & Frontend](#web-ui--frontend) · [Themes & Skins](#themes--skins) · [Security & Auth](#security--auth) · [Chat & IM](#chat--im) · [CLI & Terminal](#cli--terminal) · [Voice & Speech](#voice--speech) · [Lists & Resources](#lists--resources) · [Usage & Billing](#usage--billing) · [Agents, Automation & Workflows](#agents-automation--workflows) · [Integrations & Sharing](#integrations--sharing) · [Developer Tools](#developer-tools) · [Knowledge & Research](#knowledge--research) · [Design, Media & Vision](#design-media--vision) · [Web & Browser](#web--browser) · [Ecosystem & Resources](#ecosystem--resources) · [Just for Fun](#just-for-fun) | 22 category anchors |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
@@ -41,7 +41,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Navigation | Purpose |
 | --- | --- |
-| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,503** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
+| [Full aggregated catalog](#full-aggregated-catalog) | **All 3,507** DSH-related repositories, including unreviewed candidates; [audit log](data/audit-results.csv) |
 | Category pages (full listings) | [UI & Experience](docs/categories/ui-experience.en.md) · [Sessions & Messages](docs/categories/sessions-messages.en.md) · [Other](docs/categories/utilities.en.md) · [Desktop & Apps](docs/categories/desktop.en.md) · [MCP & Protocols](docs/categories/mcp.en.md) · [Plugin Tooling](docs/categories/plugin-tools.en.md) · [Web UI & Frontend](docs/categories/web-ui.en.md) · [Themes & Skins](docs/categories/theme.en.md) · [Security & Auth](docs/categories/security.en.md) · [Chat & IM](docs/categories/chat-im.en.md) · [CLI & Terminal](docs/categories/cli.en.md) · [Voice & Speech](docs/categories/voice.en.md) · [Lists & Resources](docs/categories/lists.en.md) · [Usage & Billing](docs/categories/billing.en.md) · [Agents, Automation & Workflows](docs/categories/agents-workflows.en.md) · [Integrations & Sharing](docs/categories/integrations-sharing.en.md) · [Developer Tools](docs/categories/developer-tools.en.md) · [Knowledge & Research](docs/categories/knowledge-research.en.md) · [Design, Media & Vision](docs/categories/media-vision.en.md) · [Web & Browser](docs/categories/web-browser.en.md) · [Ecosystem & Resources](docs/categories/ecosystem-resources.en.md) · [Just for Fun](docs/categories/fun.en.md) |
 | [Built-in DSH components](#official-built-in-capabilities-not-community-plugins) | Runtime components shipped in the official source tree |
 | [Watchlist and related projects](#watchlist-and-related-projects) | Related but unverified or non-loadable projects |
@@ -65,7 +65,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [YuChenLiao/dsh-comfyui-workbench](https://github.com/YuChenLiao/dsh-comfyui-workbench) | Browse and manage local ComfyUI assets and run API-format workflows from DSH. | `Run dsh plugin --profile desktop add github:YuChenLiao/dsh-comfyui-workbench, then restart DSH; for local development the README gives dsh plugin --profile desktop add link:D:/dsh/dsh-comfyui-workbench.` | MIT; Requires a local ComfyUI or a configured start command. The default configuration can scan workspace directories, write uploads/outputs and show terminal logs; do not enable it alongside the predecessor dsh-comfyui-album because the README warns of duplicate interfaces and deletion controls. |
 | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | Build personalized courses and teach them through an interactive handwriting whiteboard, quizzes, speech, and study tools. | `DSH desktop: Plugins -> Add Plugin -> enter dsh-aha-tutor and install from the official source, then fully restart DSH. For a non-desktop profile: dsh plugin --profile <name> add dsh-aha-tutor@1.15.0.` | MIT; The desktop host needs a full restart after installation; optional cloud speech providers use credentials and may incur charges. |
 
-> This category has **414** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
+> This category has **415** verified entries, [view the full list →](docs/categories/ui-experience.en.md)
 
 ### Sessions & Messages
 
@@ -116,7 +116,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Mrsirlila/dsh-pocket-plus](https://github.com/Mrsirlila/dsh-pocket-plus) | Lets a phone access and control a local DSH web session over LAN, Tailscale, or Cloudflare with QR login, WebSocket synchronization, and password protection. | `dsh plugin --profile web add "dsh-pocket@github:Mrsirlila/dsh-pocket-plus#path:/plugin"; restart DSH and open the DSH Pocket settings page.` | GPL-2.0; This is a modified dsh-pocket distribution and materially expands the DSH code-execution surface over a network. Keep public access disabled unless needed, use strong credentials, protect Cloudflare tokens, and review the upstream patch provenance. |
 | [pavel-logachev/dsh-mobile](https://github.com/pavel-logachev/dsh-mobile) | Pairs an Android app with a DSH host for project and session browsing, live agent interaction, files, notifications, and optional remote task execution. | `Download the signed APK, dsh-mobile-host-0.9.3.zip, and matching SHA-256 files from one release; in PowerShell run & $installer -ZipPath $zip -Hosts $hosts -WhatIf, then & $installer -ZipPath $zip -Hosts $hosts, then & $installer -ZipPath $zip -Hosts $hosts -Activate; verify with node $cli verify-config --config $config and pair with node $cli pair --config $config --read all --ttl 300 --qr (add --execute all only with explicit consent).` | MIT; Unofficial Windows + Android app; only the explicitly tested DSH versions are supported. The installer requires signed release artifacts and project filtering is a permission filter, not a filesystem sandbox. |
 
-> This category has **100** verified entries, [view the full list →](docs/categories/desktop.en.md)
+> This category has **101** verified entries, [view the full list →](docs/categories/desktop.en.md)
 
 ### MCP & Protocols
 
@@ -236,6 +236,7 @@ An entry in this section has at least one verified native signal: a reproducible
 
 | Plugin | Capability | Install or mount | License / Risk |
 | --- | --- | --- | --- |
+| [Aily-DSH/dsh-peak-guard](https://github.com/Aily-DSH/dsh-peak-guard) | Pauses and resumes chosen DSH sessions around DeepSeek peak-price hours: warns before peak, stops ticked sessions at the boundary and resumes them off-peak, with a Chinese holiday / make-up-workday calendar. | `dsh plugin --profile desktop add "git+https://github.com/Aily-DSH/dsh-peak-guard.git"; restart DSH` | MIT; Interrupts long turns at the boundary (grace period configurable); only acts on sessions you tick. |
 | [bpc-oss/dsh-web-billing](https://github.com/bpc-oss/dsh-web-billing) | RMB/USD token-billing for dsh web: official-policy auto pricing with peak/off-peak hours, per-message ledger, account balance polling, locale-driven currency display; host /billing route + hand-written client fee badge/panel (read-only over session/event). | `dsh plugin --profile web add github:bpc-oss/dsh-web-billing  (or dsh plugin --profile web add dsh-web-billing after publish); restart dsh web` | MIT |
 | [brittanistrehlowll-oss/dsh-quota-panel](https://github.com/brittanistrehlowll-oss/dsh-quota-panel) | Provider quota/balance corner panel for the dsh web surface: server-side credential proxies plus a config-driven page badge; shipped defaults overridable in the profile's cordis.patch.yml. | `dsh plugin --profile web add "github:brittanistrehlowll-oss/dsh-quota-panel" ; restart dsh web (bundle layers apply at boot)` | MIT; Review which provider keys the credential proxies touch. |
 | [dshiq04/dsh-deepseek-balance](https://github.com/dshiq04/dsh-deepseek-balance) | 余额查看 (API balance widget): web UI 侧边栏底部（Settings 上方）展示 DeepSeek API 余额，悬停显示币种/总额/赠送/充值，可配置颜色与手动刷新；API key 存 $DSH_HOME/settings.yaml 或 DEEPSEEK_API_KEY env。 | dsh plugin --profile web add dsh-deepseek-balance --link <path-to-this-package>, plus `- id: dsh-deepseek-balance` loader entry in $DSH_HOME/profiles/web/cordis.patch.yml (package must be resolvable from the profile node_modules) | MIT; Cross-device setup needs 4 manual steps; on this machine it relies on a local junction into the dsh installation's @deepseek-ai dir. |
@@ -245,9 +246,8 @@ An entry in this section has at least one verified native signal: a reproducible
 | [hnmrxz/dsh-plugin-deepseek-balance](https://github.com/hnmrxz/dsh-plugin-deepseek-balance) | 底部状态栏实时显示 DeepSeek 账户余额（同源路由 /dsh-deepseek-balance，credentials seam 实时解析 API Key，10 秒缓存） | `npm install dsh-plugin-deepseek-balance 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-deepseek-balance` | MIT; Not yet published to npm - use local install until published. |
 | [hnmrxz/dsh-plugin-usage-dashboard](https://github.com/hnmrxz/dsh-plugin-usage-dashboard) | 底部状态栏 DeepSeek 用量与估算花费：按会话聚合 token/成本，余额预算告警（复用与余额插件同一条凭据链路） | `npm install dsh-plugin-usage-dashboard 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-usage-dashboard` | MIT |
 | [hurry060215-tech/dsh-api-usage-bar](https://github.com/hurry060215-tech/dsh-api-usage-bar) | Web UI 轻量 API token 用量条：按缓存输入/未缓存输入/输出三分段显示用量构成与数值，纯前端不新增模型工具或 token 开销 | `dsh plugin --profile web add github:hurry060215-tech/dsh-api-usage-bar#v0.1.0，重启 dsh web 并刷新页面` | MIT; 适用于 DSH >=0.1.0-rc.6 <0.2.0；条形表达的是用量构成而非账户余额进度 |
-| [imeepos/dsh-billing-plugin](https://github.com/imeepos/dsh-billing-plugin) | 实时计费：Service+Consumer+Policy 三角色，价格/峰谷窗口/预算全部配置化，超预算时下一步被拒绝并记录预算耗尽通知 | `在 profile 的 cordis.patch.yml(或自有 cordis.yml) 添加挂载行 name: "dsh-billing"，用 dsh --profile <p> --dump-config 确认已入插件树` | MIT; 教材随书代码(第 11–15 章)，配置价格/预算需自行核对；仓库无独立 LICENSE 文件(仅 package.json 声明) |
 
-> This category has **38** verified entries, [view the full list →](docs/categories/billing.en.md)
+> This category has **39** verified entries, [view the full list →](docs/categories/billing.en.md)
 
 ### Agents, Automation & Workflows
 
@@ -264,7 +264,7 @@ An entry in this section has at least one verified native signal: a reproducible
 | [Luminousyyh/skill-wb-exec](https://github.com/Luminousyyh/skill-wb-exec) | Publish a DSH skill that delegates bounded coding tasks to a headless CLI executor and returns structured results and real diffs. | `dsh plugin --profile <profile> add github:Luminousyyh/skill-wb-exec; After installation, run python <SKILL_DIR>/scripts/wb_exec.py doctor before dispatching a task.` | MIT; The required backend CLI is not installed or configured by the plugin. Its executor can modify worktrees and run arbitrary project commands, so retain the documented path whitelist, isolation, and review gates. |
 | [luodaoyi/dsh-cabinet-mode](https://github.com/luodaoyi/dsh-cabinet-mode) | Adds a Cabinet agent preset plus a right-sidebar team panel and per-member settings/model routing. | `dsh plugin --profile desktop add https://github.com/luodaoyi/dsh-cabinet-mode/releases/download/v0.6.3/dsh-cabinet-mode-0.6.3.tgz; dsh plugin --profile desktop list; Fully quit and restart DSH, then create a new session and select Cabinet Mode (cabinet).` | MIT; The 0.6.3 compatibility note targets DSH 0.2.2-rc.1; Windows install paths were tested on selected rc.3/rc.5 setups, while other DSH versions/platforms and live teammate behavior remain unverified. Do not combine the bundle install with the fallback preset patch. |
 
-> This category has **386** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
+> This category has **387** verified entries, [view the full list →](docs/categories/agents-workflows.en.md)
 
 ### Integrations & Sharing
 
