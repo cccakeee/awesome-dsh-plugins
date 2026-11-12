@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3541-2563eb)
-![Verified](https://img.shields.io/badge/verified-2748-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3542-2563eb)
+![Verified](https://img.shields.io/badge/verified-2749-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-13。** 本版主目录收录 **2748 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3541 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-13。** 本版主目录收录 **2749 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3542 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3541 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3542 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3541 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3542 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -254,6 +254,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [h958661134/dsh-plugin-dot](https://github.com/h958661134/dsh-plugin-dot) | Chief-of-staff agent preset: quick todos with reminders, zero-token slash commands, long-term memory, an allow/ask/handoff/block rule gate on tool calls, a session dispatch desk, and on Windows Desktop a taskbar pet that shows status. | `dsh plugin --profile web add github:h958661134/dsh-plugin-dot (DSH Desktop: --profile desktop with the app closed; append #<release tag> to pin); restart DSH and pick the Dot agent preset` | MIT；Relaying, dispatching and archiving other sessions happen only after the user clicks a card. Optional keystroke counting (off by default) uses a keyboard hook that counts presses only. engines.dsh >=0.2.0-rc.0 <0.3.0. |
 | [cq-guojia/dsh-task-ledger](https://github.com/cq-guojia/dsh-task-ledger) | Ask the agent to open, claim, record progress on and close tasks; every step is written to readable ledger JSON/Markdown in the workspace and summarized on a board panel with weekly trends. | dsh plugin add dsh-task-ledger   (README also documents Plugins -> Add plugin with package name dsh-task-ledger, or the plugin marketplace; the standalone skill for other agents is `npx skills add cq-guojia/dsh-task-ledger -g`). Restart DSH, then use the board panel or just tell the agent to create/claim tasks. | MIT；The repo root is a private monorepo (the publishable unit is packages/plugin, name dsh-task-ledger), so `dsh plugin add <github repo url>` is not the documented path — use the npm package name. The board is only useful once the agent writes to ledger/; multi-person sharing explicitly requires git, and task deletion is irreversible. engines only pins node >=22.5, no dsh version range declared. |
 | [Kevinwu901113/dsh-dot](https://github.com/Kevinwu901113/dsh-dot) | Gives the agent a persistent companion persona with a live Android phone, QQ chat, self-directed scheduled activity, memory/handoff and an approval-gated microVM desktop and browser. | `dsh plugin --profile desktop add dsh-dot-life @xmanrui/dsh-im (dsh >= 0.2.1, hardware virtualization, Desktop app closed first; e.g. "/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh" plugin --profile desktop add dsh-dot-life @xmanrui/dsh-im), then relaunch DeepSeek Harness.` | AGPL-3.0-only；First phone start downloads ~2 GB of Android SDK/emulator after accepting Google's license, installs NapCat inside a VM and logs into a real QQ account; needs dsh-im (@xmanrui/dsh-im) and hardware virtualization; AGPL-3.0. |
 | [keli-wen/agy-staff](https://github.com/keli-wen/agy-staff) | Mounts an 'agy staff' right-sidebar plus native agy_brain/agy_worker/agy_job subagent tools and eight /agy-* role skills inside DSH. | dsh plugin --profile desktop add github:keli-wen/agy-staff (requires pnpm, Node.js, and an authenticated `agy` on PATH; use --profile web for the web profile). Upgrade: dsh plugin --profile desktop add 'github:keli-wen/agy-staff#<tag-or-commit>'. Dev checkout: dsh plugin --profile desktop add /absolute/path/to/agy-staff. | MIT；The DSH plugin lives in the dsh/ subpackage and drives an external CLI: the plugin's own note says the DSH shell sandbox blocks agy local language-server ports and OAuth keychain access, so the native tools (not the shell) must be used. Requires a paid/authenticated Google Antigravity CLI; not published to npm (install by GitHub spec only). |
@@ -263,9 +264,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [openBitFun/OpenBitFun](https://github.com/openBitFun/OpenBitFun) | Add an openbitfun_run DSH tool that runs local OpenBitFun Agent SDK turns against a workspace. | `From the OpenBitFun repository root: cargo build -p openbitfun-sdk-host-app; dsh plugin --profile web add /absolute/path/to/extensions/dsh-openbitfun; Start DSH with OPENBITFUN_SDK_HOST=/absolute/path/to/target/debug/openbitfun-sdk-host dsh web --no-open, or set hostPath in the profile patch, then restart the profile.` | MIT；This is a large desktop/runtime repository rather than a plugin-only project. The DSH bridge tracks OpenBitFun's internal SDK Host protocol, requires a locally built host binary, and is limited to local workspaces. |
 | [zhukunpenglinyutong/dsh-ccgui](https://github.com/zhukunpenglinyutong/dsh-ccgui) | Add selectable external CLI model providers to DSH, with ACP sessions, model menus, tools, and change-panel integration. | `For a source install: pnpm install && pnpm run build; dsh plugin --profile web add /absolute/path/to/dsh-ccgui; The README also documents dsh plugin --profile web add dsh-ccgui@1.0.2; restart DSH after installation.` | MIT；Review each configured CLI's own account terms and permission policy. The documented ACP/npx defaults can run Claude Code, Codex, Kimi, PI, OMP, or OpenCode with capabilities outside the DSH sandbox; prefer the source install until the README version example is updated. |
 | [Burns1028/moa-plus](https://github.com/Burns1028/moa-plus) | Adds a Project/Coordinator mode with persistent Workers, shared project context, delegated tasks, and result review inside DSH. | `git clone --branch v0.1.23 https://github.com/Burns1028/moa-plus.git; cd moa-plus; node scripts/project-mode.mjs setup; node scripts/project-mode.mjs start; # For an already prepared compatible runtime:; dsh plugin --profile desktop add "git+https://github.com/Burns1028/moa-plus.git#v0.1.23"` | MIT；Requires Node >=24.9 and DSH 0.2.1-rc.3 plus the three compatibility extensions documented by the project; stock rc.3 is not directly compatible. Use the isolated setup to avoid changing the ordinary Desktop profile and workspace. |
-| [l246804/dsh-pstack](https://github.com/l246804/dsh-pstack) | Brings pstack skills, playbooks, role-based model routing, subagent delegation, and Poteto-mode presets to DSH. | `dsh plugin --profile web add dsh-pstack; restart the profile or open a new Session.` | MIT；Requires DSH >=0.2.2-rc.1 and Node.js >=24.21.1. Optional plugins are separate, and the README warns that Agent Teams conflicts with the pstack root presets. Vendored skills retain upstream licenses. |
 
-> 该分类共 **391** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
+> 该分类共 **392** 个已核验条目，[查看完整清单 →](docs/categories/agents-workflows.md)
 
 ### 集成与分享
 
