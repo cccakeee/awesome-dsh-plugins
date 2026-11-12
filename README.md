@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3535-2563eb)
-![Verified](https://img.shields.io/badge/verified-2742-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3538-2563eb)
+![Verified](https://img.shields.io/badge/verified-2745-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-13。** 本版主目录收录 **2742 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3535 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-13。** 本版主目录收录 **2745 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3538 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3535 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3538 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3535 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3538 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -237,6 +237,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [gongfpp/dsh-cost-voice](https://github.com/gongfpp/dsh-cost-voice) | Announces each turn's estimated cost with bundled voice clips at the end of the turn, with a switchable voice pack. | `dsh plugin --profile web add dsh-cost-voice@1.2.0; restart dsh web` | MIT；Code is MIT, but the bundled audio clips and icon are excluded from MIT and limited to personal, non-commercial use with this plugin (see THIRD-PARTY-NOTICES.md). Amounts are estimates from a local price table, not provider bills. DSH >=0.2.1-0 <0.3.0-0. |
 | [Aily-DSH/dsh-peak-guard](https://github.com/Aily-DSH/dsh-peak-guard) | Pauses and resumes chosen DSH sessions around DeepSeek peak-price hours: warns before peak, stops ticked sessions at the boundary and resumes them off-peak, with a Chinese holiday / make-up-workday calendar. | `dsh plugin --profile desktop add "git+https://github.com/Aily-DSH/dsh-peak-guard.git"; restart DSH` | MIT；Interrupts long turns at the boundary (grace period configurable); only acts on sessions you tick. |
 | [bpc-oss/dsh-web-billing](https://github.com/bpc-oss/dsh-web-billing) | RMB/USD token-billing for dsh web: official-policy auto pricing with peak/off-peak hours, per-message ledger, account balance polling, locale-driven currency display; host /billing route + hand-written client fee badge/panel (read-only over session/event). | `dsh plugin --profile web add github:bpc-oss/dsh-web-billing  (or dsh plugin --profile web add dsh-web-billing after publish); restart dsh web` | MIT |
 | [brittanistrehlowll-oss/dsh-quota-panel](https://github.com/brittanistrehlowll-oss/dsh-quota-panel) | Provider quota/balance corner panel for the dsh web surface: server-side credential proxies plus a config-driven page badge; shipped defaults overridable in the profile's cordis.patch.yml. | `dsh plugin --profile web add "github:brittanistrehlowll-oss/dsh-quota-panel" ; restart dsh web (bundle layers apply at boot)` | MIT；Review which provider keys the credential proxies touch. |
@@ -246,9 +247,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [hccccc01333/dsh-analytics](https://github.com/hccccc01333/dsh-analytics) | Agent FinOps/Token 用量分析：从会话 Engine+Cache 收集用量，webServer 挂载时提供只读 /analytics JSON 路由与浏览器 client bundle，含 skill/sub-agent ROI 分析 | `dsh plugin --profile web add dsh-analytics (或 add github:you/dsh-analytics#<sha> / 本地目录)` | MIT |
 | [hnmrxz/dsh-plugin-deepseek-balance](https://github.com/hnmrxz/dsh-plugin-deepseek-balance) | 底部状态栏实时显示 DeepSeek 账户余额（同源路由 /dsh-deepseek-balance，credentials seam 实时解析 API Key，10 秒缓存） | `npm install dsh-plugin-deepseek-balance 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-deepseek-balance` | MIT；Not yet published to npm - use local install until published. |
 | [hnmrxz/dsh-plugin-usage-dashboard](https://github.com/hnmrxz/dsh-plugin-usage-dashboard) | 底部状态栏 DeepSeek 用量与估算花费：按会话聚合 token/成本，余额预算告警（复用与余额插件同一条凭据链路） | `npm install dsh-plugin-usage-dashboard 后，在 ~/.dsh/profiles/web/cordis.patch.yml 插入 name: dsh-plugin-usage-dashboard` | MIT |
-| [hurry060215-tech/dsh-api-usage-bar](https://github.com/hurry060215-tech/dsh-api-usage-bar) | Web UI 轻量 API token 用量条：按缓存输入/未缓存输入/输出三分段显示用量构成与数值，纯前端不新增模型工具或 token 开销 | `dsh plugin --profile web add github:hurry060215-tech/dsh-api-usage-bar#v0.1.0，重启 dsh web 并刷新页面` | MIT；适用于 DSH >=0.1.0-rc.6 <0.2.0；条形表达的是用量构成而非账户余额进度 |
 
-> 该分类共 **39** 个已核验条目，[查看完整清单 →](docs/categories/billing.md)
+> 该分类共 **40** 个已核验条目，[查看完整清单 →](docs/categories/billing.md)
 
 ### Agent、自动化与工作流
 
@@ -365,6 +365,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [gongfpp/dsh-thanks-carl](https://github.com/gongfpp/dsh-thanks-carl) | Local Carl the Hedgehog companion for DSH Web: 12 pre-generated sprite actions, pat reactions, 25/45-minute focus timer, quick menu, edge wandering and reminders. | `dsh plugin --profile web add dsh-thanks-carl@0.3.0; restart dsh web once and reload` | MIT；Code is MIT; the bundled Carl photo and AI-derived sprites are for personal, non-commercial use with this plugin only. Requires DSH 0.2.1+ (<0.3) and Node 22.12+. |
+| [gongfpp/dsh-novel-fish](https://github.com/gongfpp/dsh-novel-fish) | Read local EPUB / TXT / Markdown novels inside expanded reasoning and tool regions of real DSH conversations, keeping the original content and saving progress locally. | `dsh plugin --profile web add @gongfpp/dsh-novel-fish@1.1.0 (or github:gongfpp/dsh-novel-fish#v1.1.0, or the v1.1.0 release tgz)` | MIT；Web only; native UI hooks may conflict with other reasoning-slot extensions; declared DSH range >=0.2.1-rc.2 <0.3.0-0. Main branch contains unreleased changes beyond the pinned v1.1.0. |
 | [TongY1n/ui-muyu](https://github.com/TongY1n/ui-muyu) | 赛博木鱼：Web 悬浮小摆件，点击敲击累积功德、可拖拽，刷新不丢进度 | `dsh plugin --profile web add github:TongY1n/ui-muyu` | MIT；纯浏览器 UI；无网络请求、无 API Key、无文件/会话/凭据访问；仅 localStorage 存功德/位置/配色 |
 | [Sutera-Diffusus/dsh-whale-musume](https://github.com/Sutera-Diffusus/dsh-whale-musume) | 在 DSH Web 界面右下角提供可拖拽看板娘：监听工具运行状态切换工作/待机立绘（90+ 张，含节日换装与 13 种梗表情）、530+ 条台词与定时闲聊、摸头/分区互动特效、养成（心情/好感/等级/签到/每日任务）与 39 个成就墙、戳泡泡小游戏、可选天气陪伴与全屏天气特效，设置项集成进 DSH 设置页。 | `dsh plugin --profile web add github:Sutera-Diffusus/dsh-whale-musume` | MIT；官方测试环境仅 Windows 10/11 + Edge/Chrome，绑定 DSH 0.1.0-rc.6 前端结构，DSH 升级后注入点可能失效；脚本模式修改内置前端文件（务必保留备份目录，勿与 bundle 模式混用）；启用天气需联网并可能填入第三方 API Key；package.json 标记 private:true，仅能经 github: 源安装。 |
 | [QCYTSN/dsh-dafeiyu](https://github.com/QCYTSN/dsh-dafeiyu) | Windows 桌面原生 Agent 伴侣：由 DSH 会话真实事件驱动的透明无边框始终置顶窗口，展示思考/工作/等待/完成/错误状态；随 DSH 启停 | `pnpm exec dsh plugin --profile web add dsh-dafeiyu@alpha（Windows/WSL2；或 GitHub Release .tgz: dsh plugin --profile web add "...tgz"）` | MIT |
@@ -373,10 +375,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [cakeni/harness-pet](https://github.com/cakeni/harness-pet) | 桌面宠物：一只住在 DeepSeek Harness 里的小鲸鱼——像素精灵内嵌 client bundle（Canvas 鲸鱼兜底），按当前活动工具展示 working 状态，不认识的工具只报 working、绝不伪造工具名。 | `dsh plugin --profile web add github:cakeni/harness-pet（或 dsh plugin --profile web add harness-pet / link:../harness-pet）` | MIT；要求 Harness 0.1.0-rc.6 + pnpm；Git 依赖触发 prepare 构建，被 pnpm 拦截时需在 profile 的 pnpm-workspace.yaml 加 allowBuilds；安装/移除后需重启 dsh web。 |
 | [Fromlan/dsh-godot-tool](https://github.com/Fromlan/dsh-godot-tool) | 驱动 Godot 4.x 编辑器：回环 TCP JSON-lines 桥 + 27 个 godot_* 工具（开/停场景、播放错误、场景树、lint、导出构建）；drive the Godot 4.x editor from the agent via loopback TCP bridge | `Install addons/agent_rpc into the Godot project; mount @deepseek-ai/dsh-godot-tool from the harness workspace (packages/extensions/tool-godot) or via '--patch' overlay pointing at dsh-godot-tool/src/index.ts + compose dsh-tools` | MIT；Mirror of the official harness extension with workspace-scoped peer deps; cleanest install is inside the deepseek-harness monorepo or an explicit patch overlay |
 | [HomophonicFate/rpg-maker-mac-skill](https://github.com/HomophonicFate/rpg-maker-mac-skill) | DSH 技能：在 macOS 上原生运行 RPG Maker MV/MZ 游戏并套用 MTool 翻译文件（环境搭建/翻译整合/插件注册/启动器创建）；触发 /rpg-maker-mac-skill 或自然语言 | `把安装指南 URL 发给 DSH agent（'帮我安装这个 skill: …/docs/install.md'）-> 装入 ~/.dsh/skills/rpg-maker-mac-skill/` | 未发现；No LICENSE detected in repo metadata; MTool has no macOS version so only existing translation files can be loaded; upstream plugin attribution kept (knowlet/RPGDynamicTranslation). |
-| [liyupi/dsh-kun-like-pet](https://github.com/liyupi/dsh-kun-like-pet) | 桌面宠物「小坤宠」：Web 界面右下角随 Agent 工作状态切换 9 种动画，任务完成播放「你干嘛~哎哟」音效；host 状态机 + client shell.overlay 渲染 + 拖动/点击互动。 | node build-kunpet-package.mjs 生成载荷 → DSH 会话内调 `cordis_define`（kind:new，提供 spritePath/voicePath）→ `cordis_run` 激活 | MIT；动态插件会话级绑定，仅注入激活它的会话页面；状态事件经轮询 agents 服务获取（事件监听实测不可靠，见 CHANGELOG v3/v4）。 |
-| [lvyuchuiyi/dsh-funpack](https://github.com/lvyuchuiyi/dsh-funpack) | 趣味插件包:夸夸(/praise)、运势(/fortune)、摸鱼战报(/report)、番茄钟(/pomodoro)、休息提醒(/break),右下角鲸鱼娘桌宠(自定义形象/台词/互动键,支持 HatchPet/Codex 宠物包),/persona 切换说话人设;单文件零依赖零构建。 | `dsh plugin --profile web add github:lvyuchuiyi/dsh-funpack (或 dsh plugin --profile web add ./dsh-funpack)` | MIT；桌宠素材来自 dsh-pet(BSD-3) 与 Taffy 宠物包,随插件打包供个人/爱好者使用。 |
 
-> 该分类共 **37** 个已核验条目，[查看完整清单 →](docs/categories/fun.md)
+> 该分类共 **39** 个已核验条目，[查看完整清单 →](docs/categories/fun.md)
 ## 官方内置能力（不是社区插件）
 
 官方仓库中已有大量随运行时分发的包；它们属于 DSH 的可组合系统组件，不宜与独立社区扩展混为一谈。官方架构文档列出了模型、工具、Session、Agent Loop 等可替换缝隙。[2] 下表列出用户最常接触的官方能力入口。
