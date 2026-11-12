@@ -2805,13 +2805,13 @@
 - [Ultroncn/dsh-archived-chats](https://github.com/Ultroncn/dsh-archived-chats) — Search archived and unarchived chats within separate scopes, preview conversations, manage tags and notes, archive by workspace, import and export ZIP backup… · ⭐28 · MIT · JavaScript ✅
 - [CixiSVesper/dsh-soundtry](https://github.com/CixiSVesper/dsh-soundtry) — Local audio understanding for DeepSeek Harness: transcription (whisper medium), rhythm, melody, chords, structure - six tools, fully offline. Needs a Python… · ⭐25 · MIT · Python ✅
 - [PivisYYY/pivis-health](https://github.com/PivisYYY/pivis-health) — Local-first personal health butler: iOS app + Python health kernel + a DSH agent that monitors, advises and pushes execution. · ⭐22 · MIT · Python ✅
+- [huliux/dsh-asr-plugin](https://github.com/huliux/dsh-asr-plugin) — Unofficial local meeting transcription for DeepSeek Harness on Apple Silicon macOS — dual-track recording, live transcripts, @-referenced summaries. · ⭐20 · Apache-2.0 · TypeScript ✅
 - [SenmuuuuW/dsh-whale-report](https://github.com/SenmuuuuW/dsh-whale-report) — 深迹 DeepTrace — Your Agent, in numbers. DSH 插件：从会话事件日志生成日报/周报/月报/年报/自定义区间，确定性洞察与协作复盘，只读、不改写历史。 · ⭐19 · MIT · TypeScript ✅
 - [xuedai-mayi/dsh-wenshan](https://github.com/xuedai-mayi/dsh-wenshan) — 地理野外实习自成长智能助手：资料收录/知识图谱构建（GeoRAG、BM25+关系扩展+空间衰减检索、不可变知识事件日志），两种 agent preset 隔离，本地持久化与增量图谱热更新 · ⭐18 · MIT ✅
 - [HTian-qwq/prts-terrarchive](https://github.com/HTian-qwq/prts-terrarchive) — 为明日方舟的长篇剧情打造的RAG类DSH插件，拥有多种快速检索能力。 · ⭐17 · MIT · JavaScript ✅
 - [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) — 从Claude Code、Codex、Reasonix等Agent工具导入迁移历史消息，并在DeepSeek Harness(DSH)中继续对话 · ⭐16 · MIT · JavaScript ✅
 - [WeiyangPro/dsh-deepseek-usage-panel](https://github.com/WeiyangPro/dsh-deepseek-usage-panel) — A floating DSH Web panel for DeepSeek balance and locally measured token-use history. · ⭐16 · MIT · JavaScript ✅
 - [CVEO/dsh-digital-earth](https://github.com/CVEO/dsh-digital-earth) — Digital Earth: a 3D globe panel for DeepSeek Harness that loads 3D Tiles / 3DGS layers with measurement, spatial analysis and agent read/write access to the… · ⭐15 · MIT · JavaScript ✅
-- [huliux/dsh-asr-plugin](https://github.com/huliux/dsh-asr-plugin) — Unofficial local meeting recording and transcription for DeepSeek Harness on Apple Silicon macOS. · ⭐15 · Apache-2.0 · TypeScript ✅
 - [maxwell-feng/dsh-tinyfish-search](https://github.com/maxwell-feng/dsh-tinyfish-search) — TinyFish-backed web search provider for DeepSeek Harness (ctx.web). · ⭐15 · MIT · TypeScript ✅
 - [ALittleLov/dsh-soundcheck](https://github.com/ALittleLov/dsh-soundcheck) — 让文本模型读懂一首歌：本地音乐分析插件，把音频拆成能量、速度、调性、密度，音频不出本机。 · ⭐14 · MIT · Python ✅
 - [FylarOpen/dsh-fylar-office-editor](https://github.com/FylarOpen/dsh-fylar-office-editor) — DSH Web plugin for previewing, editing, exporting, and generating Office documents with the Fylar Office SDK. · ⭐14 · Not found · TypeScript ✅
