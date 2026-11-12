@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3539-2563eb)
-![Verified](https://img.shields.io/badge/verified-2746-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3540-2563eb)
+![Verified](https://img.shields.io/badge/verified-2747-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-13。** 本版主目录收录 **2746 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3539 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-13。** 本版主目录收录 **2747 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3540 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3539 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3540 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3539 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3540 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -297,6 +297,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [jasoncai0/dsh-interview-coach](https://github.com/jasoncai0/dsh-interview-coach) | Mock-first interview coach: resume-grounded memory, practice questions with scoring and three-level deep dives, answer review and a searchable answer library, plus an interviewer mode for planning and evidence-based notes. | `dsh plugin --profile <profile> add github:jasoncai0/dsh-interview-coach; refresh DSH Web` | MIT；Data stays under $DSH_HOME/storages/interview-coach; text-only Mock (no ASR/TTS/audio capture). The overlay HUD is visible in screen capture; it is a practice tool, not for use during live interviews. |
 | [CVEO/dsh-digital-earth](https://github.com/CVEO/dsh-digital-earth) | Load local or online 3D Tiles/3DGS scenes next to the chat, measure distances and areas, run profile/flood/sunlight analysis, and let the agent load layers, annotate, screenshot and export scene reports. | `dsh plugin --profile <profile> add @cveo/dsh-digital-earth   (or the in-app plugin market search for @cveo/dsh-digital-earth / local tgz), then fully restart DSH and open the '数字地球' card or the globe button in the chat title bar.` | MIT；engines.dsh caps at <0.3.0 (developer-preview coupling). ~23 MB vendored Cesium ships in the package. Local layers are not uploaded, but online basemap/terrain and the AI lasso screenshot do leave the machine; the panel also writes screenshot/JSON sidecars to disk. |
 | [flywalker68/dsh-memory-keeper](https://github.com/flywalker68/dsh-memory-keeper) | Makes the operator's markdown memory store and exported chat history searchable (local bge-small embeddings, optional Qwen embedding+rerank) and shows a memory panel in the Web UI. | git clone https://github.com/flywalker68/dsh-memory-keeper.git ~/.dsh/plugins/dsh-memory-keeper && cd ~/.dsh/plugins/dsh-memory-keeper && npm install; then in ~/.dsh/profiles/<profile>/package.json add "dsh-memory-keeper": "link:/abs/path/to/dsh-memory-keeper" to dependencies and "dsh-memory-keeper" to dsh.profile.bundles, run `pnpm install` in the profile, restart DSH, and set an absolute `workspace` in that profile's cordis.patch.yml. | MIT；Not published to npm, so the profile link must be added by hand; `workspace` must be an absolute path (empty falls back to process.cwd(), which in DSH is the profile directory and silently yields empty search results). |
 | [PivisYYY/pivis-health](https://github.com/PivisYYY/pivis-health) | Turns DSH into a personal health coach that reads Apple Health/WHOOP data, plans todos and chats through a paired iPhone app. | `dsh plugin --profile phealth add github:PivisYYY/pivis-health && ~/.dsh/profiles/phealth/node_modules/dsh-plugin-phealth/bin/phealth setup --nickname <name>  (alternative: add https://raw.githubusercontent.com/PivisYYY/pivis-health/main/dsh/market-index.json as a DSH plugin index source).` | MIT；macOS only; the dedicated phealth profile is created with approvals disabled so the agent can run ./pivis-health unattended; the TestFlight app link is still a placeholder; health data is personal and sensitive. |
@@ -306,9 +307,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Ultroncn/dsh-archived-chats](https://github.com/Ultroncn/dsh-archived-chats) | Workspace-based archive management with scoped content search, conversation previews, tags and notes, ZIP backups, lineage graphs, confirmed permanent deletion with retries, and official Host updates. | `dsh plugin --profile web add dsh-archived-chats@latest` | MIT；Reads local chat content. Permanent deletion includes associated subagents and is irreversible. Upgrades and uninstall preserve plugin data under $DSH_HOME/plugin-data/archived-chats. Declared DSH range >=0.1.0-rc.7 \|\| 0.2.2-rc.1. |
 | [Chang-Tong/dsh-unified-context](https://github.com/Chang-Tong/dsh-unified-context) | Imports resumable sessions and agents, links shared instructions and skills, converges memory, and migrates automations into DSH tasks. | `dsh plugin --profile web add dsh-unified-context@0.5.0`; restart `dsh web` and refresh the page. Use `/import-all` for the full migration, or `node import.mjs all --apply` for the CLI session/skill/context path. | MIT；Node >=22.19 is required. `/link-context` creates symlinks and `/import-all` writes local session, skill, memory, and context data; `/import-automations --activate` can schedule active work. |
 | [runzhliu/welink](https://github.com/runzhliu/welink) | Query allowlisted WeLink conversations, dates, and optionally bounded message content through read-only DSH tools. | `dsh plugin --profile web add 'github:runzhliu/welink#v0.4.1&path:/plugins/dsh-welink'; Configure WELINK_URL, WELINK_ALLOWED_CONVERSATIONS, an absolute WELINK_TOKEN_FILE, and optionally WELINK_ALLOW_MESSAGES=1 in the DSH environment, then restart the profile.` | AGPL-3.0-only；The plugin can expose third-party chat contents to the DSH model and sends queries to the configured backend. Use an isolated deployment, a least-privilege read-only token, an explicit conversation allowlist, and HTTPS outside loopback. |
-| [CixiSVesper/dsh-soundtry](https://github.com/CixiSVesper/dsh-soundtry) | Adds six local audio-analysis tools for transcription, rhythm, melody, chords, structure, and vocal separation. | `node --expose-internals "<DSH>\resources\app\lib\plugin-cli.js" desktop install C:\Users\<你>\.dsh\plugins\dsh-cixisound; node src/deps.js; runtime\venv\Scripts\python.exe python\soundtry.py doctor` | MIT；Requires Windows 10/11 x64 and Python 3.10-3.12; the default README footprint is about 2.4 GB, with larger optional modes/models. Tool names collide with older dsh-cixisound versions, so the old version must be removed first. |
 
-> 该分类共 **271** 个已核验条目，[查看完整清单 →](docs/categories/knowledge-research.md)
+> 该分类共 **272** 个已核验条目，[查看完整清单 →](docs/categories/knowledge-research.md)
 
 ### 设计、媒体与视觉
 
