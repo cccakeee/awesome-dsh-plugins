@@ -1996,6 +1996,7 @@
 - [tw93/Mole](https://github.com/tw93/Mole) — Open-source Mac and PC cleaner with a fast CLI and native Mac and Windows apps. · ⭐74380 · GPL-3.0 · Shell ✅
 - [kunkundi/crossdesk](https://github.com/kunkundi/crossdesk) — Cross-platform WebRTC remote desktop client with an agent/MCP integration that lets a DSH or Codex agent operate a remote computer. · ⭐4741 · GPL-3.0-only · C++ ✅
 - [6shenhonghong9/dsh-startup-screen](https://github.com/6shenhonghong9/dsh-startup-screen) — DeepSeek Harness startup interface and interactive six-scene boot animation for web and desktop profiles. · ⭐631 · MIT · JavaScript ✅
+- [flymysql/dsh-remote](https://github.com/flymysql/dsh-remote) — SSH remote workspaces for DeepSeek Harness: parallel projects across hosts, remote file browsing and editing, recursive search, terminals, Git diffs, and wor… · ⭐288 · MIT · JavaScript ✅
 - [helloHub1212/dsh-windows-mcp](https://github.com/helloHub1212/dsh-windows-mcp) — Windows desktop automation for DeepSeek Harness through the official MCP client bridge. · ⭐210 · MIT · JavaScript ✅
 - [huzhengcai471-crypto/dsh-startup-secret](https://github.com/huzhengcai471-crypto/dsh-startup-secret) — DeepSeek Harness derivative startup animation with cyber theme, configurable identity, and an optional access-password sequence. · ⭐167 · MIT · JavaScript ✅
 - [liguobao/ds-harness-remote](https://github.com/liguobao/ds-harness-remote) — A multi-device remote access solution built on the DeepSeek Harness plugin system, enabling PC, Android, and Web clients to securely access and operate a rem… · ⭐138 · MIT · TypeScript ✅
@@ -2073,7 +2074,6 @@
 - [TideSparrow/computer-use-dsh](https://github.com/TideSparrow/computer-use-dsh) — Codex-style computer use plugin for DeepSeek Harness (DSH): screenshot, click, type, scroll & open apps on macOS / Linux / Windows. 桌面自动化 AI Agent 插件。 · ⭐1 · MIT · JavaScript ✅
 - [Aily-DSH/dsh-test-window](https://github.com/Aily-DSH/dsh-test-window) — 让 Agent 拉起的测试窗口开在你指定的显示器上，不再盖住 DSH 窗口（Windows）。 · MIT · JavaScript ✅
 - [ch1bug/dsh-wsl-bridge](https://github.com/ch1bug/dsh-wsl-bridge) — Windows access tools for WSL agents: win_ls/win_read/win_write/win_run/win_open/win_path/win_drives as a DeepSeek Harness bundle · MIT · JavaScript ✅
-- [flymysql/dsh-remote](https://github.com/flymysql/dsh-remote) — Remote-access assistant for DeepSeek Harness: /remote command and settings page printing the exact SSH tunnel / reverse-tunnel / reverse-proxy commands (harn… · MIT · JavaScript ✅
 - [kelai141/dsh-shell-termux](https://github.com/kelai141/dsh-shell-termux) — dsh 的安卓/Termux bash 能力提供者——显式 Termux 环境注入、探测诊断、诚实的应用域沙箱声明。 · MIT · TypeScript ✅
 - [onlca/dsh-ssh](https://github.com/onlca/dsh-ssh) — DeepSeek Harness 插件:远程主机目录作为工作区,零目标主机安装 · MIT · TypeScript ✅
 - [opentandem/dsh-phone](https://github.com/opentandem/dsh-phone) — Use DeepSeek Harness (dsh) from your phone: a dsh plugin that pairs your computer with OpenTandem through a QR code. · MIT · JavaScript ✅
