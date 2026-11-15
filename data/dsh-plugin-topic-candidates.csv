@@ -3498,3 +3498,5 @@ tao1020/dsh-chrome-use,dsh-plugin,verified_plugin
 linkbag/dsh-swarm-orchestrator,dsh-plugin,verified_plugin
 1129742588/dsh-memory-tiers,dsh-plugin,verified_plugin
 drscrewdriver/dsh-input-traffic,dsh-plugin,verified_plugin
+huanlin-labs/dsh-skill-cockpit,dsh-plugin,verified_plugin
+huanlin-labs/dsh-computer-browser,dsh-plugin,verified_plugin
