@@ -137,6 +137,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 > 该分类共 **55** 个已核验条目，[查看完整清单 →](docs/categories/mcp.md)
 
 ### 插件工具
+| [huanlin-labs/dsh-skill-cockpit](https://github.com/huanlin-labs/dsh-skill-cockpit) | Skills cockpit: enable or disable each skill, mount skills into presets, keep the user-visible and model-visible lists separate, and read per-skill usage counts. | `dsh plugin --profile desktop add dsh-skill-cockpit; restart DSH Desktop` | MIT；Only manages the skill roots DSH exposes (~/.dsh/skills and ~/.agents/skills); it cannot stop other processes, manual edits, or skills invoked outside DSH. |
+
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
@@ -175,6 +177,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 > 暂无已核验条目。
 
 ### 安全与鉴权
+| [huanlin-labs/dsh-vpn-guard](https://github.com/huanlin-labs/dsh-vpn-guard) | Provider-agnostic egress monitor: exit IP, country, ASN and latency, plus a per-service view of how that IP looks to AI services; an optional Clash/Mihomo adapter adds node lists, switching and traffic, and it never reads subscription links, credentials or cookies. | `dsh plugin --profile desktop add dsh-vpn-guard; restart DSH Desktop and open the left-nav VPN 守卫 panel` | MIT；Never edits VPN configs, system proxy settings or firewall rules; switching is restricted to an allow-list with a two-step confirm and never happens automatically; probe results stay under ~/.dsh/vpn-guard/. Windows-first; other platforms unverified. |
+
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
@@ -328,6 +332,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 > 该分类共 **108** 个已核验条目，[查看完整清单 →](docs/categories/media-vision.md)
 
 ### 网页与浏览器
+| [huanlin-labs/dsh-computer-browser](https://github.com/huanlin-labs/dsh-computer-browser) | One tool surface for Windows applications and a real signed-in Chrome: background CDP page reads and clicks that escalate to foreground keyboard and mouse, plus screen observation and app control. | `dsh plugin --profile desktop add dsh-computer-browser; restart DSH Desktop` | MIT；Drives the real desktop and a real signed-in browser, so it is not a sandbox. The desktop half reuses the MIT upstream orangeofcarl0-sys/dsh-computer-use (see THIRD-PARTY.md). Passwords go only through KeePassXC Auto-Type and never enter model context. Windows-first. |
+
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
