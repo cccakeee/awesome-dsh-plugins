@@ -406,6 +406,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) | AI 编码代理驱动的 Android/Google TV 瘦身工具 | 通过 Claude Code、Codex、Gemini CLI 等编码代理执行 ADB 去广告与臃肿应用；README 未提供 DSH 装载路径，待核验 |
 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 开源完全本地的语音克隆工作台 | 独立桌面应用 + 通用 agent skills（`npx skills add`）；未发现 DSH Bundle、Patch 或 DSH 安装步骤 |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | 源自 Karpathy 编码准则的行为技能 | 单文件 CLAUDE.md，以 Claude Code 插件形式安装；面向 Claude Code，未发现 DSH 装载路径 |
+| [wwewtech/numes-deepseek-harness](https://github.com/wwewtech/numes-deepseek-harness) | 连接 DSH 与 Numes 免费模型的本地代理 | 不是可装载的 `dsh.bundle` 插件；通过 Settings 自定义模型 API 或给内置 `llm-pi-ai` 增加 provider 配置，外加零依赖本地代理（`node tools/numes-free-failover.mjs`） |
 
 ## 安装与安全
 

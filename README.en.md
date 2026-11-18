@@ -405,6 +405,7 @@ These projects are intentionally outside the native directory because the inspec
 | [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) | Coding-agent-driven Android/Google TV debloat tool | Driven by coding agents (Claude Code, Codex, Gemini CLI) over ADB; README shows no DSH load path, pending verification |
 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | Open-source fully-local voice-cloning studio | Standalone desktop app plus generic agent skills (`npx skills add`); no inspected DSH bundle, patch, or install path |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | Behavior skills derived from Karpathy's coding principles | Single-file CLAUDE.md installed as a Claude Code plugin; Claude Code-oriented, no DSH load path found |
+| [wwewtech/numes-deepseek-harness](https://github.com/wwewtech/numes-deepseek-harness) | Local proxy connecting DSH to Numes free models | Not a loadable `dsh.bundle` plugin; uses Settings → Custom model API or a provider block on the built-in `llm-pi-ai` adapter, plus a zero-dependency local proxy (`node tools/numes-free-failover.mjs`) |
 
 ## Installation and safety
 
