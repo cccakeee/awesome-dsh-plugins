@@ -391,6 +391,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | `session-*`、`subagent-*`、`schedule`、`workflow-*` | 会话、子 Agent、日程与工作流 | [官方源码 packages](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages) |
 
 ## 相关项目与观察名单（不计入主目录）
+- [wwewtech/numes-deepseek-harness](https://github.com/wwewtech/numes-deepseek-harness) — Free Numes models in DeepSeek Harness: zero-dependency local proxy with a hard `$0` route (`:free` + `max_price` guards), never-give-up retries (5s to 5m), free-model auto-discovery, and paid-model protection.
 
 以下项目与 DSH 或 DeepSeek 生态相关，但**不是本次已核验的可装载原生插件**，或主仓库本身并非插件。它们被刻意放在主目录之外，以便后续独立核验。
 
