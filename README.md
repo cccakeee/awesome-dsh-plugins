@@ -1,8 +1,8 @@
 # awesome-dsh-plugins
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Catalog](https://img.shields.io/badge/catalog-3726-2563eb)
-![Verified](https://img.shields.io/badge/verified-2934-16a34a)
+![Catalog](https://img.shields.io/badge/catalog-3727-2563eb)
+![Verified](https://img.shields.io/badge/verified-2935-16a34a)
 ![License](https://img.shields.io/badge/license-MIT-f59e0b)
 
 [English](README.en.md) | **简体中文** | [🌐 网站](https://deepseekharnessplugins.com)
@@ -11,11 +11,11 @@
 
 DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“Everything is a plugin”架构：Profile 组合 Bundle，外部插件通常以 `package.json` 的 `dsh` 字段及 patch 文件声明挂载方式。[1] [2] 因此，本目录中的安装方法和兼容性应在你自己的 DSH 版本上先行验证。
 
-**快照日期：2026-11-24。** 本版主目录收录 **2934 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3726 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
+**快照日期：2026-11-25。** 本版主目录收录 **2935 个**经源码或安装清单核验的插件与 Skill，按 22 个能力分类组织（与配套网站 [deepseekharnessplugins.com](https://deepseekharnessplugins.com) 同构）；完整清单已拆分到 [`docs/categories/`](docs/categories/) 的 22 个分类页面。同时提供 **全量聚合目录 [`CATALOG.md`](CATALOG.md)（3727 个仓库）**，合并 GitHub 搜索与多个社区目录去重后得到。**聚合 ≠ 可装载、可兼容、可安全运行**；只有本目录核验子集进入主目录，证据见 [data/verified-plugins.csv](data/verified-plugins.csv) 与 [data/audit-results.csv](data/audit-results.csv)。[3]
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3726 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3727 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | [已核验插件目录](#已核验插件目录) | 按 22 个能力分类的已核验可装载扩展（与[网站](https://deepseekharnessplugins.com)同构） |
 | [界面与体验](#界面与体验) · [会话与消息](#会话与消息) · [其他](#其他) · [桌面与应用](#桌面与应用) · [MCP 与协议](#mcp-与协议) · [插件工具](#插件工具) · [Web 界面与前端](#web-界面与前端) · [主题与皮肤](#主题与皮肤) · [安全与鉴权](#安全与鉴权) · [聊天与 IM](#聊天与-im) · [命令行与终端](#命令行与终端) · [语音](#语音) · [清单与资源](#清单与资源) · [用量与计费](#用量与计费) · [Agent、自动化与工作流](#agent自动化与工作流) · [集成与分享](#集成与分享) · [开发者工具](#开发者工具) · [知识与研究](#知识与研究) · [设计、媒体与视觉](#设计媒体与视觉) · [网页与浏览器](#网页与浏览器) · [生态与资源](#生态与资源) · [纯属好玩](#纯属好玩) | 22 个分类锚点 |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
@@ -42,7 +42,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 导航 | 内容 |
 | --- | --- |
-| [全量聚合目录](#全量聚合目录) | **3726 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
+| [全量聚合目录](#全量聚合目录) | **3727 个** DSH 相关仓库的完整聚合（含未审核候选）；[审计日志](data/audit-results.csv) |
 | 分类目录（完整清单） | [界面与体验](docs/categories/ui-experience.md) · [会话与消息](docs/categories/sessions-messages.md) · [其他](docs/categories/utilities.md) · [桌面与应用](docs/categories/desktop.md) · [MCP 与协议](docs/categories/mcp.md) · [插件工具](docs/categories/plugin-tools.md) · [Web 界面与前端](docs/categories/web-ui.md) · [主题与皮肤](docs/categories/theme.md) · [安全与鉴权](docs/categories/security.md) · [聊天与 IM](docs/categories/chat-im.md) · [命令行与终端](docs/categories/cli.md) · [语音](docs/categories/voice.md) · [清单与资源](docs/categories/lists.md) · [用量与计费](docs/categories/billing.md) · [Agent、自动化与工作流](docs/categories/agents-workflows.md) · [集成与分享](docs/categories/integrations-sharing.md) · [开发者工具](docs/categories/developer-tools.md) · [知识与研究](docs/categories/knowledge-research.md) · [设计、媒体与视觉](docs/categories/media-vision.md) · [网页与浏览器](docs/categories/web-browser.md) · [生态与资源](docs/categories/ecosystem-resources.md) · [纯属好玩](docs/categories/fun.md) |
 | [官方内置能力](#官方内置能力不是社区插件) | 随 DSH 源码发行的官方运行时构件 |
 | [相关项目与观察名单](#相关项目与观察名单不计入主目录) | 相关但并非已核验原生插件的项目 |
@@ -55,6 +55,7 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 
 | 插件 | 能力 | 安装或挂载方式 | 许可 / 风险 |
 | --- | --- | --- | --- |
+| [super-new13/dsh-iTab](https://github.com/super-new13/dsh-iTab) | Browser-style session tab strip for the DSH web client: roomier tabs, drag to reorder, middle-click close, close others/right/all, reopen closed tabs from a 50-entry history, status dots, and hover bubbles showing the Git branch; menu shortcuts open the project in the system file manager or VS Code. | `dsh plugin --profile web add dsh-itab (or github:super-new13/dsh-iTab#v0.3.10)` | MIT；Web only; declared DSH range >=0.2.0-rc.1 <0.3.0-0; author verified CLI install on macOS only (not Windows or interactive Web UI). Tab-strip approach adapted from dsh-workspace-plus and dsh-better-workspace (MIT); it may conflict with other header/tab extensions. |
 | [fengshiyangrouguan/dsh-closure-pet](https://github.com/fengshiyangrouguan/dsh-closure-pet) | Puts an animated desktop pet in the DSH overlay that reacts to agent state and shows account balance and today's spend. | DSH → Plugins → Add plugin → https://github.com/fengshiyangrouguan/dsh-closure-pet, then ensure "dsh-closure-pet" is in dsh.profile.bundles and restart. Manual: add "dsh-closure-pet": "github:fengshiyangrouguan/dsh-closure-pet" to the profile package.json plus the bundles entry. (No npm package: `npm view dsh-closure-pet` -> 404.) | NOASSERTION；GitHub reports NOASSERTION because bundled assets are outside the MIT grant: character art derived from Arknights screenshots and in-game audio are redistributed with a personal-use-only disclaimer, so redistribution/legal status is unresolved for a public catalog. |
 | [JimLiu/open-artifact](https://github.com/JimLiu/open-artifact) | Have the agent produce editable, commentable local artifacts (decks, UI designs, sheets, docs, motion) that open in a browser editor and export to PDF/PPTX/XLSX/MP4, with page comments routed back into the owning session. | `dsh plugin --profile web add dsh-open-artifact   (or in DSH: Plugins -> Add plugin -> enter dsh-open-artifact; then use /open-artifact slides\|design\|whiteboard\|sheets\|data\|docs\|motion ...)` | Apache-2.0；Formerly named baoyu-design; the DSH plugin entry in this repo is source-only until built (npm run build), so the reproducible path is the published npm package. The daemon writes plain files into your workspace and exports can pull web fonts/embeds, so review artifact output before sharing. |
 | [peiyucn/dsh-sparrow](https://github.com/peiyucn/dsh-sparrow) | Keep notes, tasks, calendar and file annotations in one DSH sidebar panel that the agent can edit through 19 desk_* tools and a bundled desk-one skill. | Plugins -> Add plugin -> `@dsh-sparrow/dsh-desk-one` (npm 0.2.2-rc.5.1); or enable Plugins -> Experimental plugins -> Custom plugin indexes, add `https://dsh.pyai.site/market/index.json` in Discover, then install Desk One from its card. Restart DSH afterwards (a browser refresh is not enough). | MIT；The repo root is a private pnpm monorepo without its own dsh.bundle, so install the individual published packages (@dsh-sparrow/dsh-desk-one, dsh-chat-fim, dsh-theme-tone, dsh-codebuddy-credits) rather than the repository root; the calendar is read-only and syncs third-party credentials into the DSH credential store. |
@@ -64,9 +65,8 @@ DeepSeek Harness 目前处于 **Developer Preview**。官方采用 Cordis 的“
 | [BaiKe-Zhang/dsh-mindmark](https://github.com/BaiKe-Zhang/dsh-mindmark) | Lets the user mark up assistant answers in the DSH web client and feeds the annotations back into the next turn as structured context. | `dsh plugin --profile web add dsh-mindmark   (then restart DSH; the annotation UI appears in the DSH web client and state is kept at $DSH_HOME/annotations/state.json)` | MIT；Web client only (`dsh.client.platform: web`); annotations are re-injected at most `maxInjections` (3) turns before they settle. |
 | [drscrewdriver/dsh-sidebar-fold](https://github.com/drscrewdriver/dsh-sidebar-fold) | Fold/unfold the sidebar add-on entries into one More row and choose which rows stay visible and how they are aligned. | `dsh plugin --profile <profile> add dsh-sidebar-fold   # then ensure dsh-sidebar-fold is in the profile's dsh.profile.bundles list and restart` | MIT；Mounting needs the host's shipped More row (DSH >= 0.2.1-rc.3); on older lines the plugin degrades silently and does nothing. The fold relies on sidebar DOM fragments that drift between host builds, so it should be re-smoke-tested after DSH upgrades; the npm command also requires adding the bundle to the profile's dsh.profile.bundles list. |
 | [kazari-qwp/dsh-tiered-plugin-menu](https://github.com/kazari-qwp/dsh-tiered-plugin-menu) | Turn individual plugins, MCP servers and Skills on or off per workspace and per session, each with its own configuration, inherited down the workspace tree. | `dsh plugin --profile desktop add dsh-tiered-plugin-menu  # web: use your profile name (usually web); TUI: dsh-tiered-plugin-tui ; dsh-go: dsh-tiered-plugin-go ; then restart DSH and use the plug icon next to 工作区 / each workspace and session row` | MIT；GitHub source requires a tsdown build - install the published npm package or the Release tarball instead of the source tree; peer deps pin @deepseek-ai/cordis 4.1.0 exactly and dev baseline is dsh 0.2.2-rc.1, so newer harness versions may need a compatible release. |
-| [oil-oil/dsh-oil-ui](https://github.com/oil-oil/dsh-oil-ui) | Gives DSH an end-to-end design workflow (direction, multi-style comparison pages, real-screenshot visual review) and routes to Oil UI Pro when present. | `npm exec --yes --package=pnpm@10.16.1 -- dsh plugin --profile web add github:oil-oil/dsh-oil-ui   (Desktop: Settings -> Plugins -> Add plugin -> github:oil-oil/dsh-oil-ui ; release snapshot: dsh plugin --profile web add ./dsh-oil-ui-X.Y.Z.tgz)` | MIT；Unpublished on npm; install with the fixed pnpm entry point (Corepack can pick a broken pnpm) and do not use --accept-risk to bypass engine checks. Older v0.3.1-v0.4.8 builds pinned an incompatible engines.dsh and must be removed before reinstalling. Version in repo is a -dev prerelease (0.4.14-dev.0). |
 
-> 该分类共 **452** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
+> 该分类共 **453** 个已核验条目，[查看完整清单 →](docs/categories/ui-experience.md)
 
 ### 会话与消息
 
