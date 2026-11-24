@@ -3408,7 +3408,7 @@
 - [keleus/deepseek-pet](https://github.com/keleus/deepseek-pet) — 在你的deepseek-harness上养一只吃白饭的大蓝鲸 · ⭐5 · MIT · JavaScript ✅
 - [HuanLinOTO/dsh-plugin-d399](https://github.com/HuanLinOTO/dsh-plugin-d399) — 模型生成时右下角弹出小游戏菜单（Wordle/消消乐/192 款参数化小游戏，可拓展注册表） | Pops up a mini-game menu while the model generates (Wordle/Match-3/192 parametric mini-games, extensible reg… · ⭐4 · NOASSERTION · JavaScript ✅
 - [Moeblack/deepseek-manners](https://github.com/Moeblack/deepseek-manners) — DSH 插件：给每次消息后注入感谢语（deepseek-manners） · ⭐4 · TypeScript ✅
-- [gongfpp/dsh-novel-fish](https://github.com/gongfpp/dsh-novel-fish) — 小说摸鱼：在 DSH 真实对话的思考/工具区域里读本地小说（EPUB/TXT/MD），保留原文、进度本地保存、不发给模型。DSH Web plugin, host >=0.2.1-rc.2 <=0.2.2-alpha.2. · ⭐3 · MIT · JavaScript ✅
+- [gongfpp/dsh-novel-fish](https://github.com/gongfpp/dsh-novel-fish) — 小说摸鱼：在 DSH 真实对话的思考/工具区域里读本地小说（EPUB/TXT/MD），保留原文、进度本地保存、不发给模型。DSH Web plugin, host >=0.2.1-rc.2 <0.3.0-0. · ⭐3 · MIT · JavaScript ✅
 - [AnacondaKC/dsh-douyin](https://github.com/AnacondaKC/dsh-douyin) — DSH WebUI 侧栏短视频插件：原生播放器、系列导航、直链解析与精确历史回放 · ⭐2 · BSD-3-Clause · TypeScript ✅
 - [HuanLinOTO/dsh-plugin-spur](https://github.com/HuanLinOTO/dsh-plugin-spur) — 聊天流中悬挂皮鞭，甩动鞭梢（>2.0 px/ms）即向 agent 发送 go work 消息 | A whip hanging in the chat stream; flick the tip (>2.0 px/ms) to send the agent a "go work!" message · ⭐2 · NOASSERTION · TypeScript ✅
 - [JasonJin2006/dsh-sound-effects-plugin](https://github.com/JasonJin2006/dsh-sound-effects-plugin) — Sound effects plugin for DeepSeek Harness: ambient work music, success chime, and attention chime. · ⭐2 · MIT · JavaScript ✅
