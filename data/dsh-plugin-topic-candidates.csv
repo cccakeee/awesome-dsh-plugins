@@ -3712,3 +3712,8 @@ MichengAI/dsh-codex-pet,dsh-plugin,verified_plugin
 mienfong/dsh-session-mgr,dsh-plugin,verified_plugin
 Destinhue/dsh-video-vision,dsh-plugin,verified_plugin
 PeterBon/dsh-hooks,dsh-plugin,verified_plugin
+gpboyer2/dsh-archived-open,dsh-plugin,verified_plugin
+gpboyer2/dsh-session-title-on-turnend,dsh-plugin,verified_plugin
+gpboyer2/dsh-finish-line,dsh-plugin,verified_plugin
+gpboyer2/dsh-toolcall-text-guard,dsh-plugin,verified_plugin
+gpboyer2/dsh-web-fetch-open,dsh-plugin,rejected
